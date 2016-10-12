@@ -283,7 +283,7 @@ mapBounds</span><span class="pun">:</span><span class="pln"> original map bounds
 <li><strong class="li-title">mapStyle</strong>: is the property which set the default map style. Available options for mapStyle is: <code>"MapBox"</code>, <code>"Blue Essence"</code>, <code>"Blue Water"</code>,  <code>"Flat Map"</code>,  <code>"Light Monochrome"</code>,  <code>"Midnight Commander"</code>,  <code>"Unsaturated Browns"</code>.  </li>
 <li><strong class="li-title">searchAsMoveDefault</strong>: <code>Boolean</code>: is the property which set the default value of <code>searchAsMove</code> component. By default it’s value is false.  /</li>
 <li><strong class="li-title">requestSize</strong>: <code>Number</code>: is the property which set the size in request. By default it’s value is 100.  </li>
-<li><strong class="li-title">depends</strong>: is the property which contains the object of sensor and method, In above example on change of “CitySensor” value then it will trigger <code>reposition</code> internal method of AppbaseMap. We exposed few methods to use on changing of dependency: <code>reposition</code>, <code>SearchAsMove</code>, <code>MapStyles</code>.  </li>
+<li><strong class="li-title">depends</strong>: <code>Object</code>: It should contain the sensors on which component is dependent. <a href="https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html">read more</a></li>
 </ul></div>
   	<div class="footer content">
 		<div class="row">
