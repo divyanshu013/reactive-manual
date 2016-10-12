@@ -133,7 +133,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><span class="twitter-typeahead" style="position: relative; display: inline-block; "><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" style="position: absolute; top: 0px; left: 0px; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size:  ; background-position: 0% 0%; background-repeat: repeat repeat; " readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent; "><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none; "></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; "><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -230,13 +230,47 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-define-dependency-on-other-sensors-item" class="level-2"><a id="-define-dependency-on-other-sensors-link" href="./v1/getting-started/Dependency.html#-define-dependency-on-other-sensors" class="level-2" pref="#-define-dependency-on-other-sensors">Define dependency on other sensors</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/0a7d36881c01efa4d5d66feba5a4662e91f748f6">Sep 16, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/getting-started/Dependency.md" target="_blank"><span class="fa fa-pencil"> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-define-dependency-on-other-sensors">Define dependency on other sensors</h2><p>Let’s take an example if topics lists is depenedent on city selection (topic sensor is dependent on city sensor) then we should pass selected city value in topic sensor and get the topic list according to selected city.</p><p>To achieve this we should pass following things to topic sensor:</p><ul>
-<li><code>selectedSensor</code>: which contains all the selected sensor values.</li>
-<li><code>sensorOnSelect</code>: an event which is filred on select/change of sensor value. - which is responsible to store selected values of sensors (this should be passed in both sensors - city and topic).</li>
-<li><code>depends</code>: an object which contains dependent sensors<pre><code class="prettyprint prettyprinted" style=""><span class="pln">depends</span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="pun">{</span><span class="str">'city'</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">state</span><span class="pun">.</span><span class="pln">mapping</span><span class="pun">.</span><span class="pln">city</span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre></li>
-</ul></div>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/a2defd9a92524aede9a516148e9ffda633450972">Oct 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/getting-started/Dependency.md" target="_blank"><span class="fa fa-pencil"> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-define-dependency-on-other-sensors">Define dependency on other sensors</h2><ul>
+<li><strong class="li-title">depends</strong>: <code>Object</code>: it should contain the sensors on which component is dependent.</li>
+</ul><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">AppbaseMap</span><span class="pln"> 
+  </span><span class="pun">...</span><span class="pln">
+depends</span><span class="pun">={{</span><span class="pln">
+    </span><span class="string"><span class="str">'SensorId'</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pun">,</span><span class="pln">
+        </span><span class="string"><span class="str">"defaultQuery"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">cityQuery
+        </span><span class="string"><span class="str">"doNotExecute"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><ul>
+<li><p><strong class="li-title">operation</strong>: <code>String</code>: It should be either <code>must</code> or <code>should</code>. It decides whether this query should be inside must clause or should clause.</p>
+</li>
+<li><p><strong class="li-title">defaultQuery</strong>: <code>Function</code>: (optional) this function will receive value of that particulat sensor and user needs to create query on basis of that and return the query, If you don’t specify defaultquery queryBuilder will include the default query of that sensor.</p>
+</li>
+<li><p><strong class="li-title">doNotExecute</strong>: <code>Boolean</code>: (by default true) If you don’t want to execute query immediatly after dependent sensor changees, then apply true as value. In this case your component already append sensor query but just didn’t execute it immediatly.</p>
+</li>
+</ul><p>Let’s take an example if topics lists is depenedent on city selection (topicSensor is dependent on citySensor).</p><p>To achieve this</p><ol>
+<li>Assign sensorId to city list.</li>
+<li><p>Use this sensorId in other sensor.</p>
+</li>
+<li><p>City Sensor should look like this</p>
+<pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;AppbaseList</span><span class="pln">
+  </span><span class="atn">sensorId</span><span class="pun">=</span><span class="atv">"CitySensor"</span><span class="pln">
+  </span><span class="atn">inputData</span><span class="pun">=</span><span class="atv">{this.props.mapping.city}</span><span class="pln"> 
+ ...
+</span><span class="tag">/&gt;</span></code></pre></li>
+<li><p>Topic Sensor should look like this</p>
+<pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;AppbaseList</span><span class="pln">
+  </span><span class="atn">sensorId</span><span class="pun">=</span><span class="atv">"TopicSensor"</span><span class="pln">
+  </span><span class="atn">inputData</span><span class="pun">=</span><span class="atv">{this.props.mapping.topic}</span><span class="pln"> 
+ ...
+  </span><span class="atn">depends</span><span class="pun">=</span><span class="atv">{{</span><span class="pln">
+      </span><span class="atn">CitySensor</span><span class="pln">: {
+          </span><span class="atv">"operation"</span><span class="pln">: </span><span class="atv">"must"</span><span class="pln">,
+          </span><span class="atv">"defaultQuery"</span><span class="pln">: </span><span class="atn">this</span><span class="pln">.</span><span class="atn">topicDepends</span><span class="pln">
+      }
+  }}
+</span><span class="tag">/&gt;</span></code></pre></li>
+</ol></div>
   	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
