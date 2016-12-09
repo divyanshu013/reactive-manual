@@ -33,6 +33,10 @@ var docbaseConfig = {
             "label": "SingleList"
           },
           {
+            "name": "SingleRange",
+            "label": "SingleRange"
+          },
+          {
             "label": "index",
             "name": "index"
           }
