@@ -45,6 +45,10 @@ var docbaseConfig = {
             "label": "SingleRange"
           },
           {
+            "name": "ToggleButton",
+            "label": "ToggleButton"
+          },
+          {
             "label": "index",
             "name": "index"
           }
