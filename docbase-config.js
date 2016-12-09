@@ -101,6 +101,5 @@ var docbaseConfig = {
         ]
       }
     ]
-  },
-  "publish": "github"
+  }
 };
