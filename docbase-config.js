@@ -21,6 +21,20 @@ var docbaseConfig = {
   "versions": {
     "v1": [
       {
+        "label": "components",
+        "name": "components",
+        "files": [
+          {
+            "name": "SingleList",
+            "label": "SingleList"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
         "label": "contribution",
         "name": "contribution",
         "files": [

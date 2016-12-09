@@ -34,6 +34,17 @@
     <div class="pull-left  hidden-xs" id="folder-navbar">
       <ul class="nav navbar-nav folder-li">
         <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+          <a ng-href=./v1/components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="components" href=./v1/components/index.html>
+            <span ng-bind="folder.label" class="link-restrict ng-binding">components</span>
+           </a>
+          <ul class="dropdown-menu">
+            <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v1/components/SingleList.html title="SingleList" ng-bind="file.label" class="ng-binding" href=./v1/components/SingleList.html>SingleList</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+              <a ng-href=./v1/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/components/index.html>index</a>
+            </li><!-- end ngRepeat: file in folder.files -->
+          </ul>
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
           <a ng-href=./v1/contribution/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="contribution" href=./v1/contribution/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">contribution</span>
            </a>
@@ -83,6 +94,17 @@
           <a class="dropdown-toggle pointer" data-toggle="dropdown">more <b class="caret"></b></a>
           <ul class="dropdown-menu megamenu row">
             <!-- ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+              <ul>
+                <li class="dropdown-header">
+                  <a ng-href=./v1/components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="components" href=./v1/components/index.html>components</a>
+                </li>
+                <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v1/components/SingleList.html title="SingleList" ng-bind="file.label" class="ng-binding" href=./v1/components/SingleList.html>SingleList</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                  <a ng-href=./v1/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/components/index.html>index</a>
+                </li><!-- end ngRepeat: file in folder.files -->
+              </ul>
+            </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
               <ul>
                 <li class="dropdown-header">
                   <a ng-href=./v1/contribution/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="contribution" href=./v1/contribution/index.html>contribution</a>
@@ -176,6 +198,17 @@
                 <!-- ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
                   <ul>
                     <li class="dropdown-header">
+                      <a ng-href=./v1/components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="components" href=./v1/components/index.html>components</a>
+                    </li>
+                    <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                      <a ng-href=./v1/components/SingleList.html title="SingleList" ng-bind="file.label" class="ng-binding" href=./v1/components/SingleList.html>SingleList</a>
+                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                      <a ng-href=./v1/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/components/index.html>index</a>
+                    </li><!-- end ngRepeat: file in folder.files -->
+                  </ul>
+                </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+                  <ul>
+                    <li class="dropdown-header">
                       <a ng-href=./v1/contribution/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="contribution" href=./v1/contribution/index.html>contribution</a>
                     </li>
                     <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
@@ -232,7 +265,7 @@
       <h1 ng-bind-html="title" class="ng-binding">Doc<b>base</b></h1>
     </div>
     <div class="col-xs-12 list">
-      <!-- ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1/contribution/index.html ng-bind="folder.label">contribution</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1/getting-started/index.html ng-bind="folder.label">getting-started</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1/mapping/index.html ng-bind="folder.label">mapping</a><!-- end ngRepeat: folder in map[currentVersion] -->
+      <!-- ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1/components/index.html ng-bind="folder.label">components</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1/contribution/index.html ng-bind="folder.label">contribution</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1/getting-started/index.html ng-bind="folder.label">getting-started</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1/mapping/index.html ng-bind="folder.label">mapping</a><!-- end ngRepeat: folder in map[currentVersion] -->
 		</div>
   </div>
    <div class="row powered-by">
