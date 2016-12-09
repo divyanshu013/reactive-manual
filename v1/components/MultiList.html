@@ -267,22 +267,49 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="realtime-react-map-library-item" class="level-1"><a id="realtime-react-map-library-link" href="./v1/getting-started/start.html#realtime-react-map-library" class="level-1" pref="#realtime-react-map-library">Realtime React Map library</a><ul class="level-2" id="realtime-react-map-library-list"><li id="realtime-react-map-library-how-to-use-item" class="level-2"><a id="realtime-react-map-library-how-to-use-link" href="./v1/getting-started/start.html#realtime-react-map-library-how-to-use" class="level-2" pref="#realtime-react-map-library-how-to-use">How to use</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-multilist-item" class="level-2"><a id="-multilist-link" href="./v1/components/MultiList.html#-multilist" class="level-2" pref="#-multilist">MultiList</a><ul class="level-3" id="-multilist-list"><li id="-multilist-props-item" class="level-3"><a id="-multilist-props-link" href="./v1/components/MultiList.html#-multilist-props" class="level-3" pref="#-multilist-props">Props</a></li><li id="-multilist-css-styles-item" class="level-3"><a id="-multilist-css-styles-link" href="./v1/components/MultiList.html#-multilist-css-styles" class="level-3" pref="#-multilist-css-styles">CSS Styles</a></li><li id="-multilist-examples-item" class="level-3"><a id="-multilist-examples-link" href="./v1/components/MultiList.html#-multilist-examples" class="level-3" pref="#-multilist-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/c8e7a8624636ddfc573b62a499782c388e408d19">Oct 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/getting-started/start.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h1 id="realtime-react-map-library">Realtime React Map library</h1><h2 id="realtime-react-map-library-how-to-use">How to use</h2><p>Include the map library in your html file with your key    </p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="pln">script type</span><span class="pun">=</span><span class="string"><span class="str">"text/javascript"</span></span><span class="pln"> src</span><span class="pun">=</span><span class="string"><span class="str">"http:</span><span class="comment"><span class="str">//maps.google.com/maps/api/js?key=Your_key_here"</span></span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></span>
-</code></pre><p>Import reactive-map components and use it inside react components.</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="kwd">import</span><span class="pln"> </span><span class="pun">{</span><span class="typ">ReactiveMap</span><span class="pun">,</span><span class="pln"> 
-        </span><span class="typ">AppbaseMap</span><span class="pun">,</span><span class="pln"> 
-        </span><span class="typ">AppbaseSearch</span><span class="pun">,</span><span class="pln"> 
-        </span><span class="typ">AppbaseSlider</span><span class="pun">,</span><span class="pln"> 
-        </span><span class="typ">AppbaseList</span><span class="pun">}</span><span class="pln"> from </span><span class="string"><span class="str">'./app/app.js'</span></span><span class="pun">;</span></code></pre></div>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/a141aa92db46840e567adca17d0c8b4eaceafa29">Dec 9, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/components/MultiList.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-multilist">MultiList</h2><p>A <code>MultiList</code> component creates a multiple checkbox select list widget. It’s useful for building an e-commerce facet like search experience.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">MultiList</span><span class="pln">
+  sensorId</span><span class="pun">=</span><span class="string"><span class="str">"CitySensor"</span></span><span class="pln">
+  inputData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">props</span><span class="pun">.</span><span class="pln">mapping</span><span class="pun">.</span><span class="pln">city</span><span class="pun">}</span><span class="pln">
+  title</span><span class="pun">=</span><span class="string"><span class="str">"Cities"</span></span><span class="pln">
+  defaultSelected</span><span class="pun">=</span><span class="string"><span class="str">"London"</span></span><span class="pln">
+  showCount</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  size</span><span class="pun">={</span><span class="number"><span class="lit">1000</span></span><span class="pun">}</span><span class="pln">
+  sortBy</span><span class="pun">=</span><span class="string"><span class="str">"asc"</span></span><span class="pln">
+  showSearch</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  searchPlaceholder</span><span class="pun">=</span><span class="string"><span class="str">"Search City"</span></span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h3 id="-multilist-props">Props</h3><ul>
+<li><strong class="li-title">sensorId</strong> : <code>String</code>: should be unique id of sensor which can be used in other sensor’s dependencies.   </li>
+<li><strong class="li-title">inputData</strong> : <code>String</code>: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map   </li>
+<li><strong class="li-title">title</strong>: <code>String</code>: Set the title of the component, to be shown in the UI.</li>
+<li><strong class="li-title">defaultSelected</strong> : <code>string</code>: is the default selected value (only applicable for single item selection)   </li>
+<li><strong class="li-title">showCount</strong>: <code>Boolean</code>: is the boolean option for whether displaying the count along with the items. Defaults to <code>true</code>.  </li>
+<li><strong class="li-title">size</strong>: <code>number</code>: is the number field which decides how many items needs to be displayed in the List. Defaults to 100.    </li>
+<li><strong class="li-title">sortBy</strong>: <code>count</code> or <code>asc</code> or <code>desc</code>: is the property which decides on how the list should be sorted. <code>count</code> sorts the list based on the count in the desc order. <code>asc</code> sorts the list in the ascending order of the term (Alphabetical). <code>desc</code> sorts the list in the descending order of the term. Defaulted to <code>count</code>.  </li>
+<li><strong class="li-title">showSearch</strong>: <code>Boolean</code>: (default false): By applying <code>true</code>, the component will show search box to filter from list.</li>
+<li><strong class="li-title">searchPlaceholder</strong>: <code>String</code>: Placeholder text applicable when <code>showSearch</code> prop is enabled.</li>
+<li><strong class="li-title">depends</strong>: <code>Object</code>: It should contain the sensors on which component is dependent. <a href="https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html">read more</a></li>
+</ul><h3 id="-multilist-css-styles">CSS Styles</h3><h3 id="-multilist-examples">Examples</h3><ol>
+<li><p>List with all the default props</p>
+</li>
+<li><p>List with custom sort and a default selection</p>
+</li>
+<li><p>List with show search set to true</p>
+</li>
+<li><p>List with a dependency on another sensor</p>
+</li>
+<li><p>Playground (with all knob actions)</p>
+</li>
+</ol></div>
   	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
-				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1/getting-started/Dependency.html class="paginationLink pull-left">Previous</a>
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
+					<a href="" class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1/mapping/mapping.html class="paginationLink pull-right">Next</a>
+					<a href=./v1/components/SingleList.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>

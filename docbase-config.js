@@ -25,6 +25,10 @@ var docbaseConfig = {
         "name": "components",
         "files": [
           {
+            "name": "MultiList",
+            "label": "MultiList"
+          },
+          {
             "name": "SingleList",
             "label": "SingleList"
           },
