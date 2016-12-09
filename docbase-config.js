@@ -29,6 +29,10 @@ var docbaseConfig = {
             "label": "MultiList"
           },
           {
+            "name": "MultiRange",
+            "label": "MultiRange"
+          },
+          {
             "name": "SingleList",
             "label": "SingleList"
           },

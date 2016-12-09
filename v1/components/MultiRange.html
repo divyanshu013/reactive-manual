@@ -279,57 +279,44 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-define-dependency-on-other-sensors-item" class="level-2"><a id="-define-dependency-on-other-sensors-link" href="./v1/getting-started/Dependency.html#-define-dependency-on-other-sensors" class="level-2" pref="#-define-dependency-on-other-sensors">Define dependency on other sensors</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-multirange-item" class="level-2"><a id="-multirange-link" href="./v1/components/MultiRange.html#-multirange" class="level-2" pref="#-multirange">MultiRange</a><ul class="level-3" id="-multirange-list"><li id="-multirange-props-item" class="level-3"><a id="-multirange-props-link" href="./v1/components/MultiRange.html#-multirange-props" class="level-3" pref="#-multirange-props">Props</a></li><li id="-multirange-css-styles-item" class="level-3"><a id="-multirange-css-styles-link" href="./v1/components/MultiRange.html#-multirange-css-styles" class="level-3" pref="#-multirange-css-styles">CSS Styles</a></li><li id="-multirange-examples-item" class="level-3"><a id="-multirange-examples-link" href="./v1/components/MultiRange.html#-multirange-examples" class="level-3" pref="#-multirange-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/a2defd9a92524aede9a516148e9ffda633450972">Oct 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/getting-started/Dependency.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-define-dependency-on-other-sensors">Define dependency on other sensors</h2><ul>
-<li><strong class="li-title">depends</strong>: <code>Object</code>: it should contain the sensors on which component is dependent.</li>
-</ul><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">AppbaseMap</span><span class="pln"> 
-  </span><span class="pun">...</span><span class="pln">
-depends</span><span class="pun">={{</span><span class="pln">
-    </span><span class="string"><span class="str">'SensorId'</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"defaultQuery"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">cityQuery
-        </span><span class="string"><span class="str">"doNotExecute"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}}</span><span class="pln">
-</span><span class="pun">/&gt;</span></code></pre><ul>
-<li><p><strong class="li-title">operation</strong>: <code>String</code>: It should be either <code>must</code> or <code>should</code>. It decides whether this query should be inside must clause or should clause.</p>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/d25d9f32ac68fd315638d5d3106f04142a7553ce">Dec 9, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/components/MultiRange.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-multirange">MultiRange</h2><p>A <code>MultiRange</code> component creates a multiple checkbox based numeric range selector. It’s useful for filtering data by prices, for instance.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">MultiRange</span><span class="pln">
+  sensorId</span><span class="pun">=</span><span class="string"><span class="str">"PriceSensor"</span></span><span class="pln">
+  appbaseField</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">props</span><span class="pun">.</span><span class="pln">mapping</span><span class="pun">.</span><span class="pln">price</span><span class="pun">}</span><span class="pln">
+  title</span><span class="pun">=</span><span class="string"><span class="str">"Price"</span></span><span class="pln">
+  defaultSelected</span><span class="pun">={[</span><span class="string"><span class="str">"Cheap"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"Moderate"</span></span><span class="pun">]}</span><span class="pln">
+  data</span><span class="pun">={</span><span class="pln">
+    </span><span class="pun">[{</span><span class="string"><span class="str">"start"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">0</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"end"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">10</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"label"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Cheap"</span></span><span class="pun">},</span><span class="pln">
+     </span><span class="pun">{</span><span class="string"><span class="str">"start"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">11</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"end"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">20</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"label"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Moderate"</span></span><span class="pun">},</span><span class="pln">
+     </span><span class="pun">{</span><span class="string"><span class="str">"start"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">21</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"end"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">50</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"label"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Pricey"</span></span><span class="pun">},</span><span class="pln">
+     </span><span class="pun">{</span><span class="string"><span class="str">"start"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">51</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"end"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">1000</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"label"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"First Date"</span></span><span class="pun">}]</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h3 id="-multirange-props">Props</h3><ul>
+<li><strong class="li-title">sensorId</strong> : <code>String</code>: should be unique id of sensor which can be used in other sensor’s dependencies.   </li>
+<li><strong class="li-title">appbaseField</strong> : <code>String</code>: is the name of the field for price data in the appbase.io app. For a <code>SingleRange</code> component, the field should be of a numeric data type.</li>
+<li><strong class="li-title">title</strong>: <code>String</code>: Sets the title of the component to be shown in the UI.</li>
+<li><strong class="li-title">defaultSelected</strong>: <code>Array</code>: is the default selected array of labels.</li>
+<li><strong class="li-title">data</strong>: <code>Object Array</code>: is a collection of UI options with labels and [start, end] range values</li>
+<li><strong class="li-title">depends</strong>: <code>Object</code>: It should contain the sensors on which the component is dependent. <a href="https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html">read more</a></li>
+</ul><h3 id="-multirange-css-styles">CSS Styles</h3><h3 id="-multirange-examples">Examples</h3><ol>
+<li><p>Range with all the default props</p>
 </li>
-<li><p><strong class="li-title">defaultQuery</strong>: <code>Function</code>: (optional) this function will receive value of that particulat sensor and user needs to create query on basis of that and return the query, If you don’t specify defaultquery queryBuilder will include the default query of that sensor.</p>
+<li><p>Range with multiple default selections</p>
 </li>
-<li><p><strong class="li-title">doNotExecute</strong>: <code>Boolean</code>: (by default true) If you don’t want to execute query immediatly after dependent sensor changees, then apply true as value. In this case your component already append sensor query but just didn’t execute it immediatly.</p>
+<li><p>Range with a dependency on another sensor</p>
 </li>
-</ul><p>Let’s take an example if topics lists is depenedent on city selection (topicSensor is dependent on citySensor).</p><p>To achieve this</p><ol>
-<li>Assign sensorId to city list.</li>
-<li><p>Use this sensorId in other sensor.</p>
+<li><p>Playground (with all knob actions)</p>
 </li>
-<li><p>City Sensor should look like this</p>
-<pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;AppbaseList</span><span class="pln">
-  </span><span class="atn">sensorId</span><span class="pun">=</span><span class="atv">"CitySensor"</span><span class="pln">
-  </span><span class="atn">inputData</span><span class="pun">=</span><span class="atv">{this.props.mapping.city}</span><span class="pln"> 
- ...
-</span><span class="tag">/&gt;</span></code></pre></li>
-<li><p>Topic Sensor should look like this</p>
-<pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;AppbaseList</span><span class="pln">
-  </span><span class="atn">sensorId</span><span class="pun">=</span><span class="atv">"TopicSensor"</span><span class="pln">
-  </span><span class="atn">inputData</span><span class="pun">=</span><span class="atv">{this.props.mapping.topic}</span><span class="pln"> 
- ...
-  </span><span class="atn">depends</span><span class="pun">=</span><span class="atv">{{</span><span class="pln">
-      </span><span class="atn">CitySensor</span><span class="pln">: {
-          </span><span class="atv">"operation"</span><span class="pln">: </span><span class="atv">"must"</span><span class="pln">,
-          </span><span class="atv">"defaultQuery"</span><span class="pln">: </span><span class="atn">this</span><span class="pln">.</span><span class="atn">topicDepends</span><span class="pln">
-      }
-  }}
-</span><span class="tag">/&gt;</span></code></pre></li>
 </ol></div>
   	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1/getting-started/AppbaseSlider.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1/components/MultiList.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1/getting-started/start.html class="paginationLink pull-right">Next</a>
+					<a href=./v1/components/SingleList.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
