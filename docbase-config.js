@@ -49,6 +49,10 @@ var docbaseConfig = {
             "label": "SingleRange"
           },
           {
+            "name": "TextField",
+            "label": "TextField"
+          },
+          {
             "name": "ToggleButton",
             "label": "ToggleButton"
           },
