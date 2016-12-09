@@ -33,6 +33,10 @@ var docbaseConfig = {
             "label": "MultiRange"
           },
           {
+            "name": "RangeSlider",
+            "label": "RangeSlider"
+          },
+          {
             "name": "SingleList",
             "label": "SingleList"
           },
