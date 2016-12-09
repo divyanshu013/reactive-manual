@@ -39,6 +39,8 @@
            </a>
           <ul class="dropdown-menu">
             <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v1/components/DataSearch.html title="DataSearch" ng-bind="file.label" class="ng-binding" href=./v1/components/DataSearch.html>DataSearch</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1/components/MultiList.html title="MultiList" ng-bind="file.label" class="ng-binding" href=./v1/components/MultiList.html>MultiList</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1/components/MultiRange.html title="MultiRange" ng-bind="file.label" class="ng-binding" href=./v1/components/MultiRange.html>MultiRange</a>
@@ -109,6 +111,8 @@
                   <a ng-href=./v1/components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="components" href=./v1/components/index.html>components</a>
                 </li>
                 <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v1/components/DataSearch.html title="DataSearch" ng-bind="file.label" class="ng-binding" href=./v1/components/DataSearch.html>DataSearch</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1/components/MultiList.html title="MultiList" ng-bind="file.label" class="ng-binding" href=./v1/components/MultiList.html>MultiList</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1/components/MultiRange.html title="MultiRange" ng-bind="file.label" class="ng-binding" href=./v1/components/MultiRange.html>MultiRange</a>
@@ -221,6 +225,8 @@
                       <a ng-href=./v1/components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="components" href=./v1/components/index.html>components</a>
                     </li>
                     <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                      <a ng-href=./v1/components/DataSearch.html title="DataSearch" ng-bind="file.label" class="ng-binding" href=./v1/components/DataSearch.html>DataSearch</a>
+                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1/components/MultiList.html title="MultiList" ng-bind="file.label" class="ng-binding" href=./v1/components/MultiList.html>MultiList</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1/components/MultiRange.html title="MultiRange" ng-bind="file.label" class="ng-binding" href=./v1/components/MultiRange.html>MultiRange</a>
@@ -329,8 +335,8 @@
   	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
-				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
-					<a href="" class="paginationLink pull-left">Previous</a>
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v1/components/DataSearch.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
 					<a href=./v1/components/MultiRange.html class="paginationLink pull-right">Next</a>

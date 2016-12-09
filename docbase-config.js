@@ -25,6 +25,10 @@ var docbaseConfig = {
         "name": "components",
         "files": [
           {
+            "name": "DataSearch",
+            "label": "DataSearch"
+          },
+          {
             "name": "MultiList",
             "label": "MultiList"
           },
