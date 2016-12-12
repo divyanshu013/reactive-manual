@@ -340,7 +340,11 @@
 <li><strong class="li-title">componentStyle</strong>: <code>Object</code>: CSS Styles to be applied to the <strong>ResultList</strong> component.  </li>
 <li><strong class="li-title">onData</strong>: <code>Function</code>: A callback function where user can define how to render the view based on the data changes.     </li>
 <li><strong class="li-title">depends</strong>: <code>Object</code>: An object defining the sensor components that trigger the <code>ResultList</code> query. <a href="https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html">read more</a>.</li>
-</ul><h3 id="-resultlist-extending-resultlist">Extending ResultList</h3><p><code>onData</code> prop registers a function callback which triggers with the following parameters every time there is a change in the data view of the <code>ResultList</code> component.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">(</span><span class="pln">res</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">err</span><span class="pun">])</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</ul><h3 id="-resultlist-extending-resultlist">Extending ResultList</h3><p><code>onData</code> prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the <code>ResultList</code> view.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="comment"><span class="com">// Register a callback function with the `onData` prop.</span></span><span class="pln">
+</span><span class="pun">&lt;</span><span class="typ">ResultList</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">/&gt;</span><span class="pln">
+
+</span><span class="comment"><span class="com">// Callback function returns an Arry of HTML elements to be rendered as ResultList items.</span></span><span class="pln">
+</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">(</span><span class="pln">res</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">err</span><span class="pun">])</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">res</span><span class="pun">.</span><span class="pln">mode</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">newData</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">currentData</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">appliedQuery</span><span class="pun">);</span><span class="pln">
   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">res</span><span class="pun">.</span><span class="pln">mode </span><span class="pun">===</span><span class="pln"> </span><span class="string"><span class="str">"historic"</span></span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
     console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"time taken for response is: "</span></span><span class="pun">+</span><span class="pln">took</span><span class="pun">+</span><span class="string"><span class="str">"ms"</span></span><span class="pun">);</span><span class="pln">
@@ -351,16 +355,16 @@
     </span><span class="comment"><span class="com">// add markup per element.</span></span><span class="pln">
     </span><span class="kwd">return</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">currentData</span><span class="pun">;</span><span class="pln">               </span><span class="comment"><span class="com">// show streaming update functionality</span></span><span class="pln">
   </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>The callback function returns an Array of HTML elements (think list items) which are then rendered to the view.  </p><p><strong>Usage</strong>:  </p><ul>
+</span><span class="pun">}</span></code></pre><p>The callback function returns an Array of HTML elements (think list items) which are then rendered to the view as ResultList items.  </p><p><strong>Usage</strong>:  </p><ul>
 <li><strong class="li-title">res</strong>: <code>Object</code> Response object containing:  <ul>
 <li><strong class="li-title">mode</strong>: <code>String</code>: “historic” when results are returned from the existing dataset and “streaming” when new results are matched.  </li>
 <li><strong class="li-title">newData</strong>: <code>Object</code>: An object array when returning historic data results or a single object for streaming mode updates.  </li>
 <li><strong class="li-title">currentData</strong>: <code>Array Object</code>: An array of the result objects being shown in the current component view.  </li>
 <li><strong class="li-title">appliedQuery</strong>: <code>Object</code>: Raw query object that triggered the function callback, useful for debugging.  </li>
-<li><strong class="li-title">took</strong>: <code>Number</code>: Time taken in milliseconds (only passed when the mode is “historic”).</li>
+<li><strong class="li-title">took</strong>: <code>Number</code>: (Optional) Time taken in milliseconds, only passed when the mode is “historic”.</li>
 </ul>
 </li>
-<li><strong class="li-title">err</strong>: <code>Object</code> Error object.</li>
+<li><strong class="li-title">err</strong>: <code>Object</code> Error object. </li>
 </ul><h3 id="-resultlist-css-styles">CSS Styles</h3><h3 id="-resultlist-examples">Examples</h3><ol>
 <li><p>ResultList with all the default props with a single sensor filter.</p>
 </li>
