@@ -89,10 +89,6 @@ var docbaseConfig = {
             "label": "AppbaseList"
           },
           {
-            "name": "AppbaseMap",
-            "label": "AppbaseMap"
-          },
-          {
             "name": "AppbaseSearch",
             "label": "AppbaseSearch"
           },
@@ -103,6 +99,10 @@ var docbaseConfig = {
           {
             "name": "Dependency",
             "label": "Dependency"
+          },
+          {
+            "name": "ReactiveMap",
+            "label": "ReactiveMap"
           },
           {
             "name": "start",
