@@ -85,28 +85,26 @@ var docbaseConfig = {
         "name": "getting-started",
         "files": [
           {
-            "name": "AppbaseList",
-            "label": "AppbaseList"
-          },
-          {
-            "name": "AppbaseSearch",
-            "label": "AppbaseSearch"
-          },
-          {
-            "name": "AppbaseSlider",
-            "label": "AppbaseSlider"
-          },
-          {
             "name": "Dependency",
             "label": "Dependency"
           },
           {
-            "name": "ReactiveMap",
-            "label": "ReactiveMap"
-          },
-          {
             "name": "start",
             "label": "start"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "map-components",
+        "name": "map-components",
+        "files": [
+          {
+            "name": "ReactiveMap",
+            "label": "ReactiveMap"
           },
           {
             "label": "index",

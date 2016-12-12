@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc" class="no-literate">
+<body role="flatdoc" class="no-literate big-h3">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -33,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
     <div class="pull-left  hidden-xs" id="folder-navbar">
       <ul class="nav navbar-nav folder-li">
-        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="components" href=./v1/components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">components</span>
            </a>
@@ -60,7 +60,7 @@
               <a ng-href=./v1/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/contribution/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="contribution" href=./v1/contribution/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">contribution</span>
            </a>
@@ -71,28 +71,31 @@
               <a ng-href=./v1/contribution/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/contribution/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/getting-started/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="getting-started" href=./v1/getting-started/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">getting-started</span>
            </a>
           <ul class="dropdown-menu">
             <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-              <a ng-href=./v1/getting-started/AppbaseList.html title="AppbaseList" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/AppbaseList.html>AppbaseList</a>
-            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-              <a ng-href=./v1/getting-started/AppbaseSearch.html title="AppbaseSearch" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/AppbaseSearch.html>AppbaseSearch</a>
-            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-              <a ng-href=./v1/getting-started/AppbaseSlider.html title="AppbaseSlider" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/AppbaseSlider.html>AppbaseSlider</a>
-            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1/getting-started/Dependency.html title="Dependency" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/Dependency.html>Dependency</a>
-            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-              <a ng-href=./v1/getting-started/ReactiveMap.html title="ReactiveMap" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/ReactiveMap.html>ReactiveMap</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1/getting-started/start.html title="start" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/start.html>start</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
               <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+          <a ng-href=./v1/map-components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="map-components" href=./v1/map-components/index.html>
+            <span ng-bind="folder.label" class="link-restrict ng-binding">map-components</span>
+           </a>
+          <ul class="dropdown-menu">
+            <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v1/map-components/ReactiveMap.html title="ReactiveMap" ng-bind="file.label" class="ng-binding" href=./v1/map-components/ReactiveMap.html>ReactiveMap</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+              <a ng-href=./v1/map-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/map-components/index.html>index</a>
+            </li><!-- end ngRepeat: file in folder.files -->
+          </ul>
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/mapping/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="mapping" href=./v1/mapping/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">mapping</span>
            </a>
@@ -105,7 +108,7 @@
           </ul>
         </li><!-- end ngRepeat: folder in map[currentVersion] -->
       </ul>
-      <ul class="nav navbar-nav category-li">
+      <ul class="nav navbar-nav category-li" style="display: block; ">
         <li class="dropdown menu-large">
           <a class="dropdown-toggle pointer" data-toggle="dropdown">more <b class="caret"></b></a>
           <ul class="dropdown-menu megamenu row">
@@ -153,19 +156,22 @@
                   <a ng-href=./v1/getting-started/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="getting-started" href=./v1/getting-started/index.html>getting-started</a>
                 </li>
                 <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                  <a ng-href=./v1/getting-started/AppbaseList.html title="AppbaseList" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/AppbaseList.html>AppbaseList</a>
-                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                  <a ng-href=./v1/getting-started/AppbaseSearch.html title="AppbaseSearch" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/AppbaseSearch.html>AppbaseSearch</a>
-                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                  <a ng-href=./v1/getting-started/AppbaseSlider.html title="AppbaseSlider" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/AppbaseSlider.html>AppbaseSlider</a>
-                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1/getting-started/Dependency.html title="Dependency" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/Dependency.html>Dependency</a>
-                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                  <a ng-href=./v1/getting-started/ReactiveMap.html title="ReactiveMap" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/ReactiveMap.html>ReactiveMap</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1/getting-started/start.html title="start" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/start.html>start</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                   <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
+                </li><!-- end ngRepeat: file in folder.files -->
+              </ul>
+            </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+              <ul>
+                <li class="dropdown-header">
+                  <a ng-href=./v1/map-components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="map-components" href=./v1/map-components/index.html>map-components</a>
+                </li>
+                <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v1/map-components/ReactiveMap.html title="ReactiveMap" ng-bind="file.label" class="ng-binding" href=./v1/map-components/ReactiveMap.html>ReactiveMap</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                  <a ng-href=./v1/map-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/map-components/index.html>index</a>
                 </li><!-- end ngRepeat: file in folder.files -->
               </ul>
             </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
@@ -187,7 +193,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -271,19 +277,22 @@
                       <a ng-href=./v1/getting-started/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="getting-started" href=./v1/getting-started/index.html>getting-started</a>
                     </li>
                     <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                      <a ng-href=./v1/getting-started/AppbaseList.html title="AppbaseList" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/AppbaseList.html>AppbaseList</a>
-                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                      <a ng-href=./v1/getting-started/AppbaseSearch.html title="AppbaseSearch" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/AppbaseSearch.html>AppbaseSearch</a>
-                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                      <a ng-href=./v1/getting-started/AppbaseSlider.html title="AppbaseSlider" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/AppbaseSlider.html>AppbaseSlider</a>
-                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1/getting-started/Dependency.html title="Dependency" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/Dependency.html>Dependency</a>
-                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                      <a ng-href=./v1/getting-started/ReactiveMap.html title="ReactiveMap" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/ReactiveMap.html>ReactiveMap</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1/getting-started/start.html title="start" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/start.html>start</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                       <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
+                    </li><!-- end ngRepeat: file in folder.files -->
+                  </ul>
+                </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+                  <ul>
+                    <li class="dropdown-header">
+                      <a ng-href=./v1/map-components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="map-components" href=./v1/map-components/index.html>map-components</a>
+                    </li>
+                    <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                      <a ng-href=./v1/map-components/ReactiveMap.html title="ReactiveMap" ng-bind="file.label" class="ng-binding" href=./v1/map-components/ReactiveMap.html>ReactiveMap</a>
+                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                      <a ng-href=./v1/map-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/map-components/index.html>index</a>
                     </li><!-- end ngRepeat: file in folder.files -->
                   </ul>
                 </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
@@ -309,32 +318,81 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-appbasesearch-item" class="level-2"><a id="-appbasesearch-link" href="./v1/getting-started/AppbaseSearch.html#-appbasesearch" class="level-2" pref="#-appbasesearch">AppbaseSearch</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-appbasemap-component-item" class="level-3"><a id="-appbasemap-component-link" href="./v1/map-components/ReactiveMap.html#-appbasemap-component" class="level-3" pref="#-appbasemap-component">AppbaseMap component</a></li></ul></li><li id="-css-styles-item" class="level-3"><a id="-css-styles-link" href="./v1/map-components/ReactiveMap.html#-css-styles" class="level-3" pref="#-css-styles">CSS Styles</a></li><li id="-examples-item" class="level-3"><a id="-examples-link" href="./v1/map-components/ReactiveMap.html#-examples" class="level-3" pref="#-examples">Examples</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/aed100a140999ba6f967925524be8400ac7859fa">Oct 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/getting-started/AppbaseSearch.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-appbasesearch">AppbaseSearch</h2><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">AppbaseSearch</span><span class="pln">
-  inputData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">props</span><span class="pun">.</span><span class="pln">mapping</span><span class="pun">.</span><span class="pln">venue</span><span class="pun">}</span><span class="pln">
-  sensorId</span><span class="pun">=</span><span class="string"><span class="str">"VenueSensor"</span></span><span class="pln">
-  placeholder</span><span class="pun">=</span><span class="string"><span class="str">"Search Venue"</span></span><span class="pln">
-  depends</span><span class="pun">={{</span><span class="pln">
-    </span><span class="string"><span class="str">'CitySensor'</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-      </span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pun">,</span><span class="pln">
-      </span><span class="string"><span class="str">"doNotExecute"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-  </span><span class="pun">}}</span><span class="pln">
-</span><span class="pun">/&gt;</span></code></pre><ul>
-<li><strong class="li-title">sensorId</strong> : <code>string</code>: should be unique id of sensor which can be used in other sensor’s dependencies.   </li>
-<li><strong class="li-title">inputData</strong> : <code>string</code>: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map   </li>
-<li><strong class="li-title">placeholder</strong> : <code>string</code>: is use to apply placeholder value in searchbox    </li>
-<li><strong class="li-title">depends</strong>: <code>Object</code>: It should contain the sensors on which component is dependent. <a href="https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html">read more</a></li>
-</ul></div>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/6fc5b409d86adf2105b099c5642bc0e5274711e7">Dec 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/map-components/ReactiveMap.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h3 id="-appbasemap-component">AppbaseMap component</h3><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">ReactiveMap</span><span class="pln">
+    inputData</span><span class="pun">=</span><span class="string"><span class="str">"venue"</span></span><span class="pln">
+    defaultZoom</span><span class="pun">={</span><span class="number"><span class="lit">13</span></span><span class="pun">}</span><span class="pln">
+    defaultCenter</span><span class="pun">={{</span><span class="pln"> lat</span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="number"><span class="lit">37</span></span><span class="lit">.</span><span class="number"><span class="lit">74</span></span></span><span class="pun">,</span><span class="pln"> lng</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="number"><span class="number"><span class="lit">122</span></span><span class="lit">.</span><span class="number"><span class="lit">45</span></span></span><span class="pln"> </span><span class="pun">}}</span><span class="pln">
+    historicalData</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+    markerCluster</span><span class="pun">={</span><span class="kwd">false</span><span class="pun">}</span><span class="pln">
+    markerOnDelete</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">markerOnDelete</span><span class="pun">}</span><span class="pln">
+    markerOnIndex</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">markerOnIndex</span><span class="pun">}</span><span class="pln">
+    markerOnClick</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">markerOnClick</span><span class="pun">}</span><span class="pln">
+    markerOnDblclick</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">markerOnDblclick</span><span class="pun">}</span><span class="pln">
+    markerOnMouseover</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">markerOnMouseover</span><span class="pun">}</span><span class="pln">
+    markerOnMouseout</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">markerOnMouseout</span><span class="pun">}</span><span class="pln"> 
+    mapStyle</span><span class="pun">=</span><span class="string"><span class="str">"Blue Water"</span></span><span class="pln">
+    autoCenter</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+    searchAsMoveComponent</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+    </span><span class="typ">MapStylesComponent</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+    title</span><span class="pun">=</span><span class="string"><span class="str">"Reactive Maps"</span></span><span class="pln">
+    depends</span><span class="pun">={{</span><span class="pln">
+      </span><span class="typ">CitySensor</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pun">},</span><span class="pln">
+      </span><span class="typ">TopicSensor</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"defaultQuery"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">topicDepends</span><span class="pun">},</span><span class="pln">
+      </span><span class="typ">RangeSensor</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pun">},</span><span class="pln">
+      </span><span class="typ">VenueSensor</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}}</span><span class="pln"> </span><span class="pun">/&gt;</span></code></pre><ul>
+<li><code>appbaseField</code>: <code>string</code>: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map    </li>
+<li><code>historicalData</code>: <code>Boolean</code>: is the boolean field which on true, shows the old results and on false, will only run searchstream(). Defaulted to <code>true</code>    </li>
+<li><code>markerCluster</code>: <code>Boolean</code>: is the property which decides on clustering the markers. Defaulted to <code>true</code>        </li>
+<li><code>mapStyle</code>: is the property which set the default map style. Available options for mapStyle is: <code>"MapBox"</code>, <code>"Blue Essence"</code>, <code>"Blue Water"</code>,  <code>"Flat Map"</code>,  <code>"Light Monochrome"</code>,  <code>"Midnight Commander"</code>,  <code>"Unsaturated Browns"</code>.  </li>
+<li><code>autoCenter</code>: <code>Boolean</code>: is the property which decides whether to change center of map according to result or not.</li>
+<li><code>searchAsMoveComponent</code>: <code>Boolean</code>: is the property which decides whether to include search as move (internal component) component or not. Defaults to false.</li>
+<li><code>mapStylesComponent</code>: <code>Boolean</code>: is the property which decides whether to include map style chooser component or not.  </li>
+<li><code>title</code>: <code>string</code>: is the property which sets the title.</li>
+<li><code>depends</code>: <code>object</code>: is the property where user can specify the dependency on sensors.</li>
+<li><p><strong class="li-title">onData</strong>: is the event which is fired when one or more markers are indexed, updated or removed from the map. It takes an object with the following properties:</p>
+<pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+mode</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">'historic'</span></span><span class="pln"> or </span><span class="string"><span class="str">'streaming'</span></span><span class="pun">,</span><span class="pln">
+newData</span><span class="pun">:</span><span class="pln"> data which is the response of xhr call or streaming data</span><span class="pun">,</span><span class="pln">
+currentData</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Array</span><span class="pln"> of all existing markers data in the view </span><span class="pun">(</span><span class="pln">should be </span><span class="pun">[]</span><span class="pln"> on query change</span><span class="pun">),</span><span class="pln">
+appliedQuery</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Raw</span><span class="pln"> query object</span><span class="pun">,</span><span class="pln">
+took</span><span class="pun">:</span><span class="pln"> time in milliseconds </span><span class="pun">(</span><span class="pln">optional</span><span class="pun">,</span><span class="pln"> only applicable when mode is historic</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>and also user can return the markup which will be append inside map (as ex. Polygon, circles, rectangles can be return using <a href="https://github.com/tomchentw/react-google-maps">react-component</a> ).</p>
+</li>
+<li><p><strong class="li-title">mapOnIdle</strong>: is the event which is fired when map reached to its idle state after dragging or zooming effect. It has argument which contains </p>
+<pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+boundingBoxCoordinates</span><span class="pun">:</span><span class="pln"> object which contains top_left</span><span class="pun">,</span><span class="pln"> bottom_right of current map bounds</span><span class="pun">,</span><span class="pln">
+mapBounds</span><span class="pun">:</span><span class="pln"> original map bounds which is returned by map
+</span><span class="pun">}</span></code></pre>
+<p>and also user can return the markup which will be append inside map (as ex. Polygon, circles, rectangles can be return using <a href="https://github.com/tomchentw/react-google-maps">react-component</a> ).</p>
+</li>
+<li><p><strong class="li-title">Events</strong>:  <code>markerOnClick</code>, <code>markerOnDblclick</code>, <code>markerOnMouseover</code>, <code>markerOnMouseout</code> are the events which will be fired on click, doubleclick, mouse over, mouse out actions on markers.   </p>
+</li>
+<li><strong class="li-title">searchAsMoveDefault</strong>: <code>Boolean</code>: is the property which set the default value of <code>searchAsMove</code> component. By default it’s value is false.  /</li>
+<li><strong class="li-title">streamActiveTime</strong>: <code>Number</code>: (default: 5) is the property which decides the time interval of streaming marker, after that time period marker icon will be converted to normal icon.</li>
+</ul><h3 id="-css-styles">CSS Styles</h3><h3 id="-examples">Examples</h3><ol>
+<li><p>ReactiveMap with all the default props.</p>
+</li>
+<li><p>ReactiveMap with a search sensor on the map.</p>
+</li>
+<li><p>ReactiveMap with historical and realtime data.</p>
+</li>
+<li><p>ReactiveMap with events example.</p>
+</li>
+<li><p>ReactiveMap with weather data.</p>
+</li>
+</ol></div>
   	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1/getting-started/AppbaseList.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1/getting-started/start.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1/getting-started/AppbaseSlider.html class="paginationLink pull-right">Next</a>
+					<a href=./v1/mapping/mapping.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
