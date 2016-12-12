@@ -41,6 +41,10 @@ var docbaseConfig = {
             "label": "RangeSlider"
           },
           {
+            "name": "ResultList",
+            "label": "ResultList"
+          },
+          {
             "name": "SingleList",
             "label": "SingleList"
           },

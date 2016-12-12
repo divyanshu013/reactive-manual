@@ -33,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
     <div class="pull-left  hidden-xs" id="folder-navbar">
       <ul class="nav navbar-nav folder-li">
-        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="components" href=./v1/components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">components</span>
            </a>
@@ -60,7 +60,7 @@
               <a ng-href=./v1/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/contribution/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="contribution" href=./v1/contribution/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">contribution</span>
            </a>
@@ -71,7 +71,7 @@
               <a ng-href=./v1/contribution/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/contribution/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/getting-started/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="getting-started" href=./v1/getting-started/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">getting-started</span>
            </a>
@@ -92,7 +92,7 @@
               <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/mapping/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="mapping" href=./v1/mapping/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">mapping</span>
            </a>
@@ -105,7 +105,7 @@
           </ul>
         </li><!-- end ngRepeat: folder in map[currentVersion] -->
       </ul>
-      <ul class="nav navbar-nav category-li">
+      <ul class="nav navbar-nav category-li" style="display: block; ">
         <li class="dropdown menu-large">
           <a class="dropdown-toggle pointer" data-toggle="dropdown">more <b class="caret"></b></a>
           <ul class="dropdown-menu megamenu row">
@@ -187,7 +187,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -309,37 +309,61 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-singlelist-item" class="level-2"><a id="-singlelist-link" href="./v1/components/SingleList.html#-singlelist" class="level-2" pref="#-singlelist">SingleList</a><ul class="level-3" id="-singlelist-list"><li id="-singlelist-props-item" class="level-3"><a id="-singlelist-props-link" href="./v1/components/SingleList.html#-singlelist-props" class="level-3" pref="#-singlelist-props">Props</a></li><li id="-singlelist-css-styles-item" class="level-3"><a id="-singlelist-css-styles-link" href="./v1/components/SingleList.html#-singlelist-css-styles" class="level-3" pref="#-singlelist-css-styles">CSS Styles</a></li><li id="-singlelist-examples-item" class="level-3"><a id="-singlelist-examples-link" href="./v1/components/SingleList.html#-singlelist-examples" class="level-3" pref="#-singlelist-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-resultlist-item" class="level-2"><a id="-resultlist-link" href="./v1/components/ResultList.html#-resultlist" class="level-2" pref="#-resultlist">ResultList</a><ul class="level-3" id="-resultlist-list"><li id="-resultlist-props-item" class="level-3"><a id="-resultlist-props-link" href="./v1/components/ResultList.html#-resultlist-props" class="level-3" pref="#-resultlist-props">Props</a></li><li id="-resultlist-extending-resultlist-item" class="level-3"><a id="-resultlist-extending-resultlist-link" href="./v1/components/ResultList.html#-resultlist-extending-resultlist" class="level-3" pref="#-resultlist-extending-resultlist">Extending ResultList</a></li><li id="-resultlist-css-styles-item" class="level-3"><a id="-resultlist-css-styles-link" href="./v1/components/ResultList.html#-resultlist-css-styles" class="level-3" pref="#-resultlist-css-styles">CSS Styles</a></li><li id="-resultlist-examples-item" class="level-3"><a id="-resultlist-examples-link" href="./v1/components/ResultList.html#-resultlist-examples" class="level-3" pref="#-resultlist-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/e4e39c6702c9177681b04e3d415b9c3b85b3cdc4">Dec 9, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/components/SingleList.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-singlelist">SingleList</h2><p>A <code>SingleList</code> component creates a single radio select list widget. It’s useful for building a selecting a category amongst many categories of items, like in an online shopping experience.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">SingleList</span><span class="pln">
-  sensorId</span><span class="pun">=</span><span class="string"><span class="str">"CitySensor"</span></span><span class="pln">
-  appbaseField</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">props</span><span class="pun">.</span><span class="pln">mapping</span><span class="pun">.</span><span class="pln">city</span><span class="pun">}</span><span class="pln">
-  title</span><span class="pun">=</span><span class="string"><span class="str">"Cities"</span></span><span class="pln">
-  defaultSelected</span><span class="pun">=</span><span class="string"><span class="str">"London"</span></span><span class="pln">
-  showCount</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
-  size</span><span class="pun">={</span><span class="number"><span class="lit">1000</span></span><span class="pun">}</span><span class="pln">
-  sortBy</span><span class="pun">=</span><span class="string"><span class="str">"asc"</span></span><span class="pln">
-  showSearch</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
-  searchPlaceholder</span><span class="pun">=</span><span class="string"><span class="str">"Search City"</span></span><span class="pln">
-</span><span class="pun">/&gt;</span></code></pre><h3 id="-singlelist-props">Props</h3><ul>
-<li><strong class="li-title">sensorId</strong> : <code>String</code>: should be unique id of sensor which can be used in other sensor’s dependencies.   </li>
-<li><strong class="li-title">appbaseField</strong> : <code>String</code>: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map   </li>
-<li><strong class="li-title">title</strong>: <code>String</code>: Set the title of the component, to be shown in the UI.</li>
-<li><strong class="li-title">defaultSelected</strong> : <code>string</code>: is the default selected value.   </li>
-<li><strong class="li-title">showCount</strong>: <code>Boolean</code>: is the boolean option for whether displaying the count along with the items. Defaults to <code>true</code>.  </li>
-<li><strong class="li-title">size</strong>: <code>number</code>: is the number field which decides how many items needs to be displayed in the List. Defaults to 100.    </li>
-<li><strong class="li-title">sortBy</strong>: <code>count</code> or <code>asc</code> or <code>desc</code>: is the property which decides on how the list should be sorted. <code>count</code> sorts the list based on the count in the desc order. <code>asc</code> sorts the list in the ascending order of the term (Alphabetical). <code>desc</code> sorts the list in the descending order of the term. Defaulted to <code>count</code>.  </li>
-<li><strong class="li-title">showSearch</strong>: <code>Boolean</code>: (default false): By applying <code>true</code>, the component will show search box to filter from list.</li>
-<li><strong class="li-title">searchPlaceholder</strong>: <code>String</code>: Placeholder text applicable when <code>showSearch</code> prop is enabled.</li>
-<li><strong class="li-title">depends</strong>: <code>Object</code>: It should contain the sensors on which component is dependent. <a href="https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html">read more</a></li>
-</ul><h3 id="-singlelist-css-styles">CSS Styles</h3><h3 id="-singlelist-examples">Examples</h3><ol>
-<li><p>List with all the default props</p>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/71404cbe63357d14365ac9bb001c1ccbcc45f52d">Dec 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/components/ResultList.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-resultlist">ResultList</h2><p>A <code>ResultList</code> component creates a result list widget. Unlike other sensors whose states can be filtered by the end user, <code>ResultList</code> behaves as an actuator that displays the results of other sensor components in a list.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">ResultList</span><span class="pln">
+  sensorId</span><span class="pun">=</span><span class="string"><span class="str">"SearchResult"</span></span><span class="pln">
+  appbaseField</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">props</span><span class="pun">.</span><span class="pln">mapping</span><span class="pun">.</span><span class="pln">searchKey</span><span class="pun">}</span><span class="pln">
+  title</span><span class="pun">=</span><span class="string"><span class="str">"Result List"</span></span><span class="pln">
+  sortBy</span><span class="pun">=</span><span class="string"><span class="str">"desc"</span></span><span class="pln">
+  from</span><span class="pun">={</span><span class="number"><span class="lit">0</span></span><span class="pun">}</span><span class="pln">
+  size</span><span class="pun">={</span><span class="number"><span class="lit">10</span></span><span class="pun">}</span><span class="pln">
+  requestOnScroll</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  componentStyle</span><span class="pun">={</span><span class="pln">height</span><span class="pun">:</span><span class="string"><span class="str">'</span><span class="number"><span class="str">700</span></span><span class="str">px'</span></span><span class="pun">,</span><span class="pln"> overflow</span><span class="pun">:</span><span class="string"><span class="str">'auto'</span></span><span class="pun">}</span><span class="pln">
+  onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln">
+  depends</span><span class="pun">={{</span><span class="pln">
+    </span><span class="string"><span class="str">"CitySensor"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="string"><span class="str">"SearchSensor"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h3 id="-resultlist-props">Props</h3><ul>
+<li><strong class="li-title">sensorId</strong> : <code>String</code>: Unique id of the sensor.  </li>
+<li><strong class="li-title">appbaseField</strong> : <code>String</code>: Data field associated with the <code>ResultList</code> sensor, useful for providing a sort context.  </li>
+<li><strong class="li-title">title</strong>: <code>String</code>: Set the title of the component, to be shown in the UI.      </li>
+<li><strong class="li-title">sortBy</strong>: <code>String</code>: Allows sorting of results by <code>default</code>, <code>asc</code> or <code>desc</code> order. The list is already sorted by relevancy of matches to the applied sensors. <code>asc</code> sorts the list in the ascending order of the associated appbaseField’s value (Alphabetical). <code>desc</code> sorts the list based on the appbaseField value in the descending order.  </li>
+<li><strong class="li-title">from</strong>: <code>Number</code>: is the starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.  </li>
+<li><strong class="li-title">size</strong>: <code>Number</code>: is the number of results to be shown per page. Defaults to 20.  </li>
+<li><strong class="li-title">requestOnScroll</strong>: <code>Boolean</code>: Should a paginate data request be made when scroll reaches the end of the component view? Defaults to <code>true</code>, allowing an infinite scroll functionality.  </li>
+<li><strong class="li-title">onData</strong>: <code>Function</code>: A callback function where user can define how to render the view based on the data changes.     </li>
+<li><strong class="li-title">depends</strong>: <code>Object</code>: An object defining the sensor components that trigger the <code>ResultList</code> query. <a href="https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html">read more</a>.</li>
+</ul><h3 id="-resultlist-extending-resultlist">Extending ResultList</h3><p><code>onData</code> prop registers a function callback which triggers with the following parameters every time there is a change in the data view of the <code>ResultList</code> component.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">(</span><span class="pln">mode</span><span class="pun">,</span><span class="pln"> response</span><span class="pun">,</span><span class="pln"> currentData</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">took</span><span class="pun">,]</span><span class="pln"> appliedQuery</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">mode</span><span class="pun">,</span><span class="pln"> response</span><span class="pun">,</span><span class="pln"> currentData</span><span class="pun">,</span><span class="pln"> appliedQuery</span><span class="pun">)</span><span class="pln">
+  </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">mode </span><span class="pun">===</span><span class="pln"> </span><span class="string"><span class="str">"historic"</span></span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"time taken for response is: "</span></span><span class="pun">+</span><span class="pln">took</span><span class="pun">+</span><span class="string"><span class="str">" ms"</span></span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> currentData </span><span class="pun">+</span><span class="pln"> response</span><span class="pun">;</span><span class="pln"> </span><span class="comment"><span class="com">// infinite scroll functionality</span></span><span class="pln">
+  </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"New streaming update: "</span></span><span class="pun">,</span><span class="pln"> response</span><span class="pun">);</span><span class="pln">
+    currentData</span><span class="pun">.</span><span class="pln">unshift</span><span class="pun">(</span><span class="pln">response</span><span class="pun">);</span><span class="pln">
+    </span><span class="comment"><span class="com">// add markup per element.</span></span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> currentData</span><span class="pun">;</span><span class="pln">           </span><span class="comment"><span class="com">// show streaming update functionality</span></span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>The callback function returns an Array of HTML elements (think list items) which are then rendered to the view.  </p><p><strong>Usage</strong>:  </p><ul>
+<li><strong class="li-title">mode</strong>: <code>String</code>: “historic” when results are returned from the existing dataset and “streaming” when new results are matched.  </li>
+<li><strong class="li-title">response</strong>: <code>Object</code>: An object array when returning historic data results or a single object for streaming mode updates.  </li>
+<li><strong class="li-title">currentData</strong>: <code>Array Object</code>: An array of the result objects being shown in the current component view.  </li>
+<li><strong class="li-title">took</strong>: <code>Number</code>: Time taken in milliseconds (only applicable when mode is “historic”.  </li>
+<li><strong class="li-title">appliedQuery</strong>: <code>Object</code>: Raw query object that triggered the function callback, useful for debugging.</li>
+</ul><h3 id="-resultlist-css-styles">CSS Styles</h3><h3 id="-resultlist-examples">Examples</h3><ol>
+<li><p>ResultList with all the default props with a single sensor filter.</p>
 </li>
-<li><p>List with custom sort and a default selection</p>
+<li><p>ResultList with an infinite scroll with a single sensor filter.</p>
 </li>
-<li><p>List with show search set to true</p>
+<li><p>ResultList with a pagination view based on a search and a filter sensor.</p>
 </li>
-<li><p>List with a dependency on another sensor</p>
+<li><p>ResultList that shows streaming updates.</p>
 </li>
 <li><p>Playground (with all knob actions)</p>
 </li>
@@ -348,10 +372,10 @@
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1/components/ResultList.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1/components/RangeSlider.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1/components/SingleRange.html class="paginationLink pull-right">Next</a>
+					<a href=./v1/components/SingleList.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
