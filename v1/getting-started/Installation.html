@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc" class="no-literate big-h3">
+<body role="flatdoc" class="no-literate">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -291,82 +291,17 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-resultlist-item" class="level-2"><a id="-resultlist-link" href="./v1/components/ResultList.html#-resultlist" class="level-2" pref="#-resultlist">ResultList</a><ul class="level-3" id="-resultlist-list"><li id="-resultlist-props-item" class="level-3"><a id="-resultlist-props-link" href="./v1/components/ResultList.html#-resultlist-props" class="level-3" pref="#-resultlist-props">Props</a></li><li id="-resultlist-extending-resultlist-item" class="level-3"><a id="-resultlist-extending-resultlist-link" href="./v1/components/ResultList.html#-resultlist-extending-resultlist" class="level-3" pref="#-resultlist-extending-resultlist">Extending ResultList</a></li><li id="-resultlist-css-styles-item" class="level-3"><a id="-resultlist-css-styles-link" href="./v1/components/ResultList.html#-resultlist-css-styles" class="level-3" pref="#-resultlist-css-styles">CSS Styles</a></li><li id="-resultlist-examples-item" class="level-3"><a id="-resultlist-examples-link" href="./v1/components/ResultList.html#-resultlist-examples" class="level-3" pref="#-resultlist-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-installation-item" class="level-2"><a id="-installation-link" href="./v1/getting-started/Installation.html#-installation" class="level-2" pref="#-installation">Installation</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/e98f3416b1b31566d8209ca93768cff0098133fb">Dec 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/components/ResultList.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><p>{% raw %}</p><h2 id="-resultlist">ResultList</h2><p>A <code>ResultList</code> component creates a result list widget. Unlike other sensors whose states can be filtered by the end user, <code>ResultList</code> behaves as an actuator that displays the results of other sensor components in a list.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">ResultList</span><span class="pln">
-  sensorId</span><span class="pun">=</span><span class="string"><span class="str">"SearchResult"</span></span><span class="pln">
-  appbaseField</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">props</span><span class="pun">.</span><span class="pln">mapping</span><span class="pun">.</span><span class="pln">searchKey</span><span class="pun">}</span><span class="pln">
-  title</span><span class="pun">=</span><span class="string"><span class="str">"Result List"</span></span><span class="pln">
-  sortBy</span><span class="pun">=</span><span class="string"><span class="str">"desc"</span></span><span class="pln">
-  from</span><span class="pun">={</span><span class="number"><span class="lit">0</span></span><span class="pun">}</span><span class="pln">
-  size</span><span class="pun">={</span><span class="number"><span class="lit">10</span></span><span class="pun">}</span><span class="pln">
-  requestOnScroll</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
-  componentStyle</span><span class="pun">={{</span><span class="pln">height</span><span class="pun">:</span><span class="string"><span class="str">'</span><span class="number"><span class="str">700</span></span><span class="str">px'</span></span><span class="pun">,</span><span class="pln"> overflow</span><span class="pun">:</span><span class="string"><span class="str">'auto'</span></span><span class="pun">}}</span><span class="pln">
-  onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln">
-  depends</span><span class="pun">={{</span><span class="pln">
-    </span><span class="string"><span class="str">"CitySensor"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-      </span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pln">
-    </span><span class="pun">},</span><span class="pln">
-    </span><span class="string"><span class="str">"SearchSensor"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-      </span><span class="string"><span class="str">"operation"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"must"</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-  </span><span class="pun">}}</span><span class="pln">
-</span><span class="pun">/&gt;</span></code></pre><h3 id="-resultlist-props">Props</h3><ul>
-<li><strong class="li-title">sensorId</strong> : <code>String</code>: Unique id of the sensor.  </li>
-<li><strong class="li-title">appbaseField</strong> : <code>String</code>: Data field associated with the <code>ResultList</code> sensor, useful for providing a sort context.  </li>
-<li><strong class="li-title">title</strong>: <code>String</code>: Set the title of the component, to be shown in the UI.      </li>
-<li><strong class="li-title">sortBy</strong>: <code>String</code>: Allows sorting of results by <code>default</code>, <code>asc</code> or <code>desc</code> order. The list is already sorted by relevancy of matches to the applied sensors. <code>asc</code> sorts the list in the ascending order of the associated appbaseField’s value (Alphabetical). <code>desc</code> sorts the list based on the appbaseField value in the descending order.  </li>
-<li><strong class="li-title">from</strong>: <code>Number</code>: is the starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.  </li>
-<li><strong class="li-title">size</strong>: <code>Number</code>: is the number of results to be shown per page. Defaults to 20.  </li>
-<li><strong class="li-title">requestOnScroll</strong>: <code>Boolean</code>: Should a paginate data request be made when scroll reaches the end of the component view? Defaults to <code>true</code>, allowing an infinite scroll functionality.  </li>
-<li><strong class="li-title">componentStyle</strong>: <code>Object</code>: CSS Styles to be applied to the <strong>ResultList</strong> component.  </li>
-<li><strong class="li-title">onData</strong>: <code>Function</code>: A callback function where user can define how to render the view based on the data changes.     </li>
-<li><strong class="li-title">depends</strong>: <code>Object</code>: An object defining the sensor components that trigger the <code>ResultList</code> query. <a href="https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html">read more</a>.</li>
-</ul><h3 id="-resultlist-extending-resultlist">Extending ResultList</h3><p><code>onData</code> prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the <code>ResultList</code> view.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="comment"><span class="com">// Register a callback function with the `onData` prop.</span></span><span class="pln">
-</span><span class="pun">&lt;</span><span class="typ">ResultList</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">/&gt;</span><span class="pln">
-
-</span><span class="comment"><span class="com">// Callback function returns an Arry of HTML elements to be rendered as ResultList items.</span></span><span class="pln">
-</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">(</span><span class="pln">res</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">err</span><span class="pun">])</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">res</span><span class="pun">.</span><span class="pln">mode</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">newData</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">currentData</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">appliedQuery</span><span class="pun">);</span><span class="pln">
-  </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">res</span><span class="pun">.</span><span class="pln">mode </span><span class="pun">===</span><span class="pln"> </span><span class="string"><span class="str">"historic"</span></span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"time taken for response is: "</span></span><span class="pun">+</span><span class="pln">took</span><span class="pun">+</span><span class="string"><span class="str">"ms"</span></span><span class="pun">);</span><span class="pln">
-    </span><span class="kwd">return</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">currentData </span><span class="pun">+</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">newData</span><span class="pun">;</span><span class="pln"> </span><span class="comment"><span class="com">// infinite scroll functionality</span></span><span class="pln">
-  </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"New streaming update: "</span></span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">newData</span><span class="pun">);</span><span class="pln">
-    res</span><span class="pun">.</span><span class="pln">currentData</span><span class="pun">.</span><span class="pln">unshift</span><span class="pun">(</span><span class="pln">res</span><span class="pun">.</span><span class="pln">newData</span><span class="pun">);</span><span class="pln">
-    </span><span class="comment"><span class="com">// add markup per element.</span></span><span class="pln">
-    </span><span class="kwd">return</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">currentData</span><span class="pun">;</span><span class="pln">               </span><span class="comment"><span class="com">// show streaming update functionality</span></span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>The callback function returns an Array of HTML elements (think list items) which are then rendered to the view as ResultList items.  </p><p><strong>Usage</strong>:  </p><ul>
-<li><strong class="li-title">res</strong>: <code>Object</code> Response object containing:  <ul>
-<li><strong class="li-title">mode</strong>: <code>String</code>: “historic” when results are returned from the existing dataset and “streaming” when new results are matched.  </li>
-<li><strong class="li-title">newData</strong>: <code>Object</code>: An object array when returning historic data results or a single object for streaming mode updates.  </li>
-<li><strong class="li-title">currentData</strong>: <code>Array Object</code>: An array of the result objects being shown in the current component view.  </li>
-<li><strong class="li-title">appliedQuery</strong>: <code>Object</code>: Raw query object that triggered the function callback, useful for debugging.  </li>
-<li><strong class="li-title">took</strong>: <code>Number</code>: (Optional) Time taken in milliseconds, only passed when the mode is “historic”.</li>
-</ul>
-</li>
-<li><strong class="li-title">err</strong>: <code>Object</code> Error object. </li>
-</ul><h3 id="-resultlist-css-styles">CSS Styles</h3><h3 id="-resultlist-examples">Examples</h3><ol>
-<li><p>ResultList with all the default props with a single sensor filter.</p>
-</li>
-<li><p>ResultList with an infinite scroll with a single sensor filter.</p>
-</li>
-<li><p>ResultList with a pagination view based on a search and a filter sensor.</p>
-</li>
-<li><p>ResultList that shows streaming updates.</p>
-</li>
-<li><p>Playground (with all knob actions)</p>
-</li>
-</ol><p>{% endraw %}</p></div>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/f8ea69afdce3f31bcda3af9d3211b99515e10197">Dec 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/getting-started/Installation.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-installation">Installation</h2><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pln">npm install</span></code></pre><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pln">npm run webpack</span><span class="pun">-</span><span class="pln">server</span></code></pre></div>
   	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1/components/DataSearch.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1/getting-started/Dependency.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1/map-components/ReactiveMap.html class="paginationLink pull-right">Next</a>
+					<a href=./v1/getting-started/Start.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>

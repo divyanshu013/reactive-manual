@@ -1,131 +1,105 @@
-var docbaseConfig = {
-  "method": "github",
-  "generic": {
-    "baseurl": "",
-    "path": ""
-  },
-  "file": {
-    "path": ""
-  },
-  "github": {
-    "user": "appbaseio",
-    "repo": "reactive-maps-docs",
-    "path": "docs",
-    "branch": "master",
-    "access_token": "OTAwNDU5MTk4M2NlYzViYzQxNzFlN2E3Yjk1MWQ2ZjhkODRjMTg5Yg=="
-  },
-  "indexHtml": "./html/main.html",
-  "flatdocHtml": "./bower_components/docbase/html/flatdoc.html",
-  "default_version": "",
-  "manual_override": false,
-  "versions": {
-    "v1": [
-      {
-        "label": "components",
-        "name": "components",
-        "files": [
-          {
-            "name": "DataSearch",
-            "label": "DataSearch"
-          },
-          {
-            "name": "MultiList",
-            "label": "MultiList"
-          },
-          {
-            "name": "MultiRange",
-            "label": "MultiRange"
-          },
-          {
-            "name": "RangeSlider",
-            "label": "RangeSlider"
-          },
-          {
-            "name": "ResultList",
-            "label": "ResultList"
-          },
-          {
-            "name": "SingleList",
-            "label": "SingleList"
-          },
-          {
-            "name": "SingleRange",
-            "label": "SingleRange"
-          },
-          {
-            "name": "TextField",
-            "label": "TextField"
-          },
-          {
-            "name": "ToggleButton",
-            "label": "ToggleButton"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "contribution",
-        "name": "contribution",
-        "files": [
-          {
-            "name": "contribution",
-            "label": "contribution"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "getting-started",
-        "name": "getting-started",
-        "files": [
-          {
-            "name": "Dependency",
-            "label": "Dependency"
-          },
-          {
-            "name": "start",
-            "label": "start"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "map-components",
-        "name": "map-components",
-        "files": [
-          {
-            "name": "ReactiveMap",
-            "label": "ReactiveMap"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "mapping",
-        "name": "mapping",
-        "files": [
-          {
-            "name": "mapping",
-            "label": "mapping"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      }
-    ]
-  }
-};
+var docbaseConfig ={
+   "method":"github",
+   "generic":{
+      "baseurl":"",
+      "path":""
+   },
+   "file":{
+      "path":""
+   },
+   "github":{
+      "user":"appbaseio",
+      "repo":"reactive-maps-docs",
+      "path":"docs",
+      "branch":"master",
+      "access_token":"OTAwNDU5MTk4M2NlYzViYzQxNzFlN2E3Yjk1MWQ2ZjhkODRjMTg5Yg=="
+   },
+   "indexHtml":"./html/main.html",
+   "flatdocHtml":"./bower_components/docbase/html/flatdoc.html",
+   "default_version":"v1",
+   "manual_override":true,
+   "versions":{
+      "v1":[
+         {
+            "name":"getting-started",
+            "label":"Getting Started",
+            "files":[
+               {
+                  "name":"Dependency",
+                  "label":"Dependency"
+               },
+               {
+                  "name":"Installation",
+                  "label":"Installation"
+               },
+               {
+                  "name":"Start",
+                  "label":"Quick Start"
+               }
+            ]
+         },
+         {
+            "name":"components",
+            "label":"Sensor Components",
+            "files":[
+               {
+                  "name":"SingleList",
+                  "label":"Single List"
+               },
+               {
+                  "name":"MultiList",
+                  "label":"Multi List"
+               },
+               {
+                  "name":"SingleRange",
+                  "label":"Single Range"
+               },
+               {
+                  "name":"MultiRange",
+                  "label":"Multi Range"
+               },
+               {
+                  "name":"RangeSlider",
+                  "label":"Range Slider"
+               },
+               {
+                  "name":"ToggleButton",
+                  "label":"Toggle Button"
+               },
+               {
+                  "name":"TextField",
+                  "label":"Text Field"
+               },
+               {
+                  "name":"DataSearch",
+                  "label":"Data Search"
+               },
+               {
+                  "name":"ResultList",
+                  "label":"Result List"
+               }
+            ]
+         },
+         {
+            "name":"map-components",
+            "label":"Sensors for Map",
+            "files":[
+               {
+                  "name":"ReactiveMap",
+                  "label":"Reactive Map"
+               }
+            ]
+         },
+         {
+            "name":"mapping",
+            "label":"Data Mappings",
+            "files":[
+               {
+                  "name":"mapping",
+                  "label":"Data Mappings"
+               }
+            ]
+         }
+      ]
+   }
+}
