@@ -33,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
     <div class="pull-left  hidden-xs" id="folder-navbar">
       <ul class="nav navbar-nav folder-li">
-        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="components" href=./v1/components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">components</span>
            </a>
@@ -60,7 +60,7 @@
               <a ng-href=./v1/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/contribution/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="contribution" href=./v1/contribution/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">contribution</span>
            </a>
@@ -71,7 +71,7 @@
               <a ng-href=./v1/contribution/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/contribution/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/getting-started/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="getting-started" href=./v1/getting-started/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">getting-started</span>
            </a>
@@ -84,7 +84,7 @@
               <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/map-components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="map-components" href=./v1/map-components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">map-components</span>
            </a>
@@ -95,7 +95,7 @@
               <a ng-href=./v1/map-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/map-components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/mapping/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="mapping" href=./v1/mapping/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">mapping</span>
            </a>
@@ -108,7 +108,7 @@
           </ul>
         </li><!-- end ngRepeat: folder in map[currentVersion] -->
       </ul>
-      <ul class="nav navbar-nav category-li">
+      <ul class="nav navbar-nav category-li" style="display: block; ">
         <li class="dropdown menu-large">
           <a class="dropdown-toggle pointer" data-toggle="dropdown">more <b class="caret"></b></a>
           <ul class="dropdown-menu megamenu row">
@@ -193,7 +193,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -320,9 +320,9 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-define-dependency-on-other-sensors-item" class="level-2"><a id="-define-dependency-on-other-sensors-link" href="./v1/getting-started/Dependency.html#-define-dependency-on-other-sensors" class="level-2" pref="#-define-dependency-on-other-sensors">Define dependency on other sensors</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/380408d9c8c835b0c6cc4a355d28d68c0be8d0c2">Dec 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/getting-started/Dependency.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-define-dependency-on-other-sensors">Define dependency on other sensors</h2><ul>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-maps-docs/commit/b369eef2be2ef641d782adcfab56492aded2adaf">Dec 12, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactive-maps-docs/tree/master/docs/v1/getting-started/Dependency.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><p>{% raw %}</p><h2 id="-define-dependency-on-other-sensors">Define dependency on other sensors</h2><ul>
 <li><strong class="li-title">depends</strong>: <code>Object</code>: it should contain the sensors on which component is dependent.</li>
-</ul><p>{% raw %}</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">AppbaseMap</span><span class="pln"> 
+</ul><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">AppbaseMap</span><span class="pln"> 
   </span><span class="pun">...</span><span class="pln">
 depends</span><span class="pun">={{</span><span class="pln">
     </span><span class="string"><span class="str">'SensorId'</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
@@ -331,7 +331,7 @@ depends</span><span class="pun">={{</span><span class="pln">
         </span><span class="string"><span class="str">"doNotExecute"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
     </span><span class="pun">}</span><span class="pln">
 </span><span class="pun">}}</span><span class="pln">
-</span><span class="pun">/&gt;</span></code></pre><p>{% endraw %}</p><ul>
+</span><span class="pun">/&gt;</span></code></pre><ul>
 <li><p><strong class="li-title">operation</strong>: <code>String</code>: It should be either <code>must</code> or <code>should</code>. It decides whether this query should be inside must clause or should clause.</p>
 </li>
 <li><p><strong class="li-title">defaultQuery</strong>: <code>Function</code>: (optional) this function will receive value of that particulat sensor and user needs to create query on basis of that and return the query, If you don’t specify defaultquery queryBuilder will include the default query of that sensor.</p>
@@ -350,7 +350,7 @@ depends</span><span class="pun">={{</span><span class="pln">
 </span><span class="tag">/&gt;</span></code></pre></li>
 <li><p>Topic Sensor should look like this</p>
 </li>
-</ol><p>{% raw %}</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">AppbaseList</span><span class="pln">
+</ol><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">AppbaseList</span><span class="pln">
     sensorId</span><span class="pun">=</span><span class="string"><span class="str">"TopicSensor"</span></span><span class="pln">
     inputData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">props</span><span class="pun">.</span><span class="pln">mapping</span><span class="pun">.</span><span class="pln">topic</span><span class="pun">}</span><span class="pln"> 
    </span><span class="pun">...</span><span class="pln">
