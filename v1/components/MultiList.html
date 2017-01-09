@@ -33,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
     <div class="pull-left  hidden-xs" id="folder-navbar">
       <ul class="nav navbar-nav folder-li">
-        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/getting-started/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Getting Started" href=./v1/getting-started/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Getting Started</span>
            </a>
@@ -50,7 +50,7 @@
               <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Sensor Components" href=./v1/components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Sensor Components</span>
            </a>
@@ -77,7 +77,7 @@
               <a ng-href=./v1/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/map-components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Sensors for Map" href=./v1/map-components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Sensors for Map</span>
            </a>
@@ -88,7 +88,7 @@
               <a ng-href=./v1/map-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/map-components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/mapping/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Data Mappings" href=./v1/mapping/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Data Mappings</span>
            </a>
@@ -101,7 +101,7 @@
           </ul>
         </li><!-- end ngRepeat: folder in map[currentVersion] -->
       </ul>
-      <ul class="nav navbar-nav category-li">
+      <ul class="nav navbar-nav category-li" style="display: block; ">
         <li class="dropdown menu-large">
           <a class="dropdown-toggle pointer" data-toggle="dropdown">more <b class="caret"></b></a>
           <ul class="dropdown-menu megamenu row">
@@ -179,7 +179,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><span class="twitter-typeahead" style="position: relative; display: inline-block; "><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" style="position: absolute; top: 0px; left: 0px; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size:  ; background-position: 0% 0%; background-repeat: repeat repeat; " readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent; "><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none; "></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; "><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -299,7 +299,7 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-multilist-item" class="level-2"><a id="-multilist-link" href="./v1/components/MultiList.html#-multilist" class="level-2" pref="#-multilist">MultiList</a><ul class="level-3" id="-multilist-list"><li id="-multilist-props-item" class="level-3"><a id="-multilist-props-link" href="./v1/components/MultiList.html#-multilist-props" class="level-3" pref="#-multilist-props">Props</a></li><li id="-multilist-css-styles-item" class="level-3"><a id="-multilist-css-styles-link" href="./v1/components/MultiList.html#-multilist-css-styles" class="level-3" pref="#-multilist-css-styles">CSS Styles</a></li><li id="-multilist-examples-item" class="level-3"><a id="-multilist-examples-link" href="./v1/components/MultiList.html#-multilist-examples" class="level-3" pref="#-multilist-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivebase-manual/commit/93ddc131bd05f543cf306f5f7ac60ae4db7f6ab4">Jan 1, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1/components/MultiList.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-multilist">MultiList</h2><p><img src="https://i.imgur.com/KuSUJyX.png" alt="Image to be displayed"></p><p>A <code>MultiList</code> component creates a multiple checkbox select list widget. It’s useful for building an e-commerce facet like search experience.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">MultiList</span><span class="pln">
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivebase-manual/commit/136a7680973e0ca0754d8c1801041499cf382862">Jan 9, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/metagrover" title="metagrover" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/9116042?v=3" alt="metagrover"></a><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1/components/MultiList.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-multilist">MultiList</h2><p><img src="https://i.imgur.com/KuSUJyX.png" alt="Image to be displayed"></p><p>A <code>MultiList</code> component creates a multiple checkbox select list widget. It’s useful for building an e-commerce facet like search experience.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">MultiList</span><span class="pln">
   sensorId</span><span class="pun">=</span><span class="string"><span class="str">"CitySensor"</span></span><span class="pln">
   appbaseField</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">props</span><span class="pun">.</span><span class="pln">mapping</span><span class="pun">.</span><span class="pln">city</span><span class="pun">}</span><span class="pln">
   title</span><span class="pun">=</span><span class="string"><span class="str">"Cities"</span></span><span class="pln">
@@ -320,7 +320,26 @@
 <li><strong class="li-title">showSearch</strong>: <code>Boolean</code>: (default false): By applying <code>true</code>, the component will show search box to filter from list.</li>
 <li><strong class="li-title">searchPlaceholder</strong>: <code>String</code>: Placeholder text applicable when <code>showSearch</code> prop is enabled.</li>
 <li><strong class="li-title">depends</strong>: <code>Object</code>: It should contain the sensors on which component is dependent. <a href="https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html">read more</a></li>
-</ul><h3 id="-multilist-css-styles">CSS Styles</h3><h3 id="-multilist-examples">Examples</h3><ol>
+</ul><h3 id="-multilist-css-styles">CSS Styles</h3><p>All reactivebase components are <code>rbc</code> namespaced.</p><pre><code class="lang-html prettyprint prettyprinted" style=""><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc rbc-multilist col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv"> card thumbnail rbc-search-active rbc-title-active rbc-placeholder-active"</span></span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;h</span><span class="number"><span class="tag">4</span></span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-title col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv">"</span></span><span class="tag">&gt;</span><span class="pln">Cities</span><span class="tag">&lt;/h</span><span class="number"><span class="tag">4</span></span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-search-container col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv">"</span></span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="string"><span class="atv">"text"</span></span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-input col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv"> form-control"</span></span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="string"><span class="atv">""</span></span><span class="pln"> </span><span class="atn">placeholder</span><span class="pun">=</span><span class="string"><span class="atv">"Search City"</span></span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-list-container col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv">"</span></span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-list-item row"</span></span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="string"><span class="atv">"checkbox"</span></span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-checkbox-item"</span></span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="string"><span class="atv">"London"</span></span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;label</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-label"</span></span><span class="tag">&gt;</span><span class="pln">London </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-count"</span></span><span class="tag">&gt;</span><span class="pln">(</span><span class="number"><span class="pln">211</span></span><span class="pln">)</span><span class="tag">&lt;/span&gt;&lt;/label&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></code></pre><ul>
+<li>Multilist component’s class name is <code>rbc-multilist</code>. Additionally, depending on the presence / absence of the <code>title</code> prop, a <code>rbc-title-active</code> or <code>rbc-title-inactive</code> class is respectively applied. Similarly for <code>search</code> and <code>searchPlaceholder</code> props, classnames of <code>rbc-search-active</code>, <code>rbc-search-inactive</code>, <code>rbc-placeholder-active</code>, <code>rbc-placeholder-active</code> are applied.</li>
+<li>the title element has a class name of <code>rbc-title</code>.</li>
+<li>the search element has a class name of <code>rbc-search-container</code>.</li>
+<li>the checkbox inputs are encapsulated inside a <code>rbc-list-container</code> class with each element having class name of <code>rbc-list-item</code>.</li>
+<li>the input checkbox element has a class name of <code>rbc-checkbox-item</code>.</li>
+<li>the label element has a class name of <code>rbc-label</code>.</li>
+<li>the element containing count inside the label has a class name of <code>rbc-count</code>.</li>
+</ul><h3 id="-multilist-examples">Examples</h3><ol>
 <li><p>List with all the default props</p>
 </li>
 <li><p>List with custom sort and a default selection</p>
