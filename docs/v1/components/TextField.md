@@ -2,9 +2,11 @@
 
 ## TextField
 
-![Image to be displayed](https://i.imgur.com/VwnK12T.png)
+![Image to be displayed](https://i.imgur.com/0fnMNaz.png)
 
 A `TextField` sensor component creates a simple text input field. It is useful for taking generic user inputs for creating a custom query context.
+
+Unlike other components that have a specific query associated with their UI view, a `TextField` component requires a `customQuery` definition using its input value.
 
 ### Usage
 
@@ -12,7 +14,7 @@ A `TextField` sensor component creates a simple text input field. It is useful f
 <TextField
   sensorId="NameTextSensor"
   appbaseField="name"
-  title="Type a Search String"
+  title="TextField"
   placeholder="Type a car name"
 />
 ```
@@ -20,13 +22,13 @@ A `TextField` sensor component creates a simple text input field. It is useful f
 ### Props
 
 - **sensorId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `depends` prop.  
+    unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI options.
+    data field to be mapped with the component's UI view.
 - **title** `String` [optional]  
     title of the component to be shown in the UI.
 - **placeholder** `String` [optional]  
-    placeholder to be displayed in the text field.  
+    placeholder to be displayed in the text field.
 
 
 ### CSS Styles API
@@ -46,7 +48,7 @@ All reactivebase components are `rbc` namespaced.
 
 * Textfield component's class name is `rbc-textfield`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `placeholder` prop, classname of `rbc-placeholder-active` or `rbc-placeholder-active` is applied.
 * the title element has a class name of `rbc-title`.
-* the search element has a class name of `rbc-search-container`.
+* the search container has a class name of `rbc-search-container`.
 * the input element has a class name of `rbc-input`.
 
 
