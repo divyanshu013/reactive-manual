@@ -33,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
     <div class="pull-left  hidden-xs" id="folder-navbar">
       <ul class="nav navbar-nav folder-li">
-        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/getting-started/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Getting Started" href=./v1/getting-started/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Getting Started</span>
            </a>
@@ -50,7 +50,7 @@
               <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Components" href=./v1/components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Components</span>
            </a>
@@ -93,7 +93,7 @@
               <a ng-href=./v1/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/map-components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Sensors for Map" href=./v1/map-components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Sensors for Map</span>
            </a>
@@ -104,7 +104,7 @@
               <a ng-href=./v1/map-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/map-components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
           <a ng-href=./v1/mapping/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Data Mappings" href=./v1/mapping/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Data Mappings</span>
            </a>
@@ -117,7 +117,7 @@
           </ul>
         </li><!-- end ngRepeat: folder in map[currentVersion] -->
       </ul>
-      <ul class="nav navbar-nav category-li">
+      <ul class="nav navbar-nav category-li" style="display: block; ">
         <li class="dropdown menu-large">
           <a class="dropdown-toggle pointer" data-toggle="dropdown">more <b class="caret"></b></a>
           <ul class="dropdown-menu megamenu row">
@@ -211,7 +211,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><span class="twitter-typeahead" style="position: relative; display: inline-block; "><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" style="position: absolute; top: 0px; left: 0px; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size:  ; background-position: 0% 0%; background-repeat: repeat repeat; " readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent; "><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none; "></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; "><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -347,13 +347,13 @@
 	<div class="menubar fixed">
 		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-textfield-item" class="level-2"><a id="-textfield-link" href="./v1/components/TextField.html#-textfield" class="level-2" pref="#-textfield">TextField</a><ul class="level-3" id="-textfield-list"><li id="-textfield-usage-item" class="level-3"><a id="-textfield-usage-link" href="./v1/components/TextField.html#-textfield-usage" class="level-3" pref="#-textfield-usage">Usage</a></li><li id="-textfield-props-item" class="level-3"><a id="-textfield-props-link" href="./v1/components/TextField.html#-textfield-props" class="level-3" pref="#-textfield-props">Props</a></li><li id="-textfield-css-styles-api-item" class="level-3"><a id="-textfield-css-styles-api-link" href="./v1/components/TextField.html#-textfield-css-styles-api" class="level-3" pref="#-textfield-css-styles-api">CSS Styles API</a></li><li id="-textfield-examples-item" class="level-3"><a id="-textfield-examples-link" href="./v1/components/TextField.html#-textfield-examples" class="level-3" pref="#-textfield-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivebase-manual/commit/e2c0852c4cfae7a32b7cc81f7c3dc747564349c9">Jan 29, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a><a class="contributor" href="https://github.com/metagrover" title="metagrover" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/9116042?v=3" alt="metagrover"></a><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1/components/TextField.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-textfield">TextField</h2><p><img src="https://i.imgur.com/0fnMNaz.png" alt="Image to be displayed"></p><p>A <code>TextField</code> sensor component creates a simple text input field. It is useful for taking generic user inputs for creating a custom query context.</p><p>Unlike other components that have a specific query associated with their UI view, a <code>TextField</code> component requires a <code>customQuery</code> definition using its input value.</p><h3 id="-textfield-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">TextField</span><span class="pln">
-  sensorId</span><span class="pun">=</span><span class="string"><span class="str">"NameTextSensor"</span></span><span class="pln">
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivebase-manual/commit/4da7b17e371654c5498ce7e98541080b403dfe58">Jan 31, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a><a class="contributor" href="https://github.com/metagrover" title="metagrover" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/9116042?v=3" alt="metagrover"></a><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1/components/TextField.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-textfield">TextField</h2><p><img src="https://i.imgur.com/0fnMNaz.png" alt="Image to be displayed"></p><p>A <code>TextField</code> sensor component creates a simple text input field. It is useful for taking generic user inputs for creating a custom query context.</p><p>Unlike other components that have a specific query associated with their UI view, a <code>TextField</code> component requires a <code>customQuery</code> definition using its input value.</p><h3 id="-textfield-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">TextField</span><span class="pln">
+  componentId</span><span class="pun">=</span><span class="string"><span class="str">"NameTextSensor"</span></span><span class="pln">
   appbaseField</span><span class="pun">=</span><span class="string"><span class="str">"name"</span></span><span class="pln">
   title</span><span class="pun">=</span><span class="string"><span class="str">"TextField"</span></span><span class="pln">
   placeholder</span><span class="pun">=</span><span class="string"><span class="str">"Type a car name"</span></span><span class="pln">
 </span><span class="pun">/&gt;</span></code></pre><h3 id="-textfield-props">Props</h3><ul>
-<li><strong class="li-title">sensorId</strong> <code class="code-with-title">String</code><br>  unique id of the sensor, can be referenced in an actuator’s <code>depends</code> prop.</li>
+<li><strong class="li-title">componentId</strong> <code class="code-with-title">String</code><br>  unique id of the sensor, can be referenced in an actuator’s <code>depends</code> prop.</li>
 <li><strong class="li-title">appbaseField</strong> <code class="code-with-title">String</code><br>  data field to be mapped with the component’s UI view.</li>
 <li><strong class="li-title">title</strong> <code class="code-with-title">String</code> [optional]<br>  title of the component to be shown in the UI.</li>
 <li><strong class="li-title">placeholder</strong> <code class="code-with-title">String</code> [optional]<br>  placeholder to be displayed in the text field.</li>
