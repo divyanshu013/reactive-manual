@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc">
+<body role="flatdoc" class="no-literate">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -349,120 +349,62 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div role="flatdoc" class="content-root ng-scope ng-hide" data-ng-show="!index">
-	<div class="menubar">
-		<div class="menu section" role="flatdoc-menu"></div>
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
+	<div class="menubar fixed">
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="style-guide-item" class="level-1"><a id="style-guide-link" href="./v1/getting-started/Theming.html#style-guide" class="level-1" pref="#style-guide">Style Guide</a><ul class="level-2" id="style-guide-list"><li id="style-guide-introduction-item" class="level-2"><a id="style-guide-introduction-link" href="./v1/getting-started/Theming.html#style-guide-introduction" class="level-2" pref="#style-guide-introduction">Introduction</a></li><li id="style-guide-usage-item" class="level-2"><a id="style-guide-usage-link" href="./v1/getting-started/Theming.html#style-guide-usage" class="level-2" pref="#style-guide-usage">Usage</a></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"></div>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivebase-manual/commit/aa49cde91b643104b09323d3091c6cb23511b717">Feb 2, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/metagrover" title="metagrover" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/9116042?v=3" alt="metagrover"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1/getting-started/Theming.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h1 id="style-guide">Style Guide</h1><h2 id="style-guide-introduction">Introduction</h2><p><code>ReactiveBase</code> comes with 6 colors in the color pallete. You can set the <code>theme</code> prop in <code>ReactiveBase</code> component as one of the following:</p><ul>
+<li><code>rbc-red</code></li>
+<li><code>rbc-orange</code></li>
+<li><code>rbc-yellow</code></li>
+<li><code>rbc-green</code></li>
+<li><code>rbc-blue</code></li>
+<li><code>rbc-dark</code></li>
+</ul><p>This will accordingly change the primary, secondary and default colors of rbc components.</p><h2 id="style-guide-usage">Usage</h2><pre><code class="lang-html prettyprint prettyprinted" style=""><span class="pln">    &lt;ReactiveBase 
+        appname=</span><span class="string"><span class="pln">"</span><span class="tag">&lt;APP</span><span class="pln"> </span><span class="atn">NAME</span><span class="tag">&gt;</span><span class="pln">"</span></span><span class="pln">
+        password=</span><span class="string"><span class="pln">"</span><span class="tag">&lt;APP</span><span class="pln"> </span><span class="atn">PASSWORD</span><span class="tag">&gt;</span><span class="pln">"</span></span><span class="pln">
+        type=</span><span class="string"><span class="pln">"TYPE"</span></span><span class="pln">
+        theme=</span><span class="string"><span class="pln">"rbc-blue"</span></span><span class="pln">
+    &gt;
+
+        </span><span class="comment"><span class="pln">// rbc components</span></span><span class="pln">
+
+    </span><span class="tag">&lt;/ReactiveBase&gt;</span></code></pre></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
-		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
+		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
 			<li>
 				<div class="other-pages">Other pages in</div>
 			</li>
 			<li>
-				<a class="level-1 ng-binding" ng-href=./v1/components/index.html ng-bind="folder.name" href=./v1/components/index.html>components</a>
+				<a class="level-1 ng-binding" ng-href=./v1/getting-started/index.html ng-bind="folder.name" href=./v1/getting-started/index.html>getting-started</a>
 			</li>
 			<!-- ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/SingleList.html ng-bind="file.label" href=./v1/components/SingleList.html>Single List</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Installation.html ng-bind="file.label" href=./v1/getting-started/Installation.html>Installation</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/MultiList.html ng-bind="file.label" href=./v1/components/MultiList.html>Multi List</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Start.html ng-bind="file.label" href=./v1/getting-started/Start.html>Quick Start</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/SingleDropdownList.html ng-bind="file.label" href=./v1/components/SingleDropdownList.html>Single Dropdown List</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/StyleGuide.html ng-bind="file.label" href=./v1/getting-started/StyleGuide.html>Style Guide</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/MultiDropdownList.html ng-bind="file.label" href=./v1/components/MultiDropdownList.html>Multi Dropdown List</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Dependency.html ng-bind="file.label" href=./v1/getting-started/Dependency.html>Dependency</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/NestedList.html ng-bind="file.label" href=./v1/components/NestedList.html>Nested List</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/SingleRange.html ng-bind="file.label" href=./v1/components/SingleRange.html>Single Range</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/MultiRange.html ng-bind="file.label" href=./v1/components/MultiRange.html>Multi Range</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/SingleDropdownRange.html ng-bind="file.label" href=./v1/components/SingleDropdownRange.html>Single Dropdown Range</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/MultiDropdownRange.html ng-bind="file.label" href=./v1/components/MultiDropdownRange.html>Multi Dropdown Range</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/ToggleButton.html ng-bind="file.label" href=./v1/components/ToggleButton.html>Toggle Button</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/RangeSlider.html ng-bind="file.label" href=./v1/components/RangeSlider.html>Range Slider</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/TextField.html ng-bind="file.label" href=./v1/components/TextField.html>Text Field</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/DataSearch.html ng-bind="file.label" href=./v1/components/DataSearch.html>Data Search</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/DatePicker.html ng-bind="file.label" href=./v1/components/DatePicker.html>Date Picker</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/DateRange.html ng-bind="file.label" href=./v1/components/DateRange.html>Date Range</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/ResultList.html ng-bind="file.label" href=./v1/components/ResultList.html>Result List</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/components/PaginatedResultList.html ng-bind="file.label" href=./v1/components/PaginatedResultList.html>Paginated Result List</a>
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Theming.html ng-bind="file.label" href=./v1/getting-started/Theming.html>Theming</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
-		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
+		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
 	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">
-				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
-					<a href="" class="paginationLink pull-left">Previous</a>
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v1/getting-started/Dependency.html class="paginationLink pull-left">Previous</a>
 				</span>
-				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right disabled">
-					<a href="" class="paginationLink pull-right">Next</a>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v1/components/SingleList.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- ngIf: index --><div class="index-container ng-scope" data-ng-if="index">
-	<div class="container">
-		<div class="row">
-			<h1 class="col-xs-12 ng-binding">
-				components (17 files)
-			</h1>
-		</div>
-		<div class="row indexLinkContainer">
-			<ul class="col-xs-12 col-sm-6">
-				<!-- ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/components/SingleList.html class="col-xs-12 ng-binding"> SingleList</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/components/MultiList.html class="col-xs-12 ng-binding"> MultiList</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/components/SingleDropdownList.html class="col-xs-12 ng-binding"> SingleDropdownList</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/components/MultiDropdownList.html class="col-xs-12 ng-binding"> MultiDropdownList</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/components/NestedList.html class="col-xs-12 ng-binding"> NestedList</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/components/SingleRange.html class="col-xs-12 ng-binding"> SingleRange</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/components/MultiRange.html class="col-xs-12 ng-binding"> MultiRange</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/components/SingleDropdownRange.html class="col-xs-12 ng-binding"> SingleDropdownRange</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/components/MultiDropdownRange.html class="col-xs-12 ng-binding"> MultiDropdownRange</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList -->
-			</ul>
-			<ul class="col-xs-12 col-sm-6">
-				<!-- ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/components/ToggleButton.html class="col-xs-12 ng-binding"> ToggleButton</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/components/RangeSlider.html class="col-xs-12 ng-binding"> RangeSlider</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/components/TextField.html class="col-xs-12 ng-binding"> TextField</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/components/DataSearch.html class="col-xs-12 ng-binding"> DataSearch</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/components/DatePicker.html class="col-xs-12 ng-binding"> DatePicker</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/components/DateRange.html class="col-xs-12 ng-binding"> DateRange</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/components/ResultList.html class="col-xs-12 ng-binding"> ResultList</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/components/PaginatedResultList.html class="col-xs-12 ng-binding"> PaginatedResultList</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList -->
-			</ul>
-		</div>
-	</div>
-</div><!-- end ngIf: index -->
+<!-- ngIf: index -->
 </div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>

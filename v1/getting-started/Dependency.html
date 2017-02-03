@@ -46,6 +46,8 @@
               <a ng-href=./v1/getting-started/StyleGuide.html title="Style Guide" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/StyleGuide.html>Style Guide</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1/getting-started/Dependency.html title="Dependency" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/Dependency.html>Dependency</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v1/getting-started/Theming.html title="Theming" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/Theming.html>Theming</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
               <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
@@ -134,6 +136,8 @@
                   <a ng-href=./v1/getting-started/StyleGuide.html title="Style Guide" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/StyleGuide.html>Style Guide</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1/getting-started/Dependency.html title="Dependency" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/Dependency.html>Dependency</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v1/getting-started/Theming.html title="Theming" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/Theming.html>Theming</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                   <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
                 </li><!-- end ngRepeat: file in folder.files -->
@@ -264,6 +268,8 @@
                       <a ng-href=./v1/getting-started/StyleGuide.html title="Style Guide" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/StyleGuide.html>Style Guide</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1/getting-started/Dependency.html title="Dependency" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/Dependency.html>Dependency</a>
+                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                      <a ng-href=./v1/getting-started/Theming.html title="Theming" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/Theming.html>Theming</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                       <a ng-href=./v1/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/getting-started/index.html>index</a>
                     </li><!-- end ngRepeat: file in folder.files -->
@@ -404,6 +410,8 @@ depends</span><span class="pun">={{</span><span class="pln">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/StyleGuide.html ng-bind="file.label" href=./v1/getting-started/StyleGuide.html>Style Guide</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Dependency.html ng-bind="file.label" href=./v1/getting-started/Dependency.html>Dependency</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Theming.html ng-bind="file.label" href=./v1/getting-started/Theming.html>Theming</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
 		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
@@ -414,7 +422,7 @@ depends</span><span class="pun">={{</span><span class="pln">
 					<a href=./v1/getting-started/StyleGuide.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1/components/SingleList.html class="paginationLink pull-right">Next</a>
+					<a href=./v1/getting-started/Theming.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
