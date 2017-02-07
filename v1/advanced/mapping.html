@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc">
+<body role="flatdoc" class="no-literate big-h3">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -361,37 +361,160 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div role="flatdoc" class="content-root ng-scope ng-hide" data-ng-show="!index">
-	<div class="menubar">
-		<div class="menu section" role="flatdoc-menu"></div>
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
+	<div class="menubar fixed">
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-elasticsearch-mapping-item" class="level-2"><a id="-elasticsearch-mapping-link" href="./v1/advanced/mapping.html#-elasticsearch-mapping" class="level-2" pref="#-elasticsearch-mapping">Elasticsearch Mapping</a></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"></div>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/cbcb1b8794adc7a6fdd168fe8c45b0630f7dc7b8">Feb 7, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1/advanced/mapping.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-elasticsearch-mapping">Elasticsearch Mapping</h2><ol>
+<li>Close the Index:      </li>
+</ol><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="str">'http://scalr.api.appbase.io/map_demo/_close'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">X POST </span><span class="pun">-</span><span class="pln">d </span><span class="str">'{}'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">u aT29UsiAp</span><span class="pun">:</span><span class="pln">e0d26007</span><span class="pun">-</span><span class="pln">d818</span><span class="pun">-</span><span class="lit">4559</span><span class="pun">-</span><span class="lit">8244</span><span class="pun">-</span><span class="pln">c3c2fbad45ad </span><span class="pun">-</span><span class="pln">H </span><span class="str">'Content-Type: application/json'</span></code></pre><ol>
+<li>Update the settings:</li>
+</ol><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="str">'http://scalr.api.appbase.io/map_demo/_settings'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">X PUT </span><span class="pun">-</span><span class="pln">d </span><span class="str">'{
+  "analysis": {
+    "filter": {
+      "nGram_filter": {
+        "type": "edge_ngram",
+        "min_gram": 1,
+        "max_gram": 20,
+        "token_chars": [
+          "letter",
+          "digit",
+          "punctuation",
+          "symbol"
+        ]
+      }
+    },
+    "analyzer": {
+      "nGram_analyzer": {
+        "type": "custom",
+        "tokenizer": "whitespace",
+        "filter": [
+          "lowercase",
+          "asciifolding",
+          "nGram_filter"
+        ]
+      },
+      "body_analyzer": {
+        "type": "custom",
+        "tokenizer": "standard",
+        "filter": [
+          "lowercase",
+          "asciifolding",
+          "stop",
+          "snowball",
+          "word_delimiter"
+        ]
+      },
+      "standard_analyzer": {
+        "type": "custom",
+        "tokenizer": "standard",
+        "filter": [
+          "lowercase",
+          "asciifolding"
+        ]
+      },
+      "whitespace_analyzer": {
+        "type": "whitespace",
+        "tokenizer": "whitespace",
+        "filter": [
+          "lowercase",
+          "asciifolding"
+        ]
+      }
+    }
+  }
+}'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">u aT29UsiAp</span><span class="pun">:</span><span class="pln">e0d26007</span><span class="pun">-</span><span class="pln">d818</span><span class="pun">-</span><span class="lit">4559</span><span class="pun">-</span><span class="lit">8244</span><span class="pun">-</span><span class="pln">c3c2fbad45ad </span><span class="pun">-</span><span class="pln">H </span><span class="str">'Content-Type: application/json'</span></code></pre><ol>
+<li>Open the Index:</li>
+</ol><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="str">'http://scalr.api.appbase.io/map_demo/_open'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">X POST </span><span class="pun">-</span><span class="pln">d </span><span class="str">'{}'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">u aT29UsiAp</span><span class="pun">:</span><span class="pln">e0d26007</span><span class="pun">-</span><span class="pln">d818</span><span class="pun">-</span><span class="lit">4559</span><span class="pun">-</span><span class="lit">8244</span><span class="pun">-</span><span class="pln">c3c2fbad45ad </span><span class="pun">-</span><span class="pln">H </span><span class="str">'Content-Type: application/json'</span></code></pre><ol>
+<li>Update the mapping: </li>
+</ol><pre><code class="lang-curl prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="string"><span class="str">'http:</span><span class="comment"><span class="str">//scalr.api.appbase.io/map_demo/_mapping/meetupdata</span><span class="number"><span class="str">1</span></span><span class="str">?ignore_conflicts=true&amp;update_all_types=true'</span></span><span class="pln"> </span><span class="pun">-</span><span class="pln">X PUT </span><span class="pun">-</span><span class="pln">d </span><span class="string"><span class="str">'{</span></span><span class="str">
+  </span><span class="string"><span class="str">"meetupdata</span><span class="number"><span class="str">1</span></span><span class="str">"</span></span><span class="str">: {
+    </span><span class="string"><span class="str">"properties"</span></span><span class="str">: {
+      </span><span class="string"><span class="str">"group"</span></span><span class="str">: {
+        </span><span class="string"><span class="str">"properties"</span></span><span class="str">: {
+          </span><span class="string"><span class="str">"group_city_new"</span></span><span class="str">: {
+            </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"multi_field"</span></span><span class="str">,
+            </span><span class="string"><span class="str">"fields"</span></span><span class="str">: {
+              </span><span class="string"><span class="str">"group_city_simple"</span></span><span class="str">: {
+                </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
+                </span><span class="string"><span class="str">"index"</span></span><span class="str">: </span><span class="string"><span class="str">"not_analyzed"</span></span><span class="str">
+              },
+              </span><span class="string"><span class="str">"group_city_ngrams"</span></span><span class="str">: {
+                </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
+                </span><span class="string"><span class="str">"analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"nGram_analyzer"</span></span><span class="str">,
+                </span><span class="string"><span class="str">"search_analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"whitespace_analyzer"</span></span><span class="str">
+              }
+            }
+          },
+          </span><span class="string"><span class="str">"group_city"</span></span><span class="str">: {
+            </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
+            </span><span class="string"><span class="str">"fields"</span></span><span class="str">: {
+              </span><span class="string"><span class="str">"raw"</span></span><span class="str">: { 
+                </span><span class="string"><span class="str">"type"</span></span><span class="str">:  </span><span class="string"><span class="str">"string"</span></span><span class="str">,
+                </span><span class="string"><span class="str">"index"</span></span><span class="str">: </span><span class="string"><span class="str">"not_analyzed"</span></span><span class="str">
+              }
+            }
+          },
+          </span><span class="string"><span class="str">"group_topics"</span></span><span class="str">: {
+            </span><span class="string"><span class="str">"properties"</span></span><span class="str">: {
+              </span><span class="string"><span class="str">"topic_name_new"</span></span><span class="str">: {
+                </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"multi_field"</span></span><span class="str">,
+                </span><span class="string"><span class="str">"fields"</span></span><span class="str">: {
+                  </span><span class="string"><span class="str">"topic_name_simple"</span></span><span class="str">: {
+                    </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
+                    </span><span class="string"><span class="str">"index"</span></span><span class="str">: </span><span class="string"><span class="str">"not_analyzed"</span></span><span class="str">
+                  },
+                  </span><span class="string"><span class="str">"topic_name_ngrams"</span></span><span class="str">: {
+                    </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
+                    </span><span class="string"><span class="str">"analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"nGram_analyzer"</span></span><span class="str">,
+                    </span><span class="string"><span class="str">"search_analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"whitespace_analyzer"</span></span><span class="str">
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      </span><span class="string"><span class="str">"venue_new"</span></span><span class="str">: {
+        </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"multi_field"</span></span><span class="str">,
+        </span><span class="string"><span class="str">"fields"</span></span><span class="str">: {
+          </span><span class="string"><span class="str">"venue_name_simple"</span></span><span class="str">: {
+            </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
+            </span><span class="string"><span class="str">"index"</span></span><span class="str">: </span><span class="string"><span class="str">"not_analyzed"</span></span><span class="str">
+          },
+          </span><span class="string"><span class="str">"venue_name_ngrams"</span></span><span class="str">: {
+            </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
+            </span><span class="string"><span class="str">"analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"nGram_analyzer"</span></span><span class="str">,
+            </span><span class="string"><span class="str">"search_analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"whitespace_analyzer"</span></span><span class="str">
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+'</span></span><span class="pln"> </span><span class="pun">-</span><span class="pln">u aT</span><span class="number"><span class="pln">29</span></span><span class="pln">UsiAp</span><span class="pun">:</span><span class="pln">e</span><span class="number"><span class="pln">0</span></span><span class="pln">d</span><span class="number"><span class="pln">26007</span></span><span class="pun">-</span><span class="pln">d</span><span class="number"><span class="pln">818</span></span><span class="pun">-</span><span class="number"><span class="lit">4559</span></span><span class="pun">-</span><span class="number"><span class="lit">8244</span></span><span class="pun">-</span><span class="pln">c</span><span class="number"><span class="pln">3</span></span><span class="pln">c</span><span class="number"><span class="pln">2</span></span><span class="pln">fbad</span><span class="number"><span class="pln">45</span></span><span class="pln">ad </span><span class="pun">-</span><span class="pln">H </span><span class="string"><span class="str">'Content-Type: application/json'</span></span>
+</code></pre></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
-		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
+		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
 			<li>
 				<div class="other-pages">Other pages in</div>
 			</li>
 			<li>
-				<a class="level-1 ng-binding" ng-href=./v1/getting-started/index.html ng-bind="folder.name" href=./v1/getting-started/index.html>getting-started</a>
+				<a class="level-1 ng-binding" ng-href=./v1/advanced/index.html ng-bind="folder.name" href=./v1/advanced/index.html>advanced</a>
 			</li>
 			<!-- ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Installation.html ng-bind="file.label" href=./v1/getting-started/Installation.html>Installation</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Start.html ng-bind="file.label" href=./v1/getting-started/Start.html>Quick Start</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/StyleGuide.html ng-bind="file.label" href=./v1/getting-started/StyleGuide.html>Style Guide</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Dependency.html ng-bind="file.label" href=./v1/getting-started/Dependency.html>Dependency</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Theming.html ng-bind="file.label" href=./v1/getting-started/Theming.html>Theming</a>
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/advanced/mapping.html ng-bind="file.label" href=./v1/advanced/mapping.html>Data Mappings</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
-		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
+		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
 	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">
-				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
-					<a href="" class="paginationLink pull-left">Previous</a>
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v1/components/PaginatedResultList.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right disabled">
 					<a href="" class="paginationLink pull-right">Next</a>
@@ -400,33 +523,7 @@
 		</div>
 	</div>
 </div>
-<!-- ngIf: index --><div class="index-container ng-scope" data-ng-if="index">
-	<div class="container">
-		<div class="row">
-			<h1 class="col-xs-12 ng-binding">
-				getting-started (5 files)
-			</h1>
-		</div>
-		<div class="row indexLinkContainer">
-			<ul class="col-xs-12 col-sm-6">
-				<!-- ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/getting-started/Installation.html class="col-xs-12 ng-binding"> Installation</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/getting-started/Start.html class="col-xs-12 ng-binding"> Start</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/getting-started/StyleGuide.html class="col-xs-12 ng-binding"> StyleGuide</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList -->
-			</ul>
-			<ul class="col-xs-12 col-sm-6">
-				<!-- ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/getting-started/Dependency.html class="col-xs-12 ng-binding"> Dependency</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/getting-started/Theming.html class="col-xs-12 ng-binding"> Theming</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList -->
-			</ul>
-		</div>
-	</div>
-</div><!-- end ngIf: index -->
+<!-- ngIf: index -->
 </div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>

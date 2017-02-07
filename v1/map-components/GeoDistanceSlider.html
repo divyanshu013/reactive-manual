@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc">
+<body role="flatdoc" class="no-literate big-h3">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -361,72 +361,82 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div role="flatdoc" class="content-root ng-scope ng-hide" data-ng-show="!index">
-	<div class="menubar">
-		<div class="menu section" role="flatdoc-menu"></div>
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
+	<div class="menubar fixed">
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-geodistanceslider-item" class="level-2"><a id="-geodistanceslider-link" href="./v1/map-components/GeoDistanceSlider.html#-geodistanceslider" class="level-2" pref="#-geodistanceslider">GeoDistanceSlider</a><ul class="level-3" id="-geodistanceslider-list"><li id="-geodistanceslider-usage-item" class="level-3"><a id="-geodistanceslider-usage-link" href="./v1/map-components/GeoDistanceSlider.html#-geodistanceslider-usage" class="level-3" pref="#-geodistanceslider-usage">Usage</a></li><li id="-geodistanceslider-props-item" class="level-3"><a id="-geodistanceslider-props-link" href="./v1/map-components/GeoDistanceSlider.html#-geodistanceslider-props" class="level-3" pref="#-geodistanceslider-props">Props</a></li><li id="-geodistanceslider-css-styles-item" class="level-3"><a id="-geodistanceslider-css-styles-link" href="./v1/map-components/GeoDistanceSlider.html#-geodistanceslider-css-styles" class="level-3" pref="#-geodistanceslider-css-styles">CSS Styles</a></li><li id="-geodistanceslider-examples-item" class="level-3"><a id="-geodistanceslider-examples-link" href="./v1/map-components/GeoDistanceSlider.html#-geodistanceslider-examples" class="level-3" pref="#-geodistanceslider-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"></div>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/d01d35c554aec75f6240465d9243cd922ba9e506">Feb 7, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1/map-components/GeoDistanceSlider.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-geodistanceslider">GeoDistanceSlider</h2><p><img src="https://i.imgur.com/FU4s0PQ.png" alt="Image to be displayed"></p><p>A <code>GeoDistanceSlider</code> sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.</p><p>Example uses:</p><ul>
+<li>finding restaurants in walking distance from your location.</li>
+<li>discovering things to do near a landmark.</li>
+</ul><h3 id="-geodistanceslider-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">GeoDistanceSlider</span><span class="pln">
+  componentId</span><span class="pun">=</span><span class="string"><span class="str">"GeoDistanceSensor"</span></span><span class="pln">
+  appbaseField</span><span class="pun">=</span><span class="string"><span class="str">"location"</span></span><span class="pln">
+  title</span><span class="pun">=</span><span class="string"><span class="str">"Geo Distance Slider"</span></span><span class="pln">
+  unit</span><span class="pun">=</span><span class="string"><span class="str">"mi"</span></span><span class="pln">
+  range</span><span class="pun">={</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"start"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">0</span></span><span class="pun">,</span><span class="pln">
+      </span><span class="string"><span class="str">"end"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">20</span></span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  defaultSelected</span><span class="pun">={</span><span class="number"><span class="lit">12</span></span><span class="pun">}</span><span class="pln">
+  rangeLabels</span><span class="pun">={</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"start"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"</span><span class="number"><span class="str">0</span></span><span class="str"> mi"</span></span><span class="pun">,</span><span class="pln">
+      </span><span class="string"><span class="str">"end"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"</span><span class="number"><span class="str">20</span></span><span class="str"> mi"</span></span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  stepValue</span><span class="pun">={</span><span class="number"><span class="lit">1</span></span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h3 id="-geodistanceslider-props">Props</h3><ul>
+<li><strong class="li-title">componentId</strong> <code class="code-with-title">String</code><br>  unique id of the sensor, can be referenced in an actuator’s <code>actuate</code> prop.</li>
+<li><strong class="li-title">appbaseField</strong> <code class="code-with-title">String</code><br>  DB data field to be mapped with the component’s UI view, used when a database query is made on this field.</li>
+<li><strong class="li-title">title</strong> <code class="code-with-title">String</code> [optional]<br>  title of the component to be shown in the UI.</li>
+<li><strong class="li-title">unit</strong> <code class="code-with-title">String</code> [optional]<br>  unit for distance measurement, uses <code>mi</code> (for miles) by default. Distance units can be specified from the following:<br>  <img src="https://i.imgur.com/STbeagk.png" alt="screenshot">.</li>
+<li><strong class="li-title">range</strong> <code class="code-with-title">Object</code><br>  an object with <code>start</code> and <code>end</code> keys and corresponding numeric values denoting the minimum and maximum possible slider values.</li>
+<li><strong class="li-title">rangeLabels</strong> <code class="code-with-title">Object</code> [optional]<br>  an object with <code>start</code> and <code>end</code> keys and corresponding <code>String</code> labels to show labels near the ends of the <code>GeoDistanceSlider</code> component.</li>
+<li><strong class="li-title">defaultSelected</strong> <code class="code-with-title">Number</code> [optional]<br>  pre-select a value from the range.</li>
+<li><strong class="li-title">stepValue</strong> <code class="code-with-title">Number</code> [optional]<br>  step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.</li>
+</ul><h3 id="-geodistanceslider-css-styles">CSS Styles</h3><p>All reactivebase and reactivemaps components are <code>rbc</code> namespaced.</p><p><img src="" alt="Annotated image"></p><pre><code class="lang-html prettyprint prettyprinted" style=""><span class="pln">TBD</span></code></pre><h3 id="-geodistanceslider-examples">Examples</h3><ol>
+<li><p>GeoDistance slider with all the default props</p>
+</li>
+<li><p>GeoDistance Slider with a title</p>
+</li>
+<li><p>GeoDistance Slider with range labels</p>
+</li>
+<li><p>Playground (with all knob actions)</p>
+</li>
+</ol></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
-		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
+		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
 			<li>
 				<div class="other-pages">Other pages in</div>
 			</li>
 			<li>
-				<a class="level-1 ng-binding" ng-href=./v1/getting-started/index.html ng-bind="folder.name" href=./v1/getting-started/index.html>getting-started</a>
+				<a class="level-1 ng-binding" ng-href=./v1/map-components/index.html ng-bind="folder.name" href=./v1/map-components/index.html>map-components</a>
 			</li>
 			<!-- ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Installation.html ng-bind="file.label" href=./v1/getting-started/Installation.html>Installation</a>
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/map-components/GeoDistanceSlider.html ng-bind="file.label" href=./v1/map-components/GeoDistanceSlider.html>Geo Distance Slider</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Start.html ng-bind="file.label" href=./v1/getting-started/Start.html>Quick Start</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/map-components/GeoDistanceDropdown.html ng-bind="file.label" href=./v1/map-components/GeoDistanceDropdown.html>Geo Distance Dropdown</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/StyleGuide.html ng-bind="file.label" href=./v1/getting-started/StyleGuide.html>Style Guide</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Dependency.html ng-bind="file.label" href=./v1/getting-started/Dependency.html>Dependency</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/getting-started/Theming.html ng-bind="file.label" href=./v1/getting-started/Theming.html>Theming</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/map-components/ReactiveMap.html ng-bind="file.label" href=./v1/map-components/ReactiveMap.html>Reactive Map</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
-		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
+		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
 	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">
-				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
-					<a href="" class="paginationLink pull-left">Previous</a>
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v1/getting-started/Theming.html class="paginationLink pull-left">Previous</a>
 				</span>
-				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right disabled">
-					<a href="" class="paginationLink pull-right">Next</a>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v1/map-components/GeoDistanceDropdown.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- ngIf: index --><div class="index-container ng-scope" data-ng-if="index">
-	<div class="container">
-		<div class="row">
-			<h1 class="col-xs-12 ng-binding">
-				getting-started (5 files)
-			</h1>
-		</div>
-		<div class="row indexLinkContainer">
-			<ul class="col-xs-12 col-sm-6">
-				<!-- ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/getting-started/Installation.html class="col-xs-12 ng-binding"> Installation</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/getting-started/Start.html class="col-xs-12 ng-binding"> Start</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &lt;= indexList.length/2">
-					<a href=./v1/getting-started/StyleGuide.html class="col-xs-12 ng-binding"> StyleGuide</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) <= indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList -->
-			</ul>
-			<ul class="col-xs-12 col-sm-6">
-				<!-- ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/getting-started/Dependency.html class="col-xs-12 ng-binding"> Dependency</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><li class="col-xs-12 ng-scope" data-ng-repeat="(key, file) in indexList" data-ng-if="file.name != 'index' &amp;&amp; (key+1) &gt; indexList.length/2">
-					<a href=./v1/getting-started/Theming.html class="col-xs-12 ng-binding"> Theming</a>
-				</li><!-- end ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList --><!-- ngIf: file.name != 'index' && (key+1) > indexList.length/2 --><!-- end ngRepeat: (key, file) in indexList -->
-			</ul>
-		</div>
-	</div>
-</div><!-- end ngIf: index -->
+<!-- ngIf: index -->
 </div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
