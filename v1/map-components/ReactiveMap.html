@@ -62,6 +62,8 @@
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1/map-components/GeoDistanceDropdown.html title="Geo Distance Dropdown" ng-bind="file.label" class="ng-binding" href=./v1/map-components/GeoDistanceDropdown.html>Geo Distance Dropdown</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v1/map-components/PlacesSearch.html title="Places Search" ng-bind="file.label" class="ng-binding" href=./v1/map-components/PlacesSearch.html>Places Search</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1/map-components/ReactiveMap.html title="Reactive Map" ng-bind="file.label" class="ng-binding" href=./v1/map-components/ReactiveMap.html>Reactive Map</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
               <a ng-href=./v1/map-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1/map-components/index.html>index</a>
@@ -159,6 +161,8 @@
                   <a ng-href=./v1/map-components/GeoDistanceSlider.html title="Geo Distance Slider" ng-bind="file.label" class="ng-binding" href=./v1/map-components/GeoDistanceSlider.html>Geo Distance Slider</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1/map-components/GeoDistanceDropdown.html title="Geo Distance Dropdown" ng-bind="file.label" class="ng-binding" href=./v1/map-components/GeoDistanceDropdown.html>Geo Distance Dropdown</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v1/map-components/PlacesSearch.html title="Places Search" ng-bind="file.label" class="ng-binding" href=./v1/map-components/PlacesSearch.html>Places Search</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1/map-components/ReactiveMap.html title="Reactive Map" ng-bind="file.label" class="ng-binding" href=./v1/map-components/ReactiveMap.html>Reactive Map</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
@@ -299,6 +303,8 @@
                       <a ng-href=./v1/map-components/GeoDistanceSlider.html title="Geo Distance Slider" ng-bind="file.label" class="ng-binding" href=./v1/map-components/GeoDistanceSlider.html>Geo Distance Slider</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1/map-components/GeoDistanceDropdown.html title="Geo Distance Dropdown" ng-bind="file.label" class="ng-binding" href=./v1/map-components/GeoDistanceDropdown.html>Geo Distance Dropdown</a>
+                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                      <a ng-href=./v1/map-components/PlacesSearch.html title="Places Search" ng-bind="file.label" class="ng-binding" href=./v1/map-components/PlacesSearch.html>Places Search</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1/map-components/ReactiveMap.html title="Reactive Map" ng-bind="file.label" class="ng-binding" href=./v1/map-components/ReactiveMap.html>Reactive Map</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
@@ -505,6 +511,8 @@ and also user can return the markup which will be append inside map (as ex. Poly
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/map-components/GeoDistanceDropdown.html ng-bind="file.label" href=./v1/map-components/GeoDistanceDropdown.html>Geo Distance Dropdown</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/map-components/PlacesSearch.html ng-bind="file.label" href=./v1/map-components/PlacesSearch.html>Places Search</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1/map-components/ReactiveMap.html ng-bind="file.label" href=./v1/map-components/ReactiveMap.html>Reactive Map</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
 		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -513,7 +521,7 @@ and also user can return the markup which will be append inside map (as ex. Poly
 		<div class="row">
 			<div class="col-xs-12">
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1/map-components/GeoDistanceDropdown.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1/map-components/PlacesSearch.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
 					<a href=./v1/components/SingleList.html class="paginationLink pull-right">Next</a>
