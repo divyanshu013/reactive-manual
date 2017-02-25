@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width">
-  <base href="">
+  <base href="../../">
   <title>Documentation</title>
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -17,8 +17,8 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc">
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: 'html/navbar.html' --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="'html/navbar.html'"><div class="container-fluid ng-scope">
+<body role="flatdoc" class="no-literate big-h3">
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -383,23 +383,46 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div class="container-fluid push ng-scope">
-  <div class="row docbase-main" style="min-height: 167px;">
-    <div class="col-xs-12 landing">
-      <h1>Reactivemaps Manual</h1>
-    </div>
-    <div class="col-xs-12 list">
-      <!-- ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1.0.0-alpha/getting-started/index.html ng-bind="folder.label">Getting Started</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1.0.0-alpha/map-components/index.html ng-bind="folder.label">Map Components</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1.0.0-alpha/components/index.html ng-bind="folder.label">Base Components</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./v1.0.0-alpha/advanced/index.html ng-bind="folder.label">Advanced Topics</a><!-- end ngRepeat: folder in map[currentVersion] -->
-    </div>
-  </div>
-   <div class="row powered-by">
-    <div class="col-xs-12">
-      <a href="https://github.com/appbaseio/Docbase">
-        <img src="./images/PoweredByDocbase.png" class="img-responsive pull-right" alt="Powered by docbase">
-       </a>
-    </div>
-  </div>
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
+	<div class="menubar fixed">
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-installation-item" class="level-2"><a id="-installation-link" href="./v1.0.0-alpha/getting-started/Installation.html#-installation" class="level-2" pref="#-installation">Installation</a><ul class="level-3" id="-installation-list"><li id="-installation-step-1-install-reactivemaps-via-npm-item" class="level-3"><a id="-installation-step-1-install-reactivemaps-via-npm-link" href="./v1.0.0-alpha/getting-started/Installation.html#-installation-step-1-install-reactivemaps-via-npm" class="level-3" pref="#-installation-step-1-install-reactivemaps-via-npm">Step 1: Install reactivemaps via NPM</a></li><li id="-installation-step-2-add-google-maps-js-lib-item" class="level-3"><a id="-installation-step-2-add-google-maps-js-lib-link" href="./v1.0.0-alpha/getting-started/Installation.html#-installation-step-2-add-google-maps-js-lib" class="level-3" pref="#-installation-step-2-add-google-maps-js-lib">Step 2: Add Google Maps JS lib</a></li><li id="-installation-step-3-add-reactivemaps-style-file-item" class="level-3"><a id="-installation-step-3-add-reactivemaps-style-file-link" href="./v1.0.0-alpha/getting-started/Installation.html#-installation-step-3-add-reactivemaps-style-file" class="level-3" pref="#-installation-step-3-add-reactivemaps-style-file">Step 3: Add ReactiveMap’s style file</a></li></ul></li></ul></li></ul></li></ul></div>
+	</div>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/1abf2722c403ee395b8657a7ea99815439612831">Feb 25, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0-alpha/getting-started/Installation.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-installation">Installation</h2><h3 id="-installation-step-1-install-reactivemaps-via-npm">Step 1: Install reactivemaps via NPM</h3><p>We will fetch the <a href="https://www.npmjs.com/package/@appbaseio/reactivemaps"><code>reactivemaps</code></a> module first from npm.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pln">npm install </span><span class="pun">--</span><span class="pln">save </span><span class="lit">@appbaseio</span><span class="pun">/</span><span class="pln">reactivemaps</span></code></pre><h3 id="-installation-step-2-add-google-maps-js-lib">Step 2: Add Google Maps JS lib</h3><p>ReactiveMaps uses Google Maps to render the maps. For including Google Maps, add the following  &lt;script&gt; tag in the &lt;head&gt; element.</p><pre><code class="lang-html prettyprint prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="string"><span class="atv">"text/javascript"</span></span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="string"><span class="atv">"http:</span><span class="comment"><span class="atv">//maps.google.com/maps/api/js?key=Your_key_here"</span></span><span class="tag">&gt;&lt;/script&gt;</span></span>
+</code></pre><h3 id="-installation-step-3-add-reactivemaps-style-file">Step 3: Add ReactiveMap’s style file</h3><p>All ReactiveMap styles are present in a single file. We will import it in the &lt;head&gt; element as well</p><pre><code class="lang-html prettyprint prettyprinted" style=""><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="string"><span class="atv">"stylesheet"</span></span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="string"><span class="atv">"node_modules/@appbaseio/reactivemaps/dist/css/style.min.css"</span></span><span class="tag">&gt;</span></code></pre><p>If you haven’t included any style framework, we recommend adding materialize. </p><pre><code class="lang-html prettyprint prettyprinted" style=""><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="string"><span class="atv">"stylesheet"</span></span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="string"><span class="atv">"https:</span><span class="comment"><span class="atv">//cdnjs.cloudflare.com/ajax/libs/materialize/</span><span class="number"><span class="number"><span class="atv">0</span></span><span class="atv">.</span><span class="number"><span class="atv">98</span></span></span><span class="atv">.</span><span class="number"><span class="atv">0</span></span><span class="atv">/css/materialize.min.css"</span></span><span class="tag">&gt;</span></span>
+</code></pre><hr><p>You’re now all set to create an app with ReactiveMaps!</p><p>Next, read the <a href="http://opensource.appbase.io/reactivemaps-manual/v1/getting-started/Start.html">getting started</a> guide to find out how to build your first ReactiveMap based app.</p></div>
+	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
+		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
+			<li>
+				<div class="other-pages">Other pages in</div>
+			</li>
+			<li>
+				<a class="level-1 ng-binding" ng-href=./v1.0.0-alpha/getting-started/index.html ng-bind="folder.name" href=./v1.0.0-alpha/getting-started/index.html>getting-started</a>
+			</li>
+			<!-- ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0-alpha/getting-started/Installation.html ng-bind="file.label" href=./v1.0.0-alpha/getting-started/Installation.html>Installation</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0-alpha/getting-started/Start.html ng-bind="file.label" href=./v1.0.0-alpha/getting-started/Start.html>Quick Start</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0-alpha/getting-started/StyleGuide.html ng-bind="file.label" href=./v1.0.0-alpha/getting-started/StyleGuide.html>Style Guide</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0-alpha/getting-started/Theming.html ng-bind="file.label" href=./v1.0.0-alpha/getting-started/Theming.html>Theming</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
+		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
+	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
+	<div class="footer content">
+		<div class="row">
+			<div class="col-xs-12">
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
+					<a href="" class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v1.0.0-alpha/getting-started/Start.html class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
 </div>
+<!-- ngIf: index -->
 </div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
