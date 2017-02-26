@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc" class="no-literate">
+<body role="flatdoc" class="no-literate big-h3">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -391,9 +391,44 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
 	<div class="menubar fixed">
-		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-poweredby-item" class="level-2"><a id="-poweredby-link" href="./v1.0.0/components/PoweredBy.html#-poweredby" class="level-2" pref="#-poweredby">PoweredBy</a></li></ul></li></ul></li></ul></div>
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-datacontroller-item" class="level-2"><a id="-datacontroller-link" href="./v1.0.0/components/DataController.html#-datacontroller" class="level-2" pref="#-datacontroller">DataController</a><ul class="level-3" id="-datacontroller-list"><li id="-datacontroller-usage-item" class="level-3"><a id="-datacontroller-usage-link" href="./v1.0.0/components/DataController.html#-datacontroller-usage" class="level-3" pref="#-datacontroller-usage">Usage</a></li><li id="-datacontroller-props-item" class="level-3"><a id="-datacontroller-props-link" href="./v1.0.0/components/DataController.html#-datacontroller-props" class="level-3" pref="#-datacontroller-props">Props</a></li><li id="-datacontroller-css-styles-item" class="level-3"><a id="-datacontroller-css-styles-link" href="./v1.0.0/components/DataController.html#-datacontroller-css-styles" class="level-3" pref="#-datacontroller-css-styles">CSS Styles</a></li><li id="-datacontroller-examples-item" class="level-3"><a id="-datacontroller-examples-link" href="./v1.0.0/components/DataController.html#-datacontroller-examples" class="level-3" pref="#-datacontroller-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/29e2e963828b233b07462578a464e3f9fe75690a">Feb 25, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/PoweredBy.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-poweredby">PoweredBy</h2><p><img src="https://i.imgur.com/NJrjLT4.png" alt="PoweredBy Image"></p><p>A <code>PoweredBy</code> component displays a powered by appbase.io logo image.</p></div>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/f68ce33a1794441152f862d067906c82cbb47342">Feb 26, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/DataController.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-datacontroller">DataController</h2><p><img src="https://i.imgur.com/Lj5O2qg.png" alt="Image to be displayed"></p><p>As the name suggests, a <code>DataContoller</code> component creates a UI optional filter. There are many cases where filtering of results is controlled by query preferences not visible in the view. A Data Controller comes in handy there.</p><p>A <code>DataController</code> also provides a way to provide a customized UI widget with a generic query, as defined by <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl.html">Elasticsearch’s Query DSL</a>.</p><p>Example uses:</p><ul>
+<li>Showing personalized feeds based on user’s global preferences that are not visible in the current UI view, like in meetup.com’s meetup recommendations to users.</li>
+<li>Extending the existing UI components to perform a generic query.</li>
+</ul><h3 id="-datacontroller-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">DataController</span><span class="pln">
+  componentId</span><span class="pun">=</span><span class="string"><span class="str">"DataControllerSensor"</span></span><span class="pln">
+  title</span><span class="pun">=</span><span class="string"><span class="str">"Data Controller Component"</span></span><span class="pln">
+  showUI</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  dataLabel</span><span class="pun">={</span><span class="pln">
+    </span><span class="pun">&lt;</span><span class="pln">p</span><span class="pun">&gt;</span><span class="pln">A customizable UI widget</span><span class="pun">&lt;/</span><span class="pln">p</span><span class="pun">&gt;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  componentStyle</span><span class="pun">={{</span><span class="pln">
+    padding</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">'</span><span class="number"><span class="str">10</span></span><span class="str">px'</span></span><span class="pln">
+  </span><span class="pun">}}</span><span class="pln">
+  customQuery</span><span class="pun">={</span><span class="pln">
+    </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        query</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          match</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            data_field</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"this is a test"</span></span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h3 id="-datacontroller-props">Props</h3><ul>
+<li><strong class="li-title">componentId</strong> <code class="code-with-title">String</code><br>  unique id of the sensor, can be referenced in another component’s <strong>react</strong> prop.</li>
+<li><strong class="li-title">title</strong> <code class="code-with-title">String</code> [optional]<br>  Sets the title of the component to be shown in the UI.</li>
+<li><strong class="li-title">showUI</strong> <code class="code-with-title">Boolean</code> [optional]<br>  whether to show the UI for the component. Defaults to <code>false</code>.</li>
+<li><strong class="li-title">dataLabel</strong> <code class="code-with-title">String or HTML</code> [optional]<br>  set the UI markup. Accepts a string or an HTML element. This prop is only applicable when <strong>showUI</strong> is set to <code>true</code>.</li>
+<li><strong class="li-title">componentStyle</strong> <code class="code-with-title">Object</code> [optional]<br>  CSS styles to be applied to the <strong>DataController</strong> component. Similar to dataLabel, this prop is only applicable when <strong>showUI</strong> is set to <code>true</code>.</li>
+<li><strong class="li-title">customQuery</strong> <code class="code-with-title">Function</code> [optional]<br>  define the data query to be applied to the component, as per Elasticsearch v2.4 Query DSL. Unlike other components where <strong>appbaseField</strong> is a required prop and decides the query, with DataController component — user returns a query definition in the customQuery prop.</li>
+</ul><h3 id="-datacontroller-css-styles">CSS Styles</h3><p>All reactivebase components are <code>rbc</code> namespaced.</p><p><img src="" alt="Annotated Image"></p><h3 id="-datacontroller-examples">Examples</h3><ol>
+<li><a href="../playground/?selectedKind=DataController&amp;selectedStory=Basic&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=tuchk4%2Freadme%2Fpanel">DataController with all the default props</a></li>
+<li><a href="../playground/?selectedKind=DataController&amp;selectedStory=With%20UI&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=tuchk4%2Freadme%2Fpanel">DataSearch with autocomplete turned off</a></li>
+<li><a href="../playground/?selectedKind=DataController&amp;selectedStory=Playground&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=tuchk4%2Freadme%2Fpanel">Playground (with all knob actions)</a></li>
+</ol></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
 		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
 			<li>
@@ -431,7 +466,7 @@
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DataSearch.html ng-bind="file.label" href=./v1.0.0/components/DataSearch.html>Data Search</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DataController.html ng-bind="file.label" href=./v1.0.0/components/DataController.html>Data Controller</a>
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DataController.html ng-bind="file.label" href=./v1.0.0/components/DataController.html>Data Controller</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DatePicker.html ng-bind="file.label" href=./v1.0.0/components/DatePicker.html>Date Picker</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
@@ -441,7 +476,7 @@
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/PaginatedResultList.html ng-bind="file.label" href=./v1.0.0/components/PaginatedResultList.html>Paginated Result List</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/PoweredBy.html ng-bind="file.label" href=./v1.0.0/components/PoweredBy.html>Powered By</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/PoweredBy.html ng-bind="file.label" href=./v1.0.0/components/PoweredBy.html>Powered By</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
 		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
@@ -449,10 +484,10 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1.0.0/components/PaginatedResultList.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1.0.0/components/DataSearch.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1.0.0/advanced/Mapping.html class="paginationLink pull-right">Next</a>
+					<a href=./v1.0.0/components/DatePicker.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
