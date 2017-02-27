@@ -2,35 +2,31 @@
 
 {% raw %}
 
-## ReactiveList
+## ReactiveElement
 
-![Image to be displayed](https://i.imgur.com/GcUFZjh.png)
+![Image to be displayed](https://i.imgur.com/hwjCLss.png)
 
-A `ReactiveList` is an actuator component that creates a result list UI widget where results from all the applied filters are shown. It forms the base for building more specific actuators like `ReactivePaginatedList` and provides a lot of rich functionalities out of the box.
+A `ReactiveElement` is a generic actuator component for creating a result component. It allows the user to define a custom UI for displaying the results.
 
 Example uses:
 
-* showing a feed of results based on the applied search criterias.
-* streaming realtime feed updates based on applied criterias like in a newsfeed.
+* showing current trending topics based on the incoming data.
+* showing a chart of financial stocks data.
 
 ### Usage
 
 ```js
-<ReactiveList
-  componentId="SearchResult"
-  appbaseField="ratings"
-  title="ReactiveList"
-  stream={true}
-  sortBy="desc"
+<ReactiveElement
+  componentId="ReactiveElementID"
+  title="Reactive Element"
   from={0}
   size={10}
-  requestOnScroll={true}
-  componentStyle={{height:'700px', overflow:'auto'}}
   initialLoader="Loading Results.."
   noResults="No Results Found!"
   showResultStats={true}
+  componentStyle={{height:'700px', overflow:'auto'}}
   react={{
-    and: ["CitySensor", "SearchSensor"]
+    or: ["CitySensor", "SearchSensor"]
   }}
   onData={this.onData}
 />
@@ -40,25 +36,14 @@ Example uses:
 
 - **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `actuate` prop.
-- **appbaseField** `String`  
-    data field to be mapped with the `ReactiveList`'s UI view, used for providing a sorting context.
 - **title** `String` [optional]  
     title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
     whether to stream new result updates in the UI. Defaults to `false`.
--  **sortBy** `String` [optional]  
-    sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
-- **sortOptions** `Object Array` [optional]  
-    an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ReactiveList component's UI. Each array element is an object that takes three keys:
-    - `label` - label to be displayed in the UI.
-    - `field` - data field to use for applying the sorting criteria on.
-    - `order` - specified as either `asc` or `desc`.
 - **from** `Number` [optional]  
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 20.
-- **requestOnScroll** `Boolean` [optional]  
-    should a paginate data request be made when scroll reaches the end of the component view? Defaults to `true`, allowing an infinite scroll functionality.
 - **componentStyle** `Object` [optional]  
     CSS Styles to be applied to the **ReactiveList** component.
 - **initialLoader** `String or HTML` [optional]  

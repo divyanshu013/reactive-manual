@@ -33,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
     <div class="pull-left  hidden-xs" id="folder-navbar">
       <ul class="nav navbar-nav folder-li">
-        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none;">
           <a ng-href=./v1.0.0/getting-started/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Getting Started" href=./v1.0.0/getting-started/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Getting Started</span>
            </a>
@@ -50,7 +50,7 @@
               <a ng-href=./v1.0.0/getting-started/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/getting-started/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none;">
           <a ng-href=./v1.0.0/map-components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Map Components" href=./v1.0.0/map-components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Map Components</span>
            </a>
@@ -67,7 +67,7 @@
               <a ng-href=./v1.0.0/map-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/map-components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none;">
           <a ng-href=./v1.0.0/components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Base Components" href=./v1.0.0/components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Base Components</span>
            </a>
@@ -111,12 +111,14 @@
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1.0.0/components/ReactivePaginatedList.html title="Reactive PaginatedList" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/ReactivePaginatedList.html>Reactive PaginatedList</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v1.0.0/components/ReactiveElement.html title="Reactive Element" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/ReactiveElement.html>Reactive Element</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1.0.0/components/PoweredBy.html title="Powered By" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/PoweredBy.html>Powered By</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
               <a ng-href=./v1.0.0/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none;">
           <a ng-href=./v1.0.0/advanced/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Advanced Topics" href=./v1.0.0/advanced/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Advanced Topics</span>
            </a>
@@ -131,7 +133,7 @@
           </ul>
         </li><!-- end ngRepeat: folder in map[currentVersion] -->
       </ul>
-      <ul class="nav navbar-nav category-li">
+      <ul class="nav navbar-nav category-li" style="display: block;">
         <li class="dropdown menu-large">
           <a class="dropdown-toggle pointer" data-toggle="dropdown">more <b class="caret"></b></a>
           <ul class="dropdown-menu megamenu row">
@@ -213,6 +215,8 @@
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1.0.0/components/ReactivePaginatedList.html title="Reactive PaginatedList" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/ReactivePaginatedList.html>Reactive PaginatedList</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v1.0.0/components/ReactiveElement.html title="Reactive Element" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/ReactiveElement.html>Reactive Element</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1.0.0/components/PoweredBy.html title="Powered By" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/PoweredBy.html>Powered By</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                   <a ng-href=./v1.0.0/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/index.html>index</a>
@@ -239,7 +243,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size: auto; background-position: 0% 0%; background-repeat: repeat repeat;"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px;"><span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size: auto; background-position: 0% 0%; background-repeat: repeat repeat;"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -361,6 +365,8 @@
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1.0.0/components/ReactivePaginatedList.html title="Reactive PaginatedList" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/ReactivePaginatedList.html>Reactive PaginatedList</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                      <a ng-href=./v1.0.0/components/ReactiveElement.html title="Reactive Element" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/ReactiveElement.html>Reactive Element</a>
+                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1.0.0/components/PoweredBy.html title="Powered By" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/PoweredBy.html>Powered By</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                       <a ng-href=./v1.0.0/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/index.html>index</a>
@@ -393,7 +399,7 @@
 	<div class="menubar fixed">
 		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-reactivepaginatedlist-item" class="level-2"><a id="-reactivepaginatedlist-link" href="./v1.0.0/components/ReactivePaginatedList.html#-reactivepaginatedlist" class="level-2" pref="#-reactivepaginatedlist">ReactivePaginatedList</a><ul class="level-3" id="-reactivepaginatedlist-list"><li id="-reactivepaginatedlist-usage-item" class="level-3"><a id="-reactivepaginatedlist-usage-link" href="./v1.0.0/components/ReactivePaginatedList.html#-reactivepaginatedlist-usage" class="level-3" pref="#-reactivepaginatedlist-usage">Usage</a></li><li id="-reactivepaginatedlist-props-item" class="level-3"><a id="-reactivepaginatedlist-props-link" href="./v1.0.0/components/ReactivePaginatedList.html#-reactivepaginatedlist-props" class="level-3" pref="#-reactivepaginatedlist-props">Props</a></li><li id="-reactivepaginatedlist-extending-reactivepaginatedlist-item" class="level-3"><a id="-reactivepaginatedlist-extending-reactivepaginatedlist-link" href="./v1.0.0/components/ReactivePaginatedList.html#-reactivepaginatedlist-extending-reactivepaginatedlist" class="level-3" pref="#-reactivepaginatedlist-extending-reactivepaginatedlist">Extending ReactivePaginatedList</a></li><li id="-reactivepaginatedlist-css-styles-item" class="level-3"><a id="-reactivepaginatedlist-css-styles-link" href="./v1.0.0/components/ReactivePaginatedList.html#-reactivepaginatedlist-css-styles" class="level-3" pref="#-reactivepaginatedlist-css-styles">CSS Styles</a></li><li id="-reactivepaginatedlist-examples-item" class="level-3"><a id="-reactivepaginatedlist-examples-link" href="./v1.0.0/components/ReactivePaginatedList.html#-reactivepaginatedlist-examples" class="level-3" pref="#-reactivepaginatedlist-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/d546648cbf7e5d0b73ad6f1594d6be34c3661648">Feb 26, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/ReactivePaginatedList.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><p>{% raw %}</p><h2 id="-reactivepaginatedlist">ReactivePaginatedList</h2><p><img src="https://i.imgur.com/s2VIShU.png" alt="Image to be displayed"></p><p>A <code>ReactivePaginatedList</code> is an actuator component that creates a result list UI widget where results from all the applied filters are shown. It is just like a <code>ReactiveList</code> except with a UI for displaying pagination.</p><p>Example uses include:</p><ul>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/51058747e05cdaca4252256ee8763c475ef65727">Feb 27, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/ReactivePaginatedList.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><p>{% raw %}</p><h2 id="-reactivepaginatedlist">ReactivePaginatedList</h2><p><img src="https://i.imgur.com/s2VIShU.png" alt="Image to be displayed"></p><p>A <code>ReactivePaginatedList</code> is an actuator component that creates a result list UI widget where results from all the applied filters are shown. It is just like a <code>ReactiveList</code> except with a UI for displaying pagination.</p><p>Example uses include:</p><ul>
 <li>showing a result view in a e-commerce browsing experience.</li>
 <li>displaying a forum thread filtered by a specific topic.</li>
 </ul><h3 id="-reactivepaginatedlist-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">ReactivePaginatedList</span><span class="pln">
@@ -405,6 +411,9 @@
   from</span><span class="pun">={</span><span class="number"><span class="lit">0</span></span><span class="pun">}</span><span class="pln">
   size</span><span class="pun">={</span><span class="number"><span class="lit">10</span></span><span class="pun">}</span><span class="pln">
   componentStyle</span><span class="pun">={{</span><span class="pln">height</span><span class="pun">:</span><span class="string"><span class="str">'</span><span class="number"><span class="str">500</span></span><span class="str">px'</span></span><span class="pun">,</span><span class="pln"> overflow</span><span class="pun">:</span><span class="string"><span class="str">'auto'</span></span><span class="pun">}}</span><span class="pln">
+  initialLoader</span><span class="pun">=</span><span class="string"><span class="str">"Loading Results.."</span></span><span class="pln">
+  noResults</span><span class="pun">=</span><span class="string"><span class="str">"No Results Found!"</span></span><span class="pln">
+  showResultStats</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
   onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln">
   react</span><span class="pun">={{</span><span class="pln">
     </span><span class="string"><span class="str">"and"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"CitySensor"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"SearchSensor"</span></span><span class="pun">]</span><span class="pln">
@@ -425,8 +434,11 @@
 <li><strong class="li-title">size</strong> <code class="code-with-title">Number</code> [optional]<br>  number of results to show per view. Defaults to 20.</li>
 <li><strong class="li-title">requestOnScroll</strong> <code class="code-with-title">Boolean</code> [optional]<br>  should a paginate data request be made when scroll reaches the end of the component view? Defaults to <code>true</code>, allowing an infinite scroll functionality.</li>
 <li><strong class="li-title">componentStyle</strong> <code class="code-with-title">Object</code> [optional]<br>  CSS Styles to be applied to the component, passed as an object.</li>
-<li><strong class="li-title">onData</strong> <code class="code-with-title">Function</code> [optional]<br>  a callback function where user can define how to render the view based on the data changes.</li>
+<li><strong class="li-title">initialLoader</strong> <code class="code-with-title">String or HTML</code> [optional]<br>  display to show the user while the data is loading, accepts <code>String</code> or <code>HTML</code> markup.</li>
+<li><strong class="li-title">noResults</strong> <code class="code-with-title">String or HTML</code> [optional]<br>  display to show the user when no results are found, accepts <code>String</code> or <code>HTML</code> markup.</li>
+<li><strong class="li-title">showResultStats</strong> <code class="code-with-title">Boolean</code> [optional]<br>  whether to show result stats in the form of results found and time taken. Defaults to <code>true</code>.</li>
 <li><strong class="li-title">react</strong> <code class="code-with-title">Object</code> [optional]<br>  a dependency object defining how this component should react based on the state changes in the sensor components.</li>
+<li><strong class="li-title">onData</strong> <code class="code-with-title">Function</code> [optional]<br>  a callback function where user can define how to render the view based on the data changes.</li>
 </ul><h3 id="-reactivepaginatedlist-extending-reactivepaginatedlist">Extending ReactivePaginatedList</h3><p><code>onData</code> prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the <code>ReactivePaginatedList</code> view.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="comment"><span class="com">// Register a callback function with the `onData` prop.</span></span><span class="pln">
 </span><span class="pun">&lt;</span><span class="typ">ReactivePaginatedList</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">/&gt;</span><span class="pln">
 
@@ -529,6 +541,8 @@
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/ReactivePaginatedList.html ng-bind="file.label" href=./v1.0.0/components/ReactivePaginatedList.html>Reactive PaginatedList</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/ReactiveElement.html ng-bind="file.label" href=./v1.0.0/components/ReactiveElement.html>Reactive Element</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/PoweredBy.html ng-bind="file.label" href=./v1.0.0/components/PoweredBy.html>Powered By</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
 		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -540,7 +554,7 @@
 					<a href=./v1.0.0/components/ReactiveList.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1.0.0/components/PoweredBy.html class="paginationLink pull-right">Next</a>
+					<a href=./v1.0.0/components/ReactiveElement.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>

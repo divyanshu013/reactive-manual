@@ -397,44 +397,72 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
 	<div class="menubar fixed">
-		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-datacontroller-item" class="level-2"><a id="-datacontroller-link" href="./v1.0.0/components/DataController.html#-datacontroller" class="level-2" pref="#-datacontroller">DataController</a><ul class="level-3" id="-datacontroller-list"><li id="-datacontroller-usage-item" class="level-3"><a id="-datacontroller-usage-link" href="./v1.0.0/components/DataController.html#-datacontroller-usage" class="level-3" pref="#-datacontroller-usage">Usage</a></li><li id="-datacontroller-props-item" class="level-3"><a id="-datacontroller-props-link" href="./v1.0.0/components/DataController.html#-datacontroller-props" class="level-3" pref="#-datacontroller-props">Props</a></li><li id="-datacontroller-css-styles-item" class="level-3"><a id="-datacontroller-css-styles-link" href="./v1.0.0/components/DataController.html#-datacontroller-css-styles" class="level-3" pref="#-datacontroller-css-styles">CSS Styles</a></li><li id="-datacontroller-examples-item" class="level-3"><a id="-datacontroller-examples-link" href="./v1.0.0/components/DataController.html#-datacontroller-examples" class="level-3" pref="#-datacontroller-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-reactiveelement-item" class="level-2"><a id="-reactiveelement-link" href="./v1.0.0/components/ReactiveElement.html#-reactiveelement" class="level-2" pref="#-reactiveelement">ReactiveElement</a><ul class="level-3" id="-reactiveelement-list"><li id="-reactiveelement-usage-item" class="level-3"><a id="-reactiveelement-usage-link" href="./v1.0.0/components/ReactiveElement.html#-reactiveelement-usage" class="level-3" pref="#-reactiveelement-usage">Usage</a></li><li id="-reactiveelement-props-item" class="level-3"><a id="-reactiveelement-props-link" href="./v1.0.0/components/ReactiveElement.html#-reactiveelement-props" class="level-3" pref="#-reactiveelement-props">Props</a></li><li id="-reactiveelement-extending-reactivelist-item" class="level-3"><a id="-reactiveelement-extending-reactivelist-link" href="./v1.0.0/components/ReactiveElement.html#-reactiveelement-extending-reactivelist" class="level-3" pref="#-reactiveelement-extending-reactivelist">Extending ReactiveList</a></li><li id="-reactiveelement-css-styles-item" class="level-3"><a id="-reactiveelement-css-styles-link" href="./v1.0.0/components/ReactiveElement.html#-reactiveelement-css-styles" class="level-3" pref="#-reactiveelement-css-styles">CSS Styles</a></li><li id="-reactiveelement-examples-item" class="level-3"><a id="-reactiveelement-examples-link" href="./v1.0.0/components/ReactiveElement.html#-reactiveelement-examples" class="level-3" pref="#-reactiveelement-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/f68ce33a1794441152f862d067906c82cbb47342">Feb 26, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/DataController.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-datacontroller">DataController</h2><p><img src="https://i.imgur.com/Lj5O2qg.png" alt="Image to be displayed"></p><p>As the name suggests, a <code>DataContoller</code> component creates a UI optional filter. There are many cases where filtering of results is controlled by query preferences not visible in the view. A Data Controller comes in handy there.</p><p>A <code>DataController</code> also provides a way to provide a customized UI widget with a generic query, as defined by <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl.html">Elasticsearch’s Query DSL</a>.</p><p>Example uses:</p><ul>
-<li>Showing personalized feeds based on user’s global preferences that are not visible in the current UI view, like in meetup.com’s meetup recommendations to users.</li>
-<li>Extending the existing UI components to perform a generic query.</li>
-</ul><h3 id="-datacontroller-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">DataController</span><span class="pln">
-  componentId</span><span class="pun">=</span><span class="string"><span class="str">"DataControllerSensor"</span></span><span class="pln">
-  title</span><span class="pun">=</span><span class="string"><span class="str">"Data Controller Component"</span></span><span class="pln">
-  showUI</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
-  dataLabel</span><span class="pun">={</span><span class="pln">
-    </span><span class="pun">&lt;</span><span class="pln">p</span><span class="pun">&gt;</span><span class="pln">A customizable UI widget</span><span class="pun">&lt;/</span><span class="pln">p</span><span class="pun">&gt;</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-  componentStyle</span><span class="pun">={{</span><span class="pln">
-    padding</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">'</span><span class="number"><span class="str">10</span></span><span class="str">px'</span></span><span class="pln">
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/a8712a8089cfa6f6d98a532e4c470448ab0dc169">Feb 27, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/ReactiveElement.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><p>{% raw %}</p><h2 id="-reactiveelement">ReactiveElement</h2><p><img src="https://i.imgur.com/hwjCLss.png" alt="Image to be displayed"></p><p>A <code>ReactiveElement</code> is a generic actuator component for creating a result component. It allows the user to define a custom UI for displaying the results.</p><p>Example uses:</p><ul>
+<li>showing current trending topics based on the incoming data.</li>
+<li>showing a chart of financial stocks data.</li>
+</ul><h3 id="-reactiveelement-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">ReactiveElement</span><span class="pln">
+  componentId</span><span class="pun">=</span><span class="string"><span class="str">"ReactiveElementID"</span></span><span class="pln">
+  title</span><span class="pun">=</span><span class="string"><span class="str">"Reactive Element"</span></span><span class="pln">
+  from</span><span class="pun">={</span><span class="number"><span class="lit">0</span></span><span class="pun">}</span><span class="pln">
+  size</span><span class="pun">={</span><span class="number"><span class="lit">10</span></span><span class="pun">}</span><span class="pln">
+  initialLoader</span><span class="pun">=</span><span class="string"><span class="str">"Loading Results.."</span></span><span class="pln">
+  noResults</span><span class="pun">=</span><span class="string"><span class="str">"No Results Found!"</span></span><span class="pln">
+  showResultStats</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  componentStyle</span><span class="pun">={{</span><span class="pln">height</span><span class="pun">:</span><span class="string"><span class="str">'</span><span class="number"><span class="str">700</span></span><span class="str">px'</span></span><span class="pun">,</span><span class="pln"> overflow</span><span class="pun">:</span><span class="string"><span class="str">'auto'</span></span><span class="pun">}}</span><span class="pln">
+  react</span><span class="pun">={{</span><span class="pln">
+    or</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"CitySensor"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"SearchSensor"</span></span><span class="pun">]</span><span class="pln">
   </span><span class="pun">}}</span><span class="pln">
-  customQuery</span><span class="pun">={</span><span class="pln">
-    </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-      </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        query</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-          match</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-            data_field</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"this is a test"</span></span><span class="pln">
-          </span><span class="pun">}</span><span class="pln">
-        </span><span class="pun">}</span><span class="pln">
-      </span><span class="pun">}</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
+  onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h3 id="-reactiveelement-props">Props</h3><ul>
+<li><strong class="li-title">componentId</strong> <code class="code-with-title">String</code><br>  unique id of the sensor, can be referenced in an actuator’s <code>actuate</code> prop.</li>
+<li><strong class="li-title">title</strong> <code class="code-with-title">String</code> [optional]<br>  title of the component, to be shown in the UI.</li>
+<li><strong class="li-title">stream</strong> <code class="code-with-title">Boolean</code> [optional]<br>  whether to stream new result updates in the UI. Defaults to <code>false</code>.</li>
+<li><strong class="li-title">from</strong> <code class="code-with-title">Number</code> [optional]<br>  starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.</li>
+<li><strong class="li-title">size</strong> <code class="code-with-title">Number</code> [optional]<br>  number of results to show per view. Defaults to 20.</li>
+<li><strong class="li-title">componentStyle</strong> <code class="code-with-title">Object</code> [optional]<br>  CSS Styles to be applied to the <strong>ReactiveList</strong> component.</li>
+<li><strong class="li-title">initialLoader</strong> <code class="code-with-title">String or HTML</code> [optional]<br>  display to show the user while the data is loading, accepts <code>String</code> or <code>HTML</code> markup.</li>
+<li><strong class="li-title">noResults</strong> <code class="code-with-title">String or HTML</code> [optional]<br>  display to show the user when no results are found, accepts <code>String</code> or <code>HTML</code> markup.</li>
+<li><strong class="li-title">showResultStats</strong> <code class="code-with-title">Boolean</code> [optional]<br>  whether to show result stats in the form of results found and time taken. Defaults to <code>true</code>.</li>
+<li><strong class="li-title">react</strong> <code class="code-with-title">Object</code> [optional]<br>  a dependency object defining how this component should react based on the state changes in the sensor components.</li>
+<li><strong class="li-title">onData</strong> <code class="code-with-title">Function</code> [optional]<br>  a callback function where user can define how to render the view based on the data changes.</li>
+</ul><h3 id="-reactiveelement-extending-reactivelist">Extending ReactiveList</h3><p><code>onData</code> prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the <code>ReactiveList</code> component’s UI view.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="comment"><span class="com">// Register a callback function with the `onData` prop.</span></span><span class="pln">
+</span><span class="pun">&lt;</span><span class="typ">ReactiveList</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">/&gt;</span><span class="pln">
+
+</span><span class="comment"><span class="com">// Callback function returns an Arry of HTML elements to be rendered as ReactiveList items.</span></span><span class="pln">
+</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">(</span><span class="pln">res</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">err</span><span class="pun">])</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">res</span><span class="pun">.</span><span class="pln">mode</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">newData</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">currentData</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">appliedQuery</span><span class="pun">);</span><span class="pln">
+  </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">res</span><span class="pun">.</span><span class="pln">mode </span><span class="pun">===</span><span class="pln"> </span><span class="string"><span class="str">"historic"</span></span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"time taken for response is: "</span></span><span class="pun">+</span><span class="pln">took</span><span class="pun">+</span><span class="string"><span class="str">"ms"</span></span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">currentData </span><span class="pun">+</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">newData</span><span class="pun">;</span><span class="pln"> </span><span class="comment"><span class="com">// infinite scroll functionality</span></span><span class="pln">
+  </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="string"><span class="str">"New streaming update: "</span></span><span class="pun">,</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">newData</span><span class="pun">);</span><span class="pln">
+    res</span><span class="pun">.</span><span class="pln">currentData</span><span class="pun">.</span><span class="pln">unshift</span><span class="pun">(</span><span class="pln">res</span><span class="pun">.</span><span class="pln">newData</span><span class="pun">);</span><span class="pln">
+    </span><span class="comment"><span class="com">// add markup per element.</span></span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">currentData</span><span class="pun">;</span><span class="pln">               </span><span class="comment"><span class="com">// show streaming update functionality</span></span><span class="pln">
   </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">/&gt;</span></code></pre><h3 id="-datacontroller-props">Props</h3><ul>
-<li><strong class="li-title">componentId</strong> <code class="code-with-title">String</code><br>  unique id of the sensor, can be referenced in another component’s <strong>react</strong> prop.</li>
-<li><strong class="li-title">title</strong> <code class="code-with-title">String</code> [optional]<br>  Sets the title of the component to be shown in the UI.</li>
-<li><strong class="li-title">showUI</strong> <code class="code-with-title">Boolean</code> [optional]<br>  whether to show the UI for the component. Defaults to <code>false</code>.</li>
-<li><strong class="li-title">dataLabel</strong> <code class="code-with-title">String or HTML</code> [optional]<br>  set the UI markup. Accepts a string or an HTML element. This prop is only applicable when <strong>showUI</strong> is set to <code>true</code>.</li>
-<li><strong class="li-title">componentStyle</strong> <code class="code-with-title">Object</code> [optional]<br>  CSS styles to be applied to the <strong>DataController</strong> component. Similar to dataLabel, this prop is only applicable when <strong>showUI</strong> is set to <code>true</code>.</li>
-<li><strong class="li-title">customQuery</strong> <code class="code-with-title">Function</code> [optional]<br>  define the data query to be applied to the component, as per Elasticsearch v2.4 Query DSL. Unlike other components where <strong>appbaseField</strong> is a required prop and decides the query, with DataController component — user returns a query definition in the customQuery prop.</li>
-</ul><h3 id="-datacontroller-css-styles">CSS Styles</h3><p>All reactivebase components are <code>rbc</code> namespaced.</p><p><img src="" alt="Annotated Image"></p><h3 id="-datacontroller-examples">Examples</h3><ol>
-<li><a href="../playground/?selectedKind=DataController&amp;selectedStory=Basic&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=tuchk4%2Freadme%2Fpanel">DataController with all the default props</a></li>
-<li><a href="../playground/?selectedKind=DataController&amp;selectedStory=With%20UI&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=tuchk4%2Freadme%2Fpanel">DataSearch with autocomplete turned off</a></li>
-<li><a href="../playground/?selectedKind=DataController&amp;selectedStory=Playground&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=tuchk4%2Freadme%2Fpanel">Playground (with all knob actions)</a></li>
-</ol></div>
+</span><span class="pun">}</span></code></pre><p>The callback function returns an Array of HTML elements (think list items) which are then rendered to the view as ReactiveList items.</p><h4 id="usage">Usage</h4><ul>
+<li><strong class="li-title">res</strong> <code class="code-with-title">Object</code><br>  response object containing:  <ul>
+<li><strong class="li-title">mode</strong> <code class="code-with-title">String</code><br>  “historic” when results are returned from the existing dataset and “streaming” when new results are matched.</li>
+<li><strong class="li-title">newData</strong> <code class="code-with-title">Object</code><br>  an object array when returning historic data results or a single object for streaming mode updates.</li>
+<li><strong class="li-title">currentData</strong> <code class="code-with-title">Object Array</code><br>  an array of the result objects being shown in the current component view.</li>
+<li><strong class="li-title">appliedQuery</strong> <code class="code-with-title">Object</code><br>  raw query object that triggered the function callback, useful for debugging.</li>
+<li><strong class="li-title">took</strong> <code class="code-with-title">Number</code> [Optional]<br>  time taken in milliseconds, only passed when the mode is “historic”.</li>
+<li><strong class="li-title">total</strong> <code class="code-with-title">Number</code> [Optional]<br>  total number of results, passed when the mode is “historic”.</li>
+</ul>
+</li>
+<li><strong class="li-title">err</strong> <code class="code-with-title">Object</code><br>  error object.</li>
+</ul><h3 id="-reactiveelement-css-styles">CSS Styles</h3><p>All reactivebase components are <code>rbc</code> namespaced.</p><p><img src="https://i.imgur.com/KtDriR7.png" alt="Annotated image"></p><h3 id="-reactiveelement-examples">Examples</h3><ol>
+<li><p>ReactiveList with all the default props with a single sensor filter.</p>
+</li>
+<li><p>ReactiveList with a search and a filter sensor.</p>
+</li>
+<li><p>ReactiveList that shows streaming updates.</p>
+</li>
+<li><p>Playground (with all knob actions).</p>
+</li>
+</ol><p>{% endraw %}</p></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
 		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
 			<li>
@@ -472,7 +500,7 @@
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DataSearch.html ng-bind="file.label" href=./v1.0.0/components/DataSearch.html>Data Search</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DataController.html ng-bind="file.label" href=./v1.0.0/components/DataController.html>Data Controller</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DataController.html ng-bind="file.label" href=./v1.0.0/components/DataController.html>Data Controller</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DatePicker.html ng-bind="file.label" href=./v1.0.0/components/DatePicker.html>Date Picker</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
@@ -482,7 +510,7 @@
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/ReactivePaginatedList.html ng-bind="file.label" href=./v1.0.0/components/ReactivePaginatedList.html>Reactive PaginatedList</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/ReactiveElement.html ng-bind="file.label" href=./v1.0.0/components/ReactiveElement.html>Reactive Element</a>
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/ReactiveElement.html ng-bind="file.label" href=./v1.0.0/components/ReactiveElement.html>Reactive Element</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/PoweredBy.html ng-bind="file.label" href=./v1.0.0/components/PoweredBy.html>Powered By</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
@@ -492,10 +520,10 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1.0.0/components/DataSearch.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1.0.0/components/ReactivePaginatedList.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1.0.0/components/DatePicker.html class="paginationLink pull-right">Next</a>
+					<a href=./v1.0.0/components/PoweredBy.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
