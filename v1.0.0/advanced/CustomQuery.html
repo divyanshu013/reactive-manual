@@ -399,39 +399,39 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
 	<div class="menubar fixed">
-		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-react-item" class="level-2"><a id="-react-link" href="./v1.0.0/advanced/React.html#-react" class="level-2" pref="#-react">React</a><ul class="level-3" id="-react-list"><li id="-react-usage-item" class="level-3"><a id="-react-usage-link" href="./v1.0.0/advanced/React.html#-react-usage" class="level-3" pref="#-react-usage">Usage</a></li><li id="-react-props-item" class="level-3"><a id="-react-props-link" href="./v1.0.0/advanced/React.html#-react-props" class="level-3" pref="#-react-props">Props</a></li></ul></li></ul></li></ul></li></ul></div>
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-custom-queries-item" class="level-2"><a id="-custom-queries-link" href="./v1.0.0/advanced/CustomQuery.html#-custom-queries" class="level-2" pref="#-custom-queries">Custom Queries</a><ul class="level-3" id="-custom-queries-list"><li id="-custom-queries-data-aware-ui-components-item" class="level-3"><a id="-custom-queries-data-aware-ui-components-link" href="./v1.0.0/advanced/CustomQuery.html#-custom-queries-data-aware-ui-components" class="level-3" pref="#-custom-queries-data-aware-ui-components">Data Aware UI components</a></li><li id="-custom-queries-defining-a-custom-query-item" class="level-3"><a id="-custom-queries-defining-a-custom-query-link" href="./v1.0.0/advanced/CustomQuery.html#-custom-queries-defining-a-custom-query" class="level-3" pref="#-custom-queries-defining-a-custom-query">Defining a Custom Query</a></li><li id="-custom-queries-data-controller-component-item" class="level-3"><a id="-custom-queries-data-controller-component-link" href="./v1.0.0/advanced/CustomQuery.html#-custom-queries-data-controller-component" class="level-3" pref="#-custom-queries-data-controller-component">Data Controller Component</a></li><li id="-custom-queries-not-familiar-to-elasticsearch-item" class="level-3"><a id="-custom-queries-not-familiar-to-elasticsearch-link" href="./v1.0.0/advanced/CustomQuery.html#-custom-queries-not-familiar-to-elasticsearch" class="level-3" pref="#-custom-queries-not-familiar-to-elasticsearch">Not familiar to Elasticsearch?</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/cf43da381d01a817f12f527e85b46da9f3415391">Feb 27, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/advanced/React.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><p>{% raw %}</p><h2 id="-react">React</h2><p>One of the key ideas behind Reactive Maps is the sensor / actuator design pattern, which allows defining how an actuator component reacts to changes in the states of the sensors.</p><h3 id="-react-usage">Usage</h3><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">ReactiveMap</span><span class="pln">
-    </span><span class="pun">...</span><span class="pln">
-    react</span><span class="pun">={{</span><span class="pln">
-      </span><span class="string"><span class="str">"and"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"citySensor"</span></span><span class="pun">,</span><span class="pln">
-      </span><span class="string"><span class="str">"or"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"searchSensor"</span></span><span class="pln">
-    </span><span class="pun">}}</span><span class="pln">
-</span><span class="pun">&gt;</span></code></pre><h3 id="-react-props">Props</h3><ul>
-<li><strong class="li-title">react</strong> <code class="code-with-title">Object</code><br>  <code>react</code> prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. <a href="http://opensource.appbase.io/reactivemaps/manual/v1.0.0/map-components/ReactiveMap.html"><code>ReactiveMap</code></a>, <a href="https://opensource.appbase.io/reactivemaps/manual/v1.0.0/components/ReactiveList.html"><code>ReactiveList</code></a>.<ul>
-<li><strong class="li-title">key</strong> <code class="code-with-title">String</code><br>  one of <code>and</code>, <code>or</code>, <code>not</code> defines the combining clause.<ul>
-<li><strong class="li-title">and</strong> clause implies that the results will be filtered by matches from <strong>all</strong> of the associated component states.</li>
-<li><strong class="li-title">or</strong> clause implies that the results will be filtered by matches from <strong>at least one</strong> of the associated component states.</li>
-<li><strong class="li-title">not</strong> clause implies that the results will be filtered by an <strong>inverse</strong> match of the associated component states.</li>
-</ul>
-</li>
-<li><strong class="li-title">value</strong> <code class="code-with-title">String or Array or Object</code>  <ul>
-<li><code>String</code> is used for specifying a single component by its <code>componentId</code>.</li>
-<li><code>Array</code> is used for specifying multiple components by their <code>componentId</code>.</li>
-<li><code>Object</code> is used for nesting other key clauses.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul><p>An example of a <code>react</code> clause where all three clauses are used and values are <code>Object</code>, <code>Array</code> and <code>String</code>.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">ReactiveMap</span><span class="pln">
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactivemaps-manual/commit/8d77001f5fc5a39b2ca7773211e6bdfe01ce2217">Feb 27, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/advanced/CustomQuery.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-custom-queries">Custom Queries</h2><h3 id="-custom-queries-data-aware-ui-components">Data Aware UI components</h3><p>One of the key ideas behind Reactive Maps is the abstraction of a query interface.</p><p>The UI components are already associated with the data queries. For instance,</p><ul>
+<li><strong class="li-title">SingleList</strong> and <strong>MultiList</strong> components create a exact term match query based on the selected items.</li>
+<li>A <strong>RangeSlider</strong> component creates a numeric range query based on the selected <code>start</code> and <code>end</code> values.</li>
+</ul><p>Components rely on the <code>appbaseField</code> prop for selecting the database field on which the query needs to be applied.</p><p>However, there are cases where you would wish to override the associated query with your own. For example,</p><h3 id="-custom-queries-defining-a-custom-query">Defining a Custom Query</h3><p>Each component has a <code>customQuery</code> prop that accepts a function. The function should return a query object compatible with <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl.html" target="_blank">Elasticsearch Query DSL</a>. Here is a simple query object that applies a match query.</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">TextField</span><span class="pln">
   </span><span class="pun">...</span><span class="pln">
-  react</span><span class="pun">={{</span><span class="pln">
-    </span><span class="string"><span class="str">"and"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"or"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"CityComp"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"TopicComp"</span></span><span class="pun">],</span><span class="pln">
-        </span><span class="string"><span class="str">"not"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"BlacklistComp"</span></span><span class="pln">
+  customQuery</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">customQuery</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span><span class="pln">
+
+</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">customQuery</span><span class="pun">=</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"query"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"match"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="string"><span class="str">"fieldName"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"text to match"</span></span><span class="pln"> </span><span class="pun">}</span><span class="pln">
     </span><span class="pun">}</span><span class="pln">
-  </span><span class="pun">}}</span><span class="pln">
-</span><span class="pun">/&gt;</span></code></pre><p>Here, we are specifying that the map’s UI should update whenever one of the blacklist items is not present and simultaneously any one of city or topics matches.</p><p>{% endraw %}</p></div>
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>Here is another example that applies a match_phrase_prefix query.</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pun">&lt;</span><span class="typ">DataSearch</span><span class="pln">
+  </span><span class="pun">...</span><span class="pln">
+  customQuery</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">customQuery</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span><span class="pln">
+
+</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">customQuery</span><span class="pun">=</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"query"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"match_phrase_prefix"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="string"><span class="str">"fieldName"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"query"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"hello world"</span></span><span class="pun">,</span><span class="pln">
+          </span><span class="string"><span class="str">"max_expansions"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">10</span></span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><h3 id="-custom-queries-data-controller-component">Data Controller Component</h3><p>Reactive Maps UI library comes with a specific component that is designed to be truly customizable, <a href="../components/DataController.html"><strong>Data Controller</strong></a>. It’s a UI optional component that requires defining the <code>customQuery</code> prop.</p><p>For example, let’s say you want to apply a query filter to represent an end-user’s global preferences within the UI without adding a widget. Data Controller allows you to define a query without needing a UI widget.</p><h3 id="-custom-queries-not-familiar-to-elasticsearch">Not familiar to Elasticsearch?</h3><p>You need to write a custom query but haven’t worked with Elasticsearch. Okay, as a super quick primer, Elasticsearch is a data store cum search engine with a NoSQL JSON data model.</p><p>The docs link above is a good way to explore ElasticSearch in depth. Another alternative to get started with the query syntax is <a href="https://opensource.appbase.io/mirage">Mirage</a>, a GUI for composing Elasticsearch queries.</p></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
 		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
 			<li>
@@ -443,9 +443,9 @@
 			<!-- ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/Mapping.html ng-bind="file.label" href=./v1.0.0/advanced/Mapping.html>Data Mappings</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/CustomQuery.html ng-bind="file.label" href=./v1.0.0/advanced/CustomQuery.html>Defining Custom Queries</a>
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/CustomQuery.html ng-bind="file.label" href=./v1.0.0/advanced/CustomQuery.html>Defining Custom Queries</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/React.html ng-bind="file.label" href=./v1.0.0/advanced/React.html>Reactivity</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/React.html ng-bind="file.label" href=./v1.0.0/advanced/React.html>Reactivity</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
 		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
@@ -453,10 +453,10 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1.0.0/advanced/CustomQuery.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1.0.0/advanced/Mapping.html class="paginationLink pull-left">Previous</a>
 				</span>
-				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right disabled">
-					<a href="" class="paginationLink pull-right">Next</a>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v1.0.0/advanced/React.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
