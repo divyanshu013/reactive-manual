@@ -68,6 +68,17 @@
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
         </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none;">
+          <a ng-href=./v1.0.0/search-components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Search Components" href=./v1.0.0/search-components/index.html>
+            <span ng-bind="folder.label" class="link-restrict ng-binding">Search Components</span>
+           </a>
+          <ul class="dropdown-menu">
+            <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v1.0.0/search-components/NestedList.html title="Nested List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/NestedList.html>Nested List</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+              <a ng-href=./v1.0.0/search-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/index.html>index</a>
+            </li><!-- end ngRepeat: file in folder.files -->
+          </ul>
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none;">
           <a ng-href=./v1.0.0/components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="Base Components" href=./v1.0.0/components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">Base Components</span>
            </a>
@@ -80,8 +91,6 @@
               <a ng-href=./v1.0.0/components/SingleDropdownList.html title="Single Dropdown List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/SingleDropdownList.html>Single Dropdown List</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1.0.0/components/MultiDropdownList.html title="Multi Dropdown List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/MultiDropdownList.html>Multi Dropdown List</a>
-            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-              <a ng-href=./v1.0.0/components/NestedList.html title="Nested List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/NestedList.html>Nested List</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1.0.0/components/SingleRange.html title="Single Range" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/SingleRange.html>Single Range</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
@@ -180,6 +189,17 @@
             </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
               <ul>
                 <li class="dropdown-header">
+                  <a ng-href=./v1.0.0/search-components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="Search Components" href=./v1.0.0/search-components/index.html>Search Components</a>
+                </li>
+                <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v1.0.0/search-components/NestedList.html title="Nested List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/NestedList.html>Nested List</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                  <a ng-href=./v1.0.0/search-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/index.html>index</a>
+                </li><!-- end ngRepeat: file in folder.files -->
+              </ul>
+            </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+              <ul>
+                <li class="dropdown-header">
                   <a ng-href=./v1.0.0/components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="Base Components" href=./v1.0.0/components/index.html>Base Components</a>
                 </li>
                 <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
@@ -190,8 +210,6 @@
                   <a ng-href=./v1.0.0/components/SingleDropdownList.html title="Single Dropdown List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/SingleDropdownList.html>Single Dropdown List</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1.0.0/components/MultiDropdownList.html title="Multi Dropdown List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/MultiDropdownList.html>Multi Dropdown List</a>
-                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                  <a ng-href=./v1.0.0/components/NestedList.html title="Nested List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/NestedList.html>Nested List</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1.0.0/components/SingleRange.html title="Single Range" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/SingleRange.html>Single Range</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
@@ -255,7 +273,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px;"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px;"><span class="twitter-typeahead" style="position: relative; display: inline-block;"><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size: auto; background-position: 0% 0%; background-repeat: repeat repeat;"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -332,6 +350,17 @@
                 </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
                   <ul>
                     <li class="dropdown-header">
+                      <a ng-href=./v1.0.0/search-components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="Search Components" href=./v1.0.0/search-components/index.html>Search Components</a>
+                    </li>
+                    <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                      <a ng-href=./v1.0.0/search-components/NestedList.html title="Nested List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/NestedList.html>Nested List</a>
+                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
+                      <a ng-href=./v1.0.0/search-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/index.html>index</a>
+                    </li><!-- end ngRepeat: file in folder.files -->
+                  </ul>
+                </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="col-sm-3 megamenu-item ng-scope" ng-repeat="folder in map[currentVersion]">
+                  <ul>
+                    <li class="dropdown-header">
                       <a ng-href=./v1.0.0/components/index.html class="map_folder ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" title="Base Components" href=./v1.0.0/components/index.html>Base Components</a>
                     </li>
                     <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
@@ -342,8 +371,6 @@
                       <a ng-href=./v1.0.0/components/SingleDropdownList.html title="Single Dropdown List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/SingleDropdownList.html>Single Dropdown List</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1.0.0/components/MultiDropdownList.html title="Multi Dropdown List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/MultiDropdownList.html>Multi Dropdown List</a>
-                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
-                      <a ng-href=./v1.0.0/components/NestedList.html title="Nested List" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/NestedList.html>Nested List</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1.0.0/components/SingleRange.html title="Single Range" ng-bind="file.label" class="ng-binding" href=./v1.0.0/components/SingleRange.html>Single Range</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
@@ -445,7 +472,7 @@
   </span><span class="pun">}</span><span class="pln">
 </span><span class="pun">}</span></code></pre><h3 id="-custom-queries-data-controller-component">Data Controller Component</h3><p>Reactive Maps UI library comes with a specific component that is designed to be truly customizable, <a href="../components/DataController.html"><strong>Data Controller</strong></a>. It’s a UI optional component that requires defining the <code style="white-space: pre;">customQuery</code> prop.</p><p>For example, let’s say you want to apply a query filter to represent an end-user’s global preferences within the UI without adding a widget. Data Controller allows you to define a query without needing a UI widget.</p><h3 id="-custom-queries-not-familiar-to-elasticsearch">Not familiar to Elasticsearch?</h3><p>You need to write a custom query but haven’t worked with Elasticsearch. Okay, as a super quick primer, Elasticsearch is a data store cum search engine with a NoSQL JSON data model.</p><p>The docs link above is a good way to explore ElasticSearch in depth. Another alternative to get started with the query syntax is <a href="https://opensource.appbase.io/mirage">Mirage</a>, a GUI for composing Elasticsearch queries.</p></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
-		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
+		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
 			<li>
 				<div class="other-pages">Other pages in</div>
 			</li>
