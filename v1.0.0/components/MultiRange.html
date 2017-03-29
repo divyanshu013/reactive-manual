@@ -438,9 +438,9 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
 	<div class="menubar fixed">
-		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-multirange-item" class="level-2"><a id="-multirange-link" href="./v1.0.0/components/MultiRange.html#-multirange" class="level-2" pref="#-multirange">MultiRange</a><ul class="level-3" id="-multirange-list"><li id="-multirange-usage-item" class="level-3"><a id="-multirange-usage-link" href="./v1.0.0/components/MultiRange.html#-multirange-usage" class="level-3" pref="#-multirange-usage">Usage</a></li><li id="-multirange-props-item" class="level-3"><a id="-multirange-props-link" href="./v1.0.0/components/MultiRange.html#-multirange-props" class="level-3" pref="#-multirange-props">Props</a></li><li id="-multirange-css-styles-item" class="level-3"><a id="-multirange-css-styles-link" href="./v1.0.0/components/MultiRange.html#-multirange-css-styles" class="level-3" pref="#-multirange-css-styles">CSS Styles</a></li><li id="-multirange-examples-item" class="level-3"><a id="-multirange-examples-link" href="./v1.0.0/components/MultiRange.html#-multirange-examples" class="level-3" pref="#-multirange-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-multirange-item" class="level-2"><a id="-multirange-link" href="./v1.0.0/components/MultiRange.html#-multirange" class="level-2" pref="#-multirange">MultiRange</a><ul class="level-3" id="-multirange-list"><li id="-multirange-usage-item" class="level-3"><a id="-multirange-usage-link" href="./v1.0.0/components/MultiRange.html#-multirange-usage" class="level-3" pref="#-multirange-usage">Usage</a></li><li id="-multirange-props-item" class="level-3"><a id="-multirange-props-link" href="./v1.0.0/components/MultiRange.html#-multirange-props" class="level-3" pref="#-multirange-props">Props</a></li><li id="-multirange-css-styles-item" class="level-3"><a id="-multirange-css-styles-link" href="./v1.0.0/components/MultiRange.html#-multirange-css-styles" class="level-3" pref="#-multirange-css-styles">CSS Styles</a></li><li id="-multirange-extending-item" class="level-3"><a id="-multirange-extending-link" href="./v1.0.0/components/MultiRange.html#-multirange-extending" class="level-3" pref="#-multirange-extending">Extending</a></li><li id="-multirange-examples-item" class="level-3"><a id="-multirange-examples-link" href="./v1.0.0/components/MultiRange.html#-multirange-examples" class="level-3" pref="#-multirange-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/cc6210c6c36c80b145db3d5b46ec9c6cad9161aa">Mar 17, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/MultiRange.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-multirange">MultiRange</h2><p><img src="https://i.imgur.com/XqRjLSS.png" alt="Image to be displayed"></p><p>A <code style="white-space: pre;">MultiRange</code> component creates a multiple checkbox based numeric range selector. It is like a MultiList widget but for numeric data.</p><p>Example uses:</p><ul>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/4745b661b7fdad4e6f00d981185dc7bba4e66bc3">Mar 29, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/MultiRange.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-multirange">MultiRange</h2><p><img src="https://i.imgur.com/XqRjLSS.png" alt="Image to be displayed"></p><p>A <code style="white-space: pre;">MultiRange</code> component creates a multiple checkbox based numeric range selector. It is like a MultiList widget but for numeric data.</p><p>Example uses:</p><ul>
 <li>filtering search results by prices in an e-commerce or food delivery experience.</li>
 <li>browsing movies by a ratings filter.</li>
 </ul><h3 id="-multirange-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">MultiRange</span><span class="pln">
@@ -488,14 +488,45 @@
 <li>the checkbox inputs are encapsulated inside a <code style="white-space: pre;">rbc-list-container</code> class with each element having class name of <code style="white-space: pre;">rbc-list-item</code>.</li>
 <li>the input checkbox element has a class name of <code style="white-space: pre;">rbc-checkbox-item</code>.</li>
 <li>the label element has a class name of <code style="white-space: pre;">rbc-label</code>.</li>
+</ul><h3 id="-multirange-extending">Extending</h3><p><code style="white-space: pre;">MultiRange</code> component can be extended to</p><ol>
+<li>customize the look and feel with <code style="white-space: pre;">componentStyle</code>,</li>
+<li>update the underlying DB query with <code style="white-space: pre;">customQuery</code>,</li>
+<li>connect with external interfaces using <code style="white-space: pre;">onValueChange</code>.</li>
+</ol><pre><code class="prettyprint prettyprinted" style="white-space: pre;"><span class="tag">&lt;MultiRange</span><span class="pln">
+  ...
+  </span><span class="atn">componentStyle</span><span class="pun">=</span><span class="atv">{{"paddingBottom"</span><span class="pln">: </span><span class="atv">"10px"</span><span class="pln">}}
+  </span><span class="atn">customQuery</span><span class="pun">=</span><span class="atv">{</span><span class="pln">
+    </span><span class="atn">function</span><span class="pln">(</span><span class="atn">value</span><span class="pln">) {
+      </span><span class="atn">return</span><span class="pln"> {
+        </span><span class="atn">query</span><span class="pln">: {
+          </span><span class="atn">match</span><span class="pln">: {
+            </span><span class="atn">data_field</span><span class="pln">: </span><span class="atv">"this is a test"</span><span class="pln">
+          }
+        }
+      }
+    }
+  }
+  </span><span class="atn">onValueChange</span><span class="pun">={</span><span class="pln">
+    </span><span class="atn">function</span><span class="pln">(</span><span class="atn">value</span><span class="pln">) {
+      </span><span class="atn">console</span><span class="pln">.</span><span class="atn">log</span><span class="pln">(</span><span class="atv">"current value: "</span><span class="pln">, </span><span class="atn">value</span><span class="pln">)
+      </span><span class="pun">//</span><span class="pln"> </span><span class="atn">set</span><span class="pln"> </span><span class="atn">the</span><span class="pln"> </span><span class="atn">state</span><span class="pln">
+      </span><span class="pun">//</span><span class="pln"> </span><span class="atn">use</span><span class="pln"> </span><span class="atn">the</span><span class="pln"> </span><span class="atn">value</span><span class="pln"> </span><span class="atn">with</span><span class="pln"> </span><span class="atn">other</span><span class="pln"> </span><span class="atn">js</span><span class="pln"> </span><span class="atn">code</span><span class="pln">
+    }
+  }
+</span><span class="tag">/&gt;</span></code></pre><ul>
+<li><strong class="li-title">componentStyle</strong> <code class="code-with-title" style="white-space: pre;">Object</code>
+  CSS styles to be applied to the <strong>MultiRange</strong> component.</li>
+<li><strong class="li-title">customQuery</strong> <code class="code-with-title" style="white-space: pre;">Function</code>
+  takes <strong>value</strong> as a parameter and <strong>returns</strong> the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+  <code style="white-space: pre;">Note:</code> customQuery is called on value changes in the <strong>MultiRange</strong> component as long as the component is a part of <code style="white-space: pre;">react</code> dependency of at least one other component.</li>
+<li><strong class="li-title">onValueChange</strong> <code class="code-with-title" style="white-space: pre;">Function</code>
+  is called every time the component’s <strong>value</strong> changes and is passed in as a parameter to the function. This can be used for updating other UI components when <strong>MultiRange’s</strong> value changes.</li>
 </ul><h3 id="-multirange-examples">Examples</h3><ol>
-<li><p>Range with all the default props</p>
+<li><p><a href="..playground/?selectedKind=m%2FMultiRange&amp;selectedStory=Basic&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs&amp;filterBy=ReactiveMaps">Range with all the default props</a></p>
 </li>
-<li><p>Range with multiple default selections</p>
+<li><p><a href="..playground/?selectedKind=m%2FMultiRange&amp;selectedStory=With%20Default%20Selected&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs&amp;filterBy=ReactiveMaps">Range with pre-selected items</a></p>
 </li>
-<li><p>Range with a dependency on another sensor</p>
-</li>
-<li><p>Playground (with all knob actions)</p>
+<li><p><a href="..playground/?knob-title=MultiRange%3A%20Earthquake%20Magnitude&amp;knob-defaultSelected%5B0%5D=Moderate&amp;knob-defaultSelected%5B1%5D=Strong&amp;knob-showTags=false&amp;selectedKind=m%2FMultiRange&amp;selectedStory=Playground&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs&amp;filterBy=ReactiveMaps">Playground (with all knob actions)</a></p>
 </li>
 </ol></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
