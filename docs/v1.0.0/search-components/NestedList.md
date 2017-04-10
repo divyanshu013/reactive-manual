@@ -15,7 +15,7 @@ Example uses:
 ```js
 <NestedList
   componentId="CarCategorySensor"
-  appbaseField={["brand.raw", "model.raw"]}
+  appbaseField={[this.props.mapping.brand, this.props.mapping.model]}
   title="List of Brand > Model"
   size={100}
   sortBy="asc"
