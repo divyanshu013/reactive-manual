@@ -15,7 +15,8 @@
   <link rel="stylesheet" type="text/css" href="./bower_components/docbase/dist/css/main.min.css">
   <!-- Theme -->
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
-<script async="" src="//static.hotjar.com/c/hotjar-22389.js?sv=5"></script><script async="" src="https://script.hotjar.com/modules-bb08c120eee706b71c7f44e04a38ee7b.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
+  
+<script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
 <body role="flatdoc" class="no-literate big-h3">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
@@ -445,7 +446,7 @@
 	<div class="menubar fixed">
 		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-datasearch-item" class="level-2"><a id="-datasearch-link" href="./v1.0.0/components/DataSearch.html#-datasearch" class="level-2" pref="#-datasearch">DataSearch</a><ul class="level-3" id="-datasearch-list"><li id="-datasearch-usage-item" class="level-3"><a id="-datasearch-usage-link" href="./v1.0.0/components/DataSearch.html#-datasearch-usage" class="level-3" pref="#-datasearch-usage">Usage</a></li><li id="-datasearch-props-item" class="level-3"><a id="-datasearch-props-link" href="./v1.0.0/components/DataSearch.html#-datasearch-props" class="level-3" pref="#-datasearch-props">Props</a></li><li id="-datasearch-css-styles-item" class="level-3"><a id="-datasearch-css-styles-link" href="./v1.0.0/components/DataSearch.html#-datasearch-css-styles" class="level-3" pref="#-datasearch-css-styles">CSS Styles</a></li><li id="-datasearch-extending-item" class="level-3"><a id="-datasearch-extending-link" href="./v1.0.0/components/DataSearch.html#-datasearch-extending" class="level-3" pref="#-datasearch-extending">Extending</a></li><li id="-datasearch-examples-item" class="level-3"><a id="-datasearch-examples-link" href="./v1.0.0/components/DataSearch.html#-datasearch-examples" class="level-3" pref="#-datasearch-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/8a92bd44f47e90a33c7759e75c2141a0111dbbbc">Mar 29, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/DataSearch.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-datasearch">DataSearch</h2><p><img src="https://i.imgur.com/dLeyahL.png" alt="Image to be displayed"></p><p>A <code style="white-space: pre;">DataSearch</code> sensor component creates a searchbox UI widget with an autocomplete functionality. It is used for applying full-text search across one or more fields.</p><p>Example uses:</p><ul>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/51982ce989f44bade46660082b13fde2f964dcdd">Apr 13, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/web-flow" title="web-flow" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/19864447?v=3" alt="web-flow"></a><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/DataSearch.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-datasearch">DataSearch</h2><p><img src="https://i.imgur.com/dLeyahL.png" alt="Image to be displayed"></p><p>A <code style="white-space: pre;">DataSearch</code> sensor component creates a searchbox UI widget with an autocomplete functionality. It is used for applying full-text search across one or more fields.</p><p>Example uses:</p><ul>
 <li>Searching for a rental listing by its <code style="white-space: pre;">name</code> or <code style="white-space: pre;">description</code> field.</li>
 <li>Creating an e-commerce search box for finding products by their listing properties.</li>
 </ul><h3 id="-datasearch-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">DataSearch</span><span class="pln">
@@ -454,12 +455,15 @@
   title</span><span class="pun">=</span><span class="string"><span class="str">"Search"</span></span><span class="pln">
   placeholder</span><span class="pun">=</span><span class="string"><span class="str">"Search for cities or venues"</span></span><span class="pln">
   autocomplete</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  highlight</span><span class="pun">={</span><span class="kwd">false</span><span class="pun">}</span><span class="pln">
 </span><span class="pun">/&gt;</span></code></pre><h3 id="-datasearch-props">Props</h3><ul>
 <li><strong class="li-title">componentId</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  unique id of the sensor, can be referenced in an actuator’s react prop.</li>
 <li><strong class="li-title">appbaseField</strong> <code class="code-with-title" style="white-space: pre;">String or Array</code><br>  data field(s) on which the search query will be aplied to. If you want to search across multiple fields, pass them as an <code style="white-space: pre;">Array</code>.</li>
 <li><strong class="li-title">title</strong> <code class="code-with-title" style="white-space: pre;">String or HTML</code> [optional]<br>  Sets the title of the component to be shown in the UI.</li>
 <li><strong class="li-title">placeholder</strong> <code class="code-with-title" style="white-space: pre;">String</code> [optional]<br>  Sets the placeholder text to be shown in the searhbox input field. Defaults to “Search…”.</li>
 <li><strong class="li-title">autocomplete</strong> <code class="code-with-title" style="white-space: pre;">Boolean</code> [optional]<br>  Sets whether the autocomplete functionality should be enabled or disabled. Defaults to true.</li>
+<li><strong class="li-title">highlight</strong> <code class="code-with-title" style="white-space: pre;">Boolean</code> [optional]<br>  Whether highlighting should be enabled in the returned results.</li>
+<li><strong class="li-title">highlightFields</strong> <code class="code-with-title" style="white-space: pre;">Array</code> [optional]<br>  When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the <strong>appbaseField</strong> prop.</li>
 </ul><h3 id="-datasearch-css-styles">CSS Styles</h3><p>All reactivebase components are <code style="white-space: pre;">rbc</code> namespaced.</p><p><img src="https://i.imgur.com/ysbmr3Gg.png" alt="Annotated Image"></p><pre><code class="lang-html prettyprint prettyprinted" style="white-space: pre;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc rbc-datasearch rbc-title-inactive rbc-placeholder-active rbc-autocomplete-active"</span></span><span class="tag">&gt;</span><span class="pln">
         </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"Select Select--single is-searchable"</span></span><span class="tag">&gt;</span><span class="pln">
             ...
@@ -580,19 +584,9 @@
 <!-- ngIf: index -->
 </div>
 
-  <!-- Hotjar Tracking Code for appbase.io -->
-  <script>
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:22389,hjsv:5};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
-  <script type="text/javascript" src="./docbase-config.js"></script>
+ <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>
 
 
-<iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body><script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); $(document).ready(function(){ setTimeout(function(){ $('#folder-navbar').megaMenu(); },200); }); });</script></html>
+
+</body><script>$(function(){  $('.search-form').searchAppbase('./search-index.json', true); $(document).ready(function(){ setTimeout(function(){ $('#folder-navbar').megaMenu(); },200); }); });</script></html>
