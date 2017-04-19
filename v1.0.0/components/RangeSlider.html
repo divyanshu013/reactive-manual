@@ -16,7 +16,7 @@
   <!-- Theme -->
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
-<script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js?_=1492607603519"></script><script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
 <body role="flatdoc" class="no-literate big-h3">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
@@ -452,7 +452,7 @@
 	<div class="menubar fixed">
 		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-rangeslider-item" class="level-2"><a id="-rangeslider-link" href="./v1.0.0/components/RangeSlider.html#-rangeslider" class="level-2" pref="#-rangeslider">RangeSlider</a><ul class="level-3" id="-rangeslider-list"><li id="-rangeslider-usage-item" class="level-3"><a id="-rangeslider-usage-link" href="./v1.0.0/components/RangeSlider.html#-rangeslider-usage" class="level-3" pref="#-rangeslider-usage">Usage</a></li><li id="-rangeslider-props-item" class="level-3"><a id="-rangeslider-props-link" href="./v1.0.0/components/RangeSlider.html#-rangeslider-props" class="level-3" pref="#-rangeslider-props">Props</a></li><li id="-rangeslider-css-styles-item" class="level-3"><a id="-rangeslider-css-styles-link" href="./v1.0.0/components/RangeSlider.html#-rangeslider-css-styles" class="level-3" pref="#-rangeslider-css-styles">CSS Styles</a></li><li id="-rangeslider-extending-item" class="level-3"><a id="-rangeslider-extending-link" href="./v1.0.0/components/RangeSlider.html#-rangeslider-extending" class="level-3" pref="#-rangeslider-extending">Extending</a></li><li id="-rangeslider-examples-item" class="level-3"><a id="-rangeslider-examples-link" href="./v1.0.0/components/RangeSlider.html#-rangeslider-examples" class="level-3" pref="#-rangeslider-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/1879ce9e7511d95124aa94a238717ea90bf92987">Apr 9, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/RangeSlider.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-rangeslider">RangeSlider</h2><p><img src="https://i.imgur.com/OYUWZHL.png" alt="Image to be displayed"></p><p>A <code style="white-space: pre;">RangeSlider</code> sensor component creates a numeric range slider UI widget. It is used for granular filtering of numeric data.</p><p>Example uses:</p><ul>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/824457a145f91d77184436d75ae72f42be0e4769">Apr 19, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/RangeSlider.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-rangeslider">RangeSlider</h2><p><img src="https://i.imgur.com/OYUWZHL.png" alt="Image to be displayed"></p><p><code style="white-space: pre;">RangeSlider</code> creates a numeric range slider UI component. It is used for granular filtering of numeric data.</p><p>Example uses:</p><ul>
 <li>filtering products from a price range in an e-commerce shopping experience.</li>
 <li>filtering flights from a range of departure and arrival times.</li>
 </ul><h3 id="-rangeslider-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">RangeSlider</span><span class="pln">
@@ -472,6 +472,7 @@
     </span><span class="pun">}</span><span class="pln">
   </span><span class="pun">}</span><span class="pln">
   stepValue</span><span class="pun">=</span><span class="number"><span class="lit">1</span></span><span class="pln">
+  showHistogram</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
   initialLoader</span><span class="pun">=</span><span class="string"><span class="str">"creating the histogram.."</span></span><span class="pln">
 </span><span class="pun">/&gt;</span></code></pre><h3 id="-rangeslider-props">Props</h3><ul>
 <li><strong class="li-title">componentId</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  unique id of the sensor, can be referenced in an actuator’s <code style="white-space: pre;">react</code> prop.</li>
@@ -481,8 +482,10 @@
 <li><strong class="li-title">rangeLabels</strong> <code class="code-with-title" style="white-space: pre;">Object</code> [optional]<br>  an object with <code style="white-space: pre;">start</code> and <code style="white-space: pre;">end</code> keys and corresponding <code style="white-space: pre;">String</code> labels to show labels near the ends of the <code style="white-space: pre;">RangeSlider</code> component.</li>
 <li><strong class="li-title">defaultSelected</strong> <code class="code-with-title" style="white-space: pre;">Object</code> [optional]<br>  an object with <code style="white-space: pre;">start</code> and <code style="white-space: pre;">end</code> keys and corresponding numeric values denoting the pre-selected range values.</li>
 <li><strong class="li-title">stepValue</strong> <code class="code-with-title" style="white-space: pre;">Number</code> [optional]<br>  step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.</li>
+<li><strong class="li-title">showHistogram</strong> <code class="code-with-title" style="white-space: pre;">Boolean</code> [optional]<br>  whether to display the range histogram or not. Defaults to <code style="white-space: pre;">true</code>.</li>
+<li><strong class="li-title">interval</strong> <code class="code-with-title" style="white-space: pre;">Number</code> [optional]<br>  set the histogram bar interval, applicable when <em>showHistogram</em> is <code style="white-space: pre;">true</code>. Defaults to <code style="white-space: pre;">(range.end - range.start) / 10</code>.</li>
 <li><strong class="li-title">initialLoader</strong> <code class="code-with-title" style="white-space: pre;">String or HTML</code> [optional]<br>  display text while the data is being fetched, accepts <code style="white-space: pre;">String</code> or <code style="white-space: pre;">HTML</code> markup.</li>
-</ul><h3 id="-rangeslider-css-styles">CSS Styles</h3><p>All reactivebase components are <code style="white-space: pre;">rbc</code> namespaced.</p><p><img src="https://i.imgur.com/jXeI9W1.png" alt="Annotated image"></p><pre><code class="lang-html prettyprint prettyprinted" style="white-space: pre;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc rbc-rangeslider card thumbnail col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv"> rbc-title-active rbc-labels-inactive"</span></span><span class="tag">&gt;</span><span class="pln">
+</ul><h3 id="-rangeslider-css-styles">CSS Styles</h3><p>All reactivebase components are <code style="white-space: pre;">rbc</code> namespaced.</p><p><img src="https://i.imgur.com/jXeI9W1.png" alt="Annotated image"></p><pre><code class="lang-html prettyprint prettyprinted" style="white-space: pre;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc rbc-rangeslider card thumbnail col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv"> rbc-title-active rbc-histogram-active rbc-labels-inactive"</span></span><span class="tag">&gt;</span><span class="pln">
     </span><span class="tag">&lt;h</span><span class="number"><span class="tag">4</span></span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-title col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv">"</span></span><span class="tag">&gt;</span><span class="pln">Guests</span><span class="tag">&lt;/h</span><span class="number"><span class="tag">4</span></span><span class="tag">&gt;</span><span class="pln">
     </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-bar-container col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv">"</span></span><span class="tag">&gt;</span><span class="pln">
       </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-bar-item"</span></span><span class="tag">&gt;</span><span class="pln">
@@ -495,14 +498,20 @@
         </span><span class="tag">&lt;/div&gt;</span><span class="pln">
     </span><span class="tag">&lt;/div&gt;</span><span class="pln">
 </span><span class="tag">&lt;/div&gt;</span></code></pre><ul>
-<li>RangeSlider component’s class name is <code style="white-space: pre;">rbc-rangeslider</code>. Additionally, depending on the presence / absence of the <code style="white-space: pre;">title</code> prop, a <code style="white-space: pre;">rbc-title-active</code> or <code style="white-space: pre;">rbc-title-inactive</code> class is respectively applied.</li>
+<li>RangeSlider component’s class name is <code style="white-space: pre;">rbc-rangeslider</code>.<ul>
+<li>Additionally, depending on the presence / absence of the <code style="white-space: pre;">title</code> prop, a <code style="white-space: pre;">rbc-title-active</code> or <code style="white-space: pre;">rbc-title-inactive</code> class is applied.</li>
+<li>Depending on the presence / absence of the <code style="white-space: pre;">showHistogram</code> prop, a <code style="white-space: pre;">rbc-histogram-active</code> or <code style="white-space: pre;">rbc-histogram-inactive</code> class is applied.</li>
+<li>Depending on the presence / absence of the <code style="white-space: pre;">rangeLabels</code> prop, a <code style="white-space: pre;">rbc-labels-active</code> or <code style="white-space: pre;">rbc-labels-inactive</code> class is applied.</li>
+</ul>
+</li>
 <li>the title element has a class name of <code style="white-space: pre;">rbc-title</code>.</li>
 <li>the histogram is encapsulated inside a <code style="white-space: pre;">rbc-bar-container</code> class with each element having class name of <code style="white-space: pre;">rbc-bar-item</code>.</li>
 <li>the slider is encapsulated inside a <code style="white-space: pre;">rbc-rangeslider-container</code> class.</li>
 </ul><h3 id="-rangeslider-extending">Extending</h3><p><code style="white-space: pre;">RangeSlider</code> component can be extended to</p><ol>
 <li>customize the look and feel with <code style="white-space: pre;">componentStyle</code>,</li>
 <li>update the underlying DB query with <code style="white-space: pre;">customQuery</code>,</li>
-<li>connect with external interfaces using <code style="white-space: pre;">onValueChange</code>.</li>
+<li>connect with external interfaces using <code style="white-space: pre;">onValueChange</code>,</li>
+<li>filter data using a combined query context via the <code style="white-space: pre;">react</code> prop.</li>
 </ol><pre><code class="prettyprint prettyprinted" style="white-space: pre;"><span class="tag">&lt;RangeSlider</span><span class="pln">
   ...
   </span><span class="atn">componentStyle</span><span class="pun">=</span><span class="atv">{{"paddingBottom"</span><span class="pln">: </span><span class="atv">"10px"</span><span class="pln">}}
@@ -524,15 +533,30 @@
       </span><span class="pun">//</span><span class="pln"> </span><span class="atn">use</span><span class="pln"> </span><span class="atn">the</span><span class="pln"> </span><span class="atn">value</span><span class="pln"> </span><span class="atn">with</span><span class="pln"> </span><span class="atn">other</span><span class="pln"> </span><span class="atn">js</span><span class="pln"> </span><span class="atn">code</span><span class="pln">
     }
   }
+  </span><span class="atn">react</span><span class="pun">=</span><span class="atv">{{</span><span class="pln">
+    </span><span class="atv">"and"</span><span class="pln">: [</span><span class="atv">"ListSensor"</span><span class="pln">]
+  }}
 </span><span class="tag">/&gt;</span></code></pre><ul>
-<li><strong class="li-title">componentStyle</strong> <code class="code-with-title" style="white-space: pre;">Object</code>
-  CSS styles to be applied to the <strong>RangeSlider</strong> component.</li>
-<li><strong class="li-title">customQuery</strong> <code class="code-with-title" style="white-space: pre;">Function</code>
-  takes <strong>value</strong> as a parameter and <strong>returns</strong> the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+<li><strong class="li-title">componentStyle</strong> <code class="code-with-title" style="white-space: pre;">Object</code><br>  CSS styles to be applied to the <strong>RangeSlider</strong> component.</li>
+<li><strong class="li-title">customQuery</strong> <code class="code-with-title" style="white-space: pre;">Function</code><br>  takes <strong>value</strong> as a parameter and <strong>returns</strong> the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
   <code style="white-space: pre;">Note:</code> customQuery is called on value changes in the <strong>RangeSlider</strong> component as long as the component is a part of <code style="white-space: pre;">react</code> dependency of at least one other component.</li>
-<li><strong class="li-title">onValueChange</strong> <code class="code-with-title" style="white-space: pre;">Function</code>
-  is called every time the component’s <strong>value</strong> changes and is passed in as a parameter to the function. This can be used for updating other UI components when <strong>RangeSlider’s</strong> value changes.</li>
-</ul><h3 id="-rangeslider-examples">Examples</h3><ol>
+<li><strong class="li-title">onValueChange</strong> <code class="code-with-title" style="white-space: pre;">Function</code><br>  is called every time the component’s <strong>value</strong> changes and is passed in as a parameter to the function. This can be used for updating other UI components when <strong>RangeSlider’s</strong> value changes.</li>
+<li><strong class="li-title">react</strong> <code class="code-with-title" style="white-space: pre;">Object</code><br>  specify dependent components to reactively update <strong>RangeSlider’s</strong> data view.<ul>
+<li><strong class="li-title">key</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  one of <code style="white-space: pre;">and</code>, <code style="white-space: pre;">or</code>, <code style="white-space: pre;">not</code> defines the combining clause.<ul>
+<li><strong class="li-title">and</strong> clause implies that the results will be filtered by matches from <strong>all</strong> of the associated component states.</li>
+<li><strong class="li-title">or</strong> clause implies that the results will be filtered by matches from <strong>at least one</strong> of the associated component states.</li>
+<li><strong class="li-title">not</strong> clause implies that the results will be filtered by an <strong>inverse</strong> match of the associated component states.</li>
+</ul>
+</li>
+<li><strong class="li-title">value</strong> <code class="code-with-title" style="white-space: pre;">String or Array or Object</code>  <ul>
+<li><code style="white-space: pre;">String</code> is used for specifying a single component by its <code style="white-space: pre;">componentId</code>.</li>
+<li><code style="white-space: pre;">Array</code> is used for specifying multiple components by their <code style="white-space: pre;">componentId</code>.</li>
+<li><code style="white-space: pre;">Object</code> is used for nesting other key clauses.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h3 id="-rangeslider-examples">Examples</h3><p></p><p data-height="500" data-theme-id="light" data-slug-hash="wJLYoe" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RangeSlider" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/ZKQeGx/">ReactiveSearch RangeSlider</a> on codepen.</p><p></p><script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script><p>See more stories for RangeSlider on playground.</p><ol>
 <li><p><a href="../playground/?selectedKind=RangeSlider&amp;selectedStory=Basic&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs&amp;filterBy=ReactiveMaps">Range with all the default props</a></p>
 </li>
 <li><p><a href="../playground/?selectedKind=RangeSlider&amp;selectedStory=With%20Default%20Selected&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs&amp;filterBy=ReactiveMaps">Range with a default selection</a></p>
