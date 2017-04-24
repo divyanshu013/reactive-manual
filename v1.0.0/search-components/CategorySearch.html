@@ -16,7 +16,7 @@
   <!-- Theme -->
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
-<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js?_=1492778116760"></script><script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js?_=1493041300312"></script><script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
 <body role="flatdoc" class="no-literate big-h3">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
@@ -82,6 +82,8 @@
               <a ng-href=./v1.0.0/search-components/MultiLevelMenu.html title="MultiLevel Menu" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1.0.0/search-components/CategorySearch.html title="Category Search" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v1.0.0/search-components/DynamicRangeSlider.html title="DynamicRange Slider" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
               <a ng-href=./v1.0.0/search-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
@@ -205,6 +207,8 @@
                   <a ng-href=./v1.0.0/search-components/MultiLevelMenu.html title="MultiLevel Menu" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1.0.0/search-components/CategorySearch.html title="Category Search" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v1.0.0/search-components/DynamicRangeSlider.html title="DynamicRange Slider" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                   <a ng-href=./v1.0.0/search-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/index.html>index</a>
                 </li><!-- end ngRepeat: file in folder.files -->
@@ -370,6 +374,8 @@
                       <a ng-href=./v1.0.0/search-components/MultiLevelMenu.html title="MultiLevel Menu" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1.0.0/search-components/CategorySearch.html title="Category Search" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
+                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                      <a ng-href=./v1.0.0/search-components/DynamicRangeSlider.html title="DynamicRange Slider" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                       <a ng-href=./v1.0.0/search-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/index.html>index</a>
                     </li><!-- end ngRepeat: file in folder.files -->
@@ -548,6 +554,8 @@ A <code style="white-space: pre;">CategorySearch</code> sensor component creates
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/MultiLevelMenu.html ng-bind="file.label" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/CategorySearch.html ng-bind="file.label" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/DynamicRangeSlider.html ng-bind="file.label" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
 		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
@@ -558,7 +566,7 @@ A <code style="white-space: pre;">CategorySearch</code> sensor component creates
 					<a href=./v1.0.0/search-components/MultiLevelMenu.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1.0.0/components/SingleList.html class="paginationLink pull-right">Next</a>
+					<a href=./v1.0.0/search-components/DynamicRangeSlider.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>

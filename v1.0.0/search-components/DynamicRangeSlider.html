@@ -16,7 +16,7 @@
   <!-- Theme -->
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
-<script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js?_=1493041300313"></script><script type="text/javascript" async="" src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
 <body role="flatdoc" class="no-literate big-h3">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
@@ -456,169 +456,150 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
 	<div class="menubar fixed">
-		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-elasticsearch-mapping-item" class="level-2"><a id="-elasticsearch-mapping-link" href="./v1.0.0/advanced/Mapping.html#-elasticsearch-mapping" class="level-2" pref="#-elasticsearch-mapping">Elasticsearch Mapping</a></li></ul></li></ul></li></ul></div>
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-dynamicrangeslider-item" class="level-2"><a id="-dynamicrangeslider-link" href="./v1.0.0/search-components/DynamicRangeSlider.html#-dynamicrangeslider" class="level-2" pref="#-dynamicrangeslider">DynamicRangeSlider</a><ul class="level-3" id="-dynamicrangeslider-list"><li id="-dynamicrangeslider-usage-item" class="level-3"><a id="-dynamicrangeslider-usage-link" href="./v1.0.0/search-components/DynamicRangeSlider.html#-dynamicrangeslider-usage" class="level-3" pref="#-dynamicrangeslider-usage">Usage</a></li><li id="-dynamicrangeslider-props-item" class="level-3"><a id="-dynamicrangeslider-props-link" href="./v1.0.0/search-components/DynamicRangeSlider.html#-dynamicrangeslider-props" class="level-3" pref="#-dynamicrangeslider-props">Props</a></li><li id="-dynamicrangeslider-css-styles-item" class="level-3"><a id="-dynamicrangeslider-css-styles-link" href="./v1.0.0/search-components/DynamicRangeSlider.html#-dynamicrangeslider-css-styles" class="level-3" pref="#-dynamicrangeslider-css-styles">CSS Styles</a></li><li id="-dynamicrangeslider-extending-item" class="level-3"><a id="-dynamicrangeslider-extending-link" href="./v1.0.0/search-components/DynamicRangeSlider.html#-dynamicrangeslider-extending" class="level-3" pref="#-dynamicrangeslider-extending">Extending</a></li><li id="-dynamicrangeslider-examples-item" class="level-3"><a id="-dynamicrangeslider-examples-link" href="./v1.0.0/search-components/DynamicRangeSlider.html#-dynamicrangeslider-examples" class="level-3" pref="#-dynamicrangeslider-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/29e2e963828b233b07462578a464e3f9fe75690a">Feb 25, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/advanced/Mapping.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-elasticsearch-mapping">Elasticsearch Mapping</h2><ol>
-<li>Close the Index:      </li>
-</ol><pre><code class="prettyprint prettyprinted" style="white-space: pre;"><span class="pln">curl </span><span class="str">'http://scalr.api.appbase.io/map_demo/_close'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">X POST </span><span class="pun">-</span><span class="pln">d </span><span class="str">'{}'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">u aT29UsiAp</span><span class="pun">:</span><span class="pln">e0d26007</span><span class="pun">-</span><span class="pln">d818</span><span class="pun">-</span><span class="lit">4559</span><span class="pun">-</span><span class="lit">8244</span><span class="pun">-</span><span class="pln">c3c2fbad45ad </span><span class="pun">-</span><span class="pln">H </span><span class="str">'Content-Type: application/json'</span></code></pre><ol>
-<li>Update the settings:</li>
-</ol><pre><code class="prettyprint prettyprinted" style="white-space: pre;"><span class="pln">curl </span><span class="str">'http://scalr.api.appbase.io/map_demo/_settings'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">X PUT </span><span class="pun">-</span><span class="pln">d </span><span class="str">'{
-  "analysis": {
-    "filter": {
-      "nGram_filter": {
-        "type": "edge_ngram",
-        "min_gram": 1,
-        "max_gram": 20,
-        "token_chars": [
-          "letter",
-          "digit",
-          "punctuation",
-          "symbol"
-        ]
-      }
-    },
-    "analyzer": {
-      "nGram_analyzer": {
-        "type": "custom",
-        "tokenizer": "whitespace",
-        "filter": [
-          "lowercase",
-          "asciifolding",
-          "nGram_filter"
-        ]
-      },
-      "body_analyzer": {
-        "type": "custom",
-        "tokenizer": "standard",
-        "filter": [
-          "lowercase",
-          "asciifolding",
-          "stop",
-          "snowball",
-          "word_delimiter"
-        ]
-      },
-      "standard_analyzer": {
-        "type": "custom",
-        "tokenizer": "standard",
-        "filter": [
-          "lowercase",
-          "asciifolding"
-        ]
-      },
-      "whitespace_analyzer": {
-        "type": "whitespace",
-        "tokenizer": "whitespace",
-        "filter": [
-          "lowercase",
-          "asciifolding"
-        ]
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/ce0ae7683c43f146eb0b607ecd021361a38c0795">Apr 24, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/search-components/DynamicRangeSlider.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-dynamicrangeslider">DynamicRangeSlider</h2><p><img src="https://i.imgur.com/am2VHmW.png" alt="Image to be displayed"></p><p><code style="white-space: pre;">DynamicRangeSlider</code> creates a numeric range slider UI component. It is used for granular filtering of numeric data.</p><p>Example uses:</p><ul>
+<li>filtering products from a price range in an e-commerce shopping experience.</li>
+<li>filtering flights from a range of departure and arrival times.</li>
+</ul><h3 id="-dynamicrangeslider-usage">Usage</h3><h4 id="basic-usage">Basic Usage</h4><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">DynamicRangeSlider</span><span class="pln">
+  componentId</span><span class="pun">=</span><span class="string"><span class="str">"DynamicRangeSensor"</span></span><span class="pln">
+  appbaseField</span><span class="pun">=</span><span class="string"><span class="str">"guests"</span></span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><p>While <code style="white-space: pre;">DynamicRangeSlider</code> only requires the above props to be used, it comes with many additional props for pre-selecting range values, setting the step value of the range slider, specifying labels for the range endpoints, whether to display histogram etc.</p><h4 id="usage-with-all-props">Usage With All Props</h4><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">DynamicRangeSlider</span><span class="pln">
+  componentId</span><span class="pun">=</span><span class="string"><span class="str">"DynamicRangeSensor"</span></span><span class="pln">
+  appbaseField</span><span class="pun">=</span><span class="string"><span class="str">"guests"</span></span><span class="pln">
+  title</span><span class="pun">=</span><span class="string"><span class="str">"Guests"</span></span><span class="pln">
+  defaultSelected</span><span class="pun">={(</span><span class="pln">min</span><span class="pun">,</span><span class="pln"> max</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"start"</span></span><span class="pun">:</span><span class="pln"> min</span><span class="pun">,</span><span class="pln">
+      </span><span class="string"><span class="str">"end"</span></span><span class="pun">:</span><span class="pln"> </span><span class="typ">Math</span><span class="pun">.</span><span class="pln">min</span><span class="pun">(</span><span class="pln">min </span><span class="pun">+</span><span class="pln"> </span><span class="number"><span class="lit">5</span></span><span class="pun">,</span><span class="pln"> max</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">)}</span><span class="pln">
+  rangeLabels</span><span class="pun">={(</span><span class="pln">min</span><span class="pun">,</span><span class="pln"> max</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"start"</span></span><span class="pun">:</span><span class="pln"> min </span><span class="pun">+</span><span class="pln"> </span><span class="string"><span class="str">" guest"</span></span><span class="pun">,</span><span class="pln">
+      </span><span class="string"><span class="str">"end"</span></span><span class="pun">:</span><span class="pln"> max </span><span class="pun">+</span><span class="pln"> </span><span class="string"><span class="str">" guests"</span></span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">)}</span><span class="pln">
+  stepValue</span><span class="pun">={</span><span class="number"><span class="lit">1</span></span><span class="pun">}</span><span class="pln">
+  showHistogram</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  interval</span><span class="pun">={</span><span class="number"><span class="lit">2</span></span><span class="pun">}</span><span class="pln">
+  initialLoader</span><span class="pun">=</span><span class="string"><span class="str">"Rendering the histogram.."</span></span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h3 id="-dynamicrangeslider-props">Props</h3><ul>
+<li><strong class="li-title">componentId</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  unique id of the sensor, can be referenced in an actuator’s <code style="white-space: pre;">react</code> prop.</li>
+<li><strong class="li-title">appbaseField</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  DB data field to be mapped with the component’s UI view.The selected range creates a database query on this field.</li>
+<li><strong class="li-title">title</strong> <code class="code-with-title" style="white-space: pre;">String or HTML</code> [optional]<br>  title of the component to be shown in the UI.</li>
+<li><strong class="li-title">defaultSelected</strong> <code class="code-with-title" style="white-space: pre;">Object</code> [optional]<br>  a function that accepts <code style="white-space: pre;">min</code> and <code style="white-space: pre;">max</code> range values as parameters and returns an object representing current selection from the range with <code style="white-space: pre;">start</code> and <code style="white-space: pre;">end</code> keys.</li>
+<li><strong class="li-title">rangeLabels</strong> <code class="code-with-title" style="white-space: pre;">Function</code> [optional]<br>  a function that accepts <code style="white-space: pre;">min</code> and <code style="white-space: pre;">max</code> range values as parameters and returns an object representing labels with <code style="white-space: pre;">start</code> and <code style="white-space: pre;">end</code> keys.</li>
+<li><strong class="li-title">stepValue</strong> <code class="code-with-title" style="white-space: pre;">Number</code> [optional]<br>  step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.</li>
+<li><strong class="li-title">showHistogram</strong> <code class="code-with-title" style="white-space: pre;">Boolean</code> [optional]<br>  whether to display the range histogram or not. Defaults to <code style="white-space: pre;">true</code>.</li>
+<li><strong class="li-title">interval</strong> <code class="code-with-title" style="white-space: pre;">Number</code> [optional]<br>  set the histogram bar interval, applicable when <em>showHistogram</em> is <code style="white-space: pre;">true</code>. Defaults to <code style="white-space: pre;">(range.end - range.start) / 10</code>.</li>
+<li><strong class="li-title">initialLoader</strong> <code class="code-with-title" style="white-space: pre;">String or HTML</code> [optional]<br>  display text while the data is being fetched, accepts <code style="white-space: pre;">String</code> or <code style="white-space: pre;">HTML</code> markup.</li>
+</ul><h3 id="-dynamicrangeslider-css-styles">CSS Styles</h3><p>All reactivebase components are <code style="white-space: pre;">rbc</code> namespaced.</p><p><img src="https://i.imgur.com/jBkvYft.png" alt="Annotated image"></p><pre><code class="lang-html prettyprint prettyprinted" style="white-space: pre;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc rbc-dynamicrangeslider card thumbnail col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv"> rbc-title-active rbc-rangelabels-inactive rbc-histogram-inactive rbc-initialloader-inactive"</span></span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;h</span><span class="number"><span class="tag">4</span></span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-title col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv">"</span></span><span class="tag">&gt;</span><span class="pln">DynamicRangeSlider</span><span class="tag">&lt;/h</span><span class="number"><span class="tag">4</span></span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-rangeslider-container col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv">"</span></span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rc-slider"</span></span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rc-slider-rail"</span></span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rc-slider-track rc-slider-track-</span><span class="number"><span class="atv">1</span></span><span class="atv">"</span></span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="string"><span class="atv">"</span><span class="pln">visibility</span><span class="pun">:</span><span class="pln"> visible</span><span class="pun">;</span><span class="pln"> left</span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">0</span></span><span class="pun">%;</span><span class="pln"> width</span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="number"><span class="lit">101</span></span><span class="lit">.</span><span class="number"><span class="lit">01</span></span></span><span class="pun">%;</span><span class="atv">"</span></span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rc-slider-step"</span></span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rc-slider-handle rc-slider-handle-</span><span class="number"><span class="atv">1</span></span><span class="atv"> rc-slider-handle-lower"</span></span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="string"><span class="atv">"</span><span class="pln">left</span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">0</span></span><span class="pun">%;</span><span class="atv">"</span></span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rc-slider-handle rc-slider-handle-</span><span class="number"><span class="atv">2</span></span><span class="atv"> rc-slider-handle-upper"</span></span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="string"><span class="atv">"</span><span class="pln">left</span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="number"><span class="lit">101</span></span><span class="lit">.</span><span class="number"><span class="lit">01</span></span></span><span class="pun">%;</span><span class="atv">"</span></span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rc-slider-mark"</span></span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></code></pre><ul>
+<li>DynamicRangeSlider component’s class name is <code style="white-space: pre;">rbc-dynamicrangeslider</code>. Additionally, depending on the presence / absence of the <code style="white-space: pre;">title</code> prop, a <code style="white-space: pre;">rbc-title-active</code> or <code style="white-space: pre;">rbc-title-inactive</code> class is respectively applied.</li>
+<li>the title element has a class name of <code style="white-space: pre;">rbc-title</code>.</li>
+<li>the histogram is encapsulated inside a <code style="white-space: pre;">rbc-bar-container</code> class with each element having class name of <code style="white-space: pre;">rbc-bar-item</code>. When the histogram is not present, the top level element will have a <code style="white-space: pre;">rbc-histogram-inactive</code> class.</li>
+<li>the slider is encapsulated inside a <code style="white-space: pre;">rbc-rangeslider-container</code> class.</li>
+<li>if range labels are not present, the top level element will have a <code style="white-space: pre;">rbc-rangelabels-inactive</code> class.</li>
+</ul><h3 id="-dynamicrangeslider-extending">Extending</h3><p><code style="white-space: pre;">DynamicRangeSlider</code> component can be extended to</p><ol>
+<li>customize the look and feel with <code style="white-space: pre;">componentStyle</code>,</li>
+<li>update the underlying DB query with <code style="white-space: pre;">customQuery</code>,</li>
+<li>connect with external interfaces using <code style="white-space: pre;">onValueChange</code>,</li>
+<li>filter data using a combined query context via the <code style="white-space: pre;">react</code> prop.</li>
+</ol><pre><code class="prettyprint prettyprinted" style="white-space: pre;"><span class="tag">&lt;DynamicRangeSlider</span><span class="pln">
+  ...
+  </span><span class="atn">componentStyle</span><span class="pun">=</span><span class="atv">{{"paddingBottom"</span><span class="pln">: </span><span class="atv">"10px"</span><span class="pln">}}
+  </span><span class="atn">customQuery</span><span class="pun">=</span><span class="atv">{</span><span class="pln">
+    </span><span class="atn">function</span><span class="pln">(</span><span class="atn">value</span><span class="pln">) {
+      </span><span class="atn">return</span><span class="pln"> {
+        </span><span class="atn">query</span><span class="pln">: {
+          </span><span class="atn">match</span><span class="pln">: {
+            </span><span class="atn">data_field</span><span class="pln">: </span><span class="atv">"this is a test"</span><span class="pln">
+          }
+        }
       }
     }
   }
-}'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">u aT29UsiAp</span><span class="pun">:</span><span class="pln">e0d26007</span><span class="pun">-</span><span class="pln">d818</span><span class="pun">-</span><span class="lit">4559</span><span class="pun">-</span><span class="lit">8244</span><span class="pun">-</span><span class="pln">c3c2fbad45ad </span><span class="pun">-</span><span class="pln">H </span><span class="str">'Content-Type: application/json'</span></code></pre><ol>
-<li>Open the Index:</li>
-</ol><pre><code class="prettyprint prettyprinted" style="white-space: pre;"><span class="pln">curl </span><span class="str">'http://scalr.api.appbase.io/map_demo/_open'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">X POST </span><span class="pun">-</span><span class="pln">d </span><span class="str">'{}'</span><span class="pln"> </span><span class="pun">-</span><span class="pln">u aT29UsiAp</span><span class="pun">:</span><span class="pln">e0d26007</span><span class="pun">-</span><span class="pln">d818</span><span class="pun">-</span><span class="lit">4559</span><span class="pun">-</span><span class="lit">8244</span><span class="pun">-</span><span class="pln">c3c2fbad45ad </span><span class="pun">-</span><span class="pln">H </span><span class="str">'Content-Type: application/json'</span></code></pre><ol>
-<li>Update the mapping: </li>
-</ol><pre><code class="lang-curl prettyprint prettyprinted" style="white-space: pre;"><span class="pln">curl </span><span class="string"><span class="str">'http:</span><span class="comment"><span class="str">//scalr.api.appbase.io/map_demo/_mapping/meetupdata</span><span class="number"><span class="str">1</span></span><span class="str">?ignore_conflicts=true&amp;update_all_types=true'</span></span><span class="pln"> </span><span class="pun">-</span><span class="pln">X PUT </span><span class="pun">-</span><span class="pln">d </span><span class="string"><span class="str">'{</span></span><span class="str">
-  </span><span class="string"><span class="str">"meetupdata</span><span class="number"><span class="str">1</span></span><span class="str">"</span></span><span class="str">: {
-    </span><span class="string"><span class="str">"properties"</span></span><span class="str">: {
-      </span><span class="string"><span class="str">"group"</span></span><span class="str">: {
-        </span><span class="string"><span class="str">"properties"</span></span><span class="str">: {
-          </span><span class="string"><span class="str">"group_city_new"</span></span><span class="str">: {
-            </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"multi_field"</span></span><span class="str">,
-            </span><span class="string"><span class="str">"fields"</span></span><span class="str">: {
-              </span><span class="string"><span class="str">"group_city_simple"</span></span><span class="str">: {
-                </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
-                </span><span class="string"><span class="str">"index"</span></span><span class="str">: </span><span class="string"><span class="str">"not_analyzed"</span></span><span class="str">
-              },
-              </span><span class="string"><span class="str">"group_city_ngrams"</span></span><span class="str">: {
-                </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
-                </span><span class="string"><span class="str">"analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"nGram_analyzer"</span></span><span class="str">,
-                </span><span class="string"><span class="str">"search_analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"whitespace_analyzer"</span></span><span class="str">
-              }
-            }
-          },
-          </span><span class="string"><span class="str">"group_city"</span></span><span class="str">: {
-            </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
-            </span><span class="string"><span class="str">"fields"</span></span><span class="str">: {
-              </span><span class="string"><span class="str">"raw"</span></span><span class="str">: { 
-                </span><span class="string"><span class="str">"type"</span></span><span class="str">:  </span><span class="string"><span class="str">"string"</span></span><span class="str">,
-                </span><span class="string"><span class="str">"index"</span></span><span class="str">: </span><span class="string"><span class="str">"not_analyzed"</span></span><span class="str">
-              }
-            }
-          },
-          </span><span class="string"><span class="str">"group_topics"</span></span><span class="str">: {
-            </span><span class="string"><span class="str">"properties"</span></span><span class="str">: {
-              </span><span class="string"><span class="str">"topic_name_new"</span></span><span class="str">: {
-                </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"multi_field"</span></span><span class="str">,
-                </span><span class="string"><span class="str">"fields"</span></span><span class="str">: {
-                  </span><span class="string"><span class="str">"topic_name_simple"</span></span><span class="str">: {
-                    </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
-                    </span><span class="string"><span class="str">"index"</span></span><span class="str">: </span><span class="string"><span class="str">"not_analyzed"</span></span><span class="str">
-                  },
-                  </span><span class="string"><span class="str">"topic_name_ngrams"</span></span><span class="str">: {
-                    </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
-                    </span><span class="string"><span class="str">"analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"nGram_analyzer"</span></span><span class="str">,
-                    </span><span class="string"><span class="str">"search_analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"whitespace_analyzer"</span></span><span class="str">
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      </span><span class="string"><span class="str">"venue_new"</span></span><span class="str">: {
-        </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"multi_field"</span></span><span class="str">,
-        </span><span class="string"><span class="str">"fields"</span></span><span class="str">: {
-          </span><span class="string"><span class="str">"venue_name_simple"</span></span><span class="str">: {
-            </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
-            </span><span class="string"><span class="str">"index"</span></span><span class="str">: </span><span class="string"><span class="str">"not_analyzed"</span></span><span class="str">
-          },
-          </span><span class="string"><span class="str">"venue_name_ngrams"</span></span><span class="str">: {
-            </span><span class="string"><span class="str">"type"</span></span><span class="str">: </span><span class="string"><span class="str">"string"</span></span><span class="str">,
-            </span><span class="string"><span class="str">"analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"nGram_analyzer"</span></span><span class="str">,
-            </span><span class="string"><span class="str">"search_analyzer"</span></span><span class="str">: </span><span class="string"><span class="str">"whitespace_analyzer"</span></span><span class="str">
-          }
-        }
-
-      }
+  </span><span class="atn">onValueChange</span><span class="pun">={</span><span class="pln">
+    </span><span class="atn">function</span><span class="pln">(</span><span class="atn">value</span><span class="pln">) {
+      </span><span class="atn">console</span><span class="pln">.</span><span class="atn">log</span><span class="pln">(</span><span class="atv">"current value: "</span><span class="pln">, </span><span class="atn">value</span><span class="pln">)
+      </span><span class="pun">//</span><span class="pln"> </span><span class="atn">set</span><span class="pln"> </span><span class="atn">the</span><span class="pln"> </span><span class="atn">state</span><span class="pln">
+      </span><span class="pun">//</span><span class="pln"> </span><span class="atn">use</span><span class="pln"> </span><span class="atn">the</span><span class="pln"> </span><span class="atn">value</span><span class="pln"> </span><span class="atn">with</span><span class="pln"> </span><span class="atn">other</span><span class="pln"> </span><span class="atn">js</span><span class="pln"> </span><span class="atn">code</span><span class="pln">
     }
-
   }
-}
-
-'</span></span><span class="pln"> </span><span class="pun">-</span><span class="pln">u aT</span><span class="number"><span class="pln">29</span></span><span class="pln">UsiAp</span><span class="pun">:</span><span class="pln">e</span><span class="number"><span class="pln">0</span></span><span class="pln">d</span><span class="number"><span class="pln">26007</span></span><span class="pun">-</span><span class="pln">d</span><span class="number"><span class="pln">818</span></span><span class="pun">-</span><span class="number"><span class="lit">4559</span></span><span class="pun">-</span><span class="number"><span class="lit">8244</span></span><span class="pun">-</span><span class="pln">c</span><span class="number"><span class="pln">3</span></span><span class="pln">c</span><span class="number"><span class="pln">2</span></span><span class="pln">fbad</span><span class="number"><span class="pln">45</span></span><span class="pln">ad </span><span class="pun">-</span><span class="pln">H </span><span class="string"><span class="str">'Content-Type: application/json'</span></span>
-</code></pre></div>
+  </span><span class="atn">react</span><span class="pun">=</span><span class="atv">{{</span><span class="pln">
+    </span><span class="atv">"and"</span><span class="pln">: [</span><span class="atv">"ListSensor"</span><span class="pln">]
+  }}
+</span><span class="tag">/&gt;</span></code></pre><ul>
+<li><strong class="li-title">componentStyle</strong> <code class="code-with-title" style="white-space: pre;">Object</code><br>  CSS styles to be applied to the <strong>DynamicRangeSlider</strong> component.</li>
+<li><strong class="li-title">customQuery</strong> <code class="code-with-title" style="white-space: pre;">Function</code><br>  takes <strong>value</strong> as a parameter and <strong>returns</strong> the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+  <code style="white-space: pre;">Note:</code> customQuery is called on value changes in the <strong>DynamicRangeSlider</strong> component as long as the component is a part of <code style="white-space: pre;">react</code> dependency of at least one other component.</li>
+<li><strong class="li-title">onValueChange</strong> <code class="code-with-title" style="white-space: pre;">Function</code><br>  is called every time the component’s <strong>value</strong> changes and is passed in as a parameter to the function. This can be used for updating other UI components when <strong>DynamicRangeSlider’s</strong> value changes.</li>
+<li><strong class="li-title">react</strong> <code class="code-with-title" style="white-space: pre;">Object</code><br>  specify dependent components to reactively update <strong>DynamicRangeSlider’s</strong> data view.<ul>
+<li><strong class="li-title">key</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  one of <code style="white-space: pre;">and</code>, <code style="white-space: pre;">or</code>, <code style="white-space: pre;">not</code> defines the combining clause.<ul>
+<li><strong class="li-title">and</strong> clause implies that the results will be filtered by matches from <strong>all</strong> of the associated component states.</li>
+<li><strong class="li-title">or</strong> clause implies that the results will be filtered by matches from <strong>at least one</strong> of the associated component states.</li>
+<li><strong class="li-title">not</strong> clause implies that the results will be filtered by an <strong>inverse</strong> match of the associated component states.</li>
+</ul>
+</li>
+<li><strong class="li-title">value</strong> <code class="code-with-title" style="white-space: pre;">String or Array or Object</code>  <ul>
+<li><code style="white-space: pre;">String</code> is used for specifying a single component by its <code style="white-space: pre;">componentId</code>.</li>
+<li><code style="white-space: pre;">Array</code> is used for specifying multiple components by their <code style="white-space: pre;">componentId</code>.</li>
+<li><code style="white-space: pre;">Object</code> is used for nesting other key clauses.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h3 id="-dynamicrangeslider-examples">Examples</h3><p></p><p data-height="500" data-theme-id="light" data-slug-hash="PmGmOW" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RangeSlider" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/PmGmOW/">ReactiveSearch DynamicRangeSlider</a> on codepen.</p><p></p><script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script><p>See more stories for DynamicRangeSlider on playground.</p><ol>
+<li><p><a href="../playground/?filterBy=ReactiveSearch&amp;selectedKind=s%2FDynamicRangeSlider&amp;selectedStory=Basic&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs">DynamicRangeSlider with default props</a></p>
+</li>
+<li><p><a href="../playground/?filterBy=ReactiveSearch&amp;knob-showHistogram=false&amp;selectedKind=s%2FDynamicRangeSlider&amp;selectedStory=Without+histogram&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs">DynamicRangeSlider without histogram</a></p>
+</li>
+<li><p><a href="../playground/?filterBy=ReactiveSearch&amp;selectedKind=s%2FDynamicRangeSlider&amp;selectedStory=With+RangeLabels&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs">With Range Labels</a></p>
+</li>
+<li><p><a href="../playground/?filterBy=ReactiveSearch&amp;selectedKind=s%2FDynamicRangeSlider&amp;selectedStory=With+defaultSelected&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs">With defaultSelected</a></p>
+</li>
+<li><p><a href="../playground/?filterBy=ReactiveSearch&amp;knob-showHistogram=true&amp;knob-title=DynamicRangeSlider%3A+Guest+RSVPs&amp;knob-stepValue=1&amp;selectedKind=s%2FDynamicRangeSlider&amp;selectedStory=Playground&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs">Playground (with all knob actions)</a></p>
+</li>
+</ol></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
-		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
+		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
 			<li>
 				<div class="other-pages">Other pages in</div>
 			</li>
 			<li>
-				<a class="level-1 ng-binding" ng-href=./v1.0.0/advanced/index.html ng-bind="folder.name" href=./v1.0.0/advanced/index.html>advanced</a>
+				<a class="level-1 ng-binding" ng-href=./v1.0.0/search-components/index.html ng-bind="folder.name" href=./v1.0.0/search-components/index.html>search-components</a>
 			</li>
 			<!-- ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/CustomQuery.html ng-bind="file.label" href=./v1.0.0/advanced/CustomQuery.html>Defining Custom Queries</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/NestedList.html ng-bind="file.label" href=./v1.0.0/search-components/NestedList.html>Nested List</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/React.html ng-bind="file.label" href=./v1.0.0/advanced/React.html>Reactive Chaining</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/MultiLevelMenu.html ng-bind="file.label" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/Mapping.html ng-bind="file.label" href=./v1.0.0/advanced/Mapping.html>Data Mappings</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/CategorySearch.html ng-bind="file.label" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/StyleGuide.html ng-bind="file.label" href=./v1.0.0/advanced/StyleGuide.html>Style Guide</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/advanced/Theming.html ng-bind="file.label" href=./v1.0.0/advanced/Theming.html>Theming</a>
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/DynamicRangeSlider.html ng-bind="file.label" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
-		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
+		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
 	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1.0.0/advanced/React.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1.0.0/search-components/CategorySearch.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1.0.0/advanced/StyleGuide.html class="paginationLink pull-right">Next</a>
+					<a href=./v1.0.0/components/SingleList.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>

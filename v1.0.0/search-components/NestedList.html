@@ -82,6 +82,8 @@
               <a ng-href=./v1.0.0/search-components/MultiLevelMenu.html title="MultiLevel Menu" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
               <a ng-href=./v1.0.0/search-components/CategorySearch.html title="Category Search" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
+            </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+              <a ng-href=./v1.0.0/search-components/DynamicRangeSlider.html title="DynamicRange Slider" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
             </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
               <a ng-href=./v1.0.0/search-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
@@ -205,6 +207,8 @@
                   <a ng-href=./v1.0.0/search-components/MultiLevelMenu.html title="MultiLevel Menu" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                   <a ng-href=./v1.0.0/search-components/CategorySearch.html title="Category Search" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
+                </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                  <a ng-href=./v1.0.0/search-components/DynamicRangeSlider.html title="DynamicRange Slider" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
                 </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                   <a ng-href=./v1.0.0/search-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/index.html>index</a>
                 </li><!-- end ngRepeat: file in folder.files -->
@@ -370,6 +374,8 @@
                       <a ng-href=./v1.0.0/search-components/MultiLevelMenu.html title="MultiLevel Menu" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
                       <a ng-href=./v1.0.0/search-components/CategorySearch.html title="Category Search" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
+                    </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope">
+                      <a ng-href=./v1.0.0/search-components/DynamicRangeSlider.html title="DynamicRange Slider" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
                     </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" data-ng-hide="file.name == 'index'" class="ng-scope ng-hide">
                       <a ng-href=./v1.0.0/search-components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v1.0.0/search-components/index.html>index</a>
                     </li><!-- end ngRepeat: file in folder.files -->
@@ -525,6 +531,8 @@ It is used for filtering results based on the current selection from a list of i
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/MultiLevelMenu.html ng-bind="file.label" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
 				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/CategorySearch.html ng-bind="file.label" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
+			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/DynamicRangeSlider.html ng-bind="file.label" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
 		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
