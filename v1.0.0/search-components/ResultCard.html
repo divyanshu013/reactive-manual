@@ -468,124 +468,165 @@
 </nav>
 <div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
 	<div class="menubar fixed">
-		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-textfield-item" class="level-2"><a id="-textfield-link" href="./v1.0.0/components/TextField.html#-textfield" class="level-2" pref="#-textfield">TextField</a><ul class="level-3" id="-textfield-list"><li id="-textfield-usage-item" class="level-3"><a id="-textfield-usage-link" href="./v1.0.0/components/TextField.html#-textfield-usage" class="level-3" pref="#-textfield-usage">Usage</a></li><li id="-textfield-props-item" class="level-3"><a id="-textfield-props-link" href="./v1.0.0/components/TextField.html#-textfield-props" class="level-3" pref="#-textfield-props">Props</a></li><li id="-textfield-css-styles-api-item" class="level-3"><a id="-textfield-css-styles-api-link" href="./v1.0.0/components/TextField.html#-textfield-css-styles-api" class="level-3" pref="#-textfield-css-styles-api">CSS Styles API</a></li><li id="-textfield-extending-item" class="level-3"><a id="-textfield-extending-link" href="./v1.0.0/components/TextField.html#-textfield-extending" class="level-3" pref="#-textfield-extending">Extending</a></li><li id="-textfield-examples-item" class="level-3"><a id="-textfield-examples-link" href="./v1.0.0/components/TextField.html#-textfield-examples" class="level-3" pref="#-textfield-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
+		<div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-resultcard-item" class="level-2"><a id="-resultcard-link" href="./v1.0.0/search-components/ResultCard.html#-resultcard" class="level-2" pref="#-resultcard">ResultCard</a><ul class="level-3" id="-resultcard-list"><li id="-resultcard-usage-item" class="level-3"><a id="-resultcard-usage-link" href="./v1.0.0/search-components/ResultCard.html#-resultcard-usage" class="level-3" pref="#-resultcard-usage">Usage</a></li><li id="-resultcard-props-item" class="level-3"><a id="-resultcard-props-link" href="./v1.0.0/search-components/ResultCard.html#-resultcard-props" class="level-3" pref="#-resultcard-props">Props</a></li><li id="-resultcard-css-styles-item" class="level-3"><a id="-resultcard-css-styles-link" href="./v1.0.0/search-components/ResultCard.html#-resultcard-css-styles" class="level-3" pref="#-resultcard-css-styles">CSS Styles</a></li><li id="-resultcard-extending-item" class="level-3"><a id="-resultcard-extending-link" href="./v1.0.0/search-components/ResultCard.html#-resultcard-extending" class="level-3" pref="#-resultcard-extending">Extending</a></li><li id="-resultcard-examples-item" class="level-3"><a id="-resultcard-examples-link" href="./v1.0.0/search-components/ResultCard.html#-resultcard-examples" class="level-3" pref="#-resultcard-examples">Examples</a></li></ul></li></ul></li></ul></li></ul></div>
 	</div>
-	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/1879ce9e7511d95124aa94a238717ea90bf92987">Apr 9, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/components/TextField.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-textfield">TextField</h2><p><img src="https://i.imgur.com/0fnMNaz.png" alt="Image to be displayed"></p><p>A <code style="white-space: pre;">TextField</code> sensor component creates a simple text input field. It is useful for taking generic user inputs that can be used with a custom query.</p><h3 id="-textfield-usage">Usage</h3><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">TextField</span><span class="pln">
-  componentId</span><span class="pun">=</span><span class="string"><span class="str">"NameTextSensor"</span></span><span class="pln">
-  appbaseField</span><span class="pun">=</span><span class="string"><span class="str">"name"</span></span><span class="pln">
-  title</span><span class="pun">=</span><span class="string"><span class="str">"TextField"</span></span><span class="pln">
-  placeholder</span><span class="pun">=</span><span class="string"><span class="str">"Type a car name"</span></span><span class="pln">
-</span><span class="pun">/&gt;</span></code></pre><h3 id="-textfield-props">Props</h3><ul>
-<li><strong class="li-title">componentId</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  unique id of the sensor, can be referenced in an actuator’s <code style="white-space: pre;">react</code> prop.</li>
-<li><strong class="li-title">appbaseField</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  data field to be mapped with the component’s UI view.</li>
-<li><strong class="li-title">title</strong> <code class="code-with-title" style="white-space: pre;">String or HTML</code> [optional]<br>  title of the component to be shown in the UI.</li>
-<li><strong class="li-title">placeholder</strong> <code class="code-with-title" style="white-space: pre;">String</code> [optional]<br>  placeholder to be displayed in the text field.</li>
-</ul><h3 id="-textfield-css-styles-api">CSS Styles API</h3><p>All reactivebase components are <code style="white-space: pre;">rbc</code> namespaced.</p><p><img src="https://i.imgur.com/EeShH2p.png" alt="Annotated image"></p><pre><code class="lang-html prettyprint prettyprinted" style="white-space: pre;"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc rbc-textfield col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv"> card thumbnail rbc-title-active rbc-placeholder-inactive"</span></span><span class="tag">&gt;</span><span class="pln">
-    </span><span class="tag">&lt;h</span><span class="number"><span class="tag">4</span></span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-title col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv">"</span></span><span class="tag">&gt;</span><span class="pln">Type a search string</span><span class="tag">&lt;/h</span><span class="number"><span class="tag">4</span></span><span class="tag">&gt;</span><span class="pln">
-    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-search-container col s</span><span class="number"><span class="atv">12</span></span><span class="atv"> col-xs-</span><span class="number"><span class="atv">12</span></span><span class="atv">"</span></span><span class="tag">&gt;</span><span class="pln">
-        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="string"><span class="atv">"text"</span></span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"rbc-input"</span></span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="string"><span class="atv">""</span></span><span class="tag">&gt;</span><span class="pln">
-    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-</span><span class="tag">&lt;/div&gt;</span></code></pre><ul>
-<li>Textfield component’s class name is <code style="white-space: pre;">rbc-textfield</code>. Additionally, depending on the presence / absence of the <code style="white-space: pre;">title</code> prop, a <code style="white-space: pre;">rbc-title-active</code> or <code style="white-space: pre;">rbc-title-inactive</code> class is respectively applied. Similarly for <code style="white-space: pre;">placeholder</code> prop, classname of <code style="white-space: pre;">rbc-placeholder-active</code> or <code style="white-space: pre;">rbc-placeholder-active</code> is applied.</li>
-<li>the title element has a class name of <code style="white-space: pre;">rbc-title</code>.</li>
-<li>the search container has a class name of <code style="white-space: pre;">rbc-search-container</code>.</li>
-<li>the input element has a class name of <code style="white-space: pre;">rbc-input</code>.</li>
-</ul><h3 id="-textfield-extending">Extending</h3><p><code style="white-space: pre;">TextField</code> component can be extended to</p><ol>
-<li>customize the look and feel with <code style="white-space: pre;">componentStyle</code>,</li>
-<li>update the underlying DB query with <code style="white-space: pre;">customQuery</code>,</li>
-<li>connect with external interfaces using <code style="white-space: pre;">onValueChange</code>.</li>
-</ol><pre><code class="prettyprint prettyprinted" style="white-space: pre;"><span class="tag">&lt;TextField</span><span class="pln">
-  ...
-  </span><span class="atn">componentStyle</span><span class="pun">=</span><span class="atv">{{"paddingBottom"</span><span class="pln">: </span><span class="atv">"10px"</span><span class="pln">}}
-  </span><span class="atn">customQuery</span><span class="pun">=</span><span class="atv">{</span><span class="pln">
-    </span><span class="atn">function</span><span class="pln">(</span><span class="atn">value</span><span class="pln">) {
-      </span><span class="atn">return</span><span class="pln"> {
-        </span><span class="atn">query</span><span class="pln">: {
-          </span><span class="atn">match</span><span class="pln">: {
-            </span><span class="atn">data_field</span><span class="pln">: </span><span class="atv">"this is a test"</span><span class="pln">
-          }
-        }
-      }
-    }
-  }
-  </span><span class="atn">onValueChange</span><span class="pun">={</span><span class="pln">
-    </span><span class="atn">function</span><span class="pln">(</span><span class="atn">value</span><span class="pln">) {
-      </span><span class="atn">console</span><span class="pln">.</span><span class="atn">log</span><span class="pln">(</span><span class="atv">"current value: "</span><span class="pln">, </span><span class="atn">value</span><span class="pln">)
-      </span><span class="pun">//</span><span class="pln"> </span><span class="atn">set</span><span class="pln"> </span><span class="atn">the</span><span class="pln"> </span><span class="atn">state</span><span class="pln">
-      </span><span class="pun">//</span><span class="pln"> </span><span class="atn">use</span><span class="pln"> </span><span class="atn">the</span><span class="pln"> </span><span class="atn">value</span><span class="pln"> </span><span class="atn">with</span><span class="pln"> </span><span class="atn">other</span><span class="pln"> </span><span class="atn">js</span><span class="pln"> </span><span class="atn">code</span><span class="pln">
-    }
-  }
-</span><span class="tag">/&gt;</span></code></pre><ul>
-<li><strong class="li-title">componentStyle</strong> <code class="code-with-title" style="white-space: pre;">Object</code>
-  CSS styles to be applied to the <strong>TextField</strong> component.</li>
-<li><strong class="li-title">customQuery</strong> <code class="code-with-title" style="white-space: pre;">Function</code>
-  takes <strong>value</strong> as a parameter and <strong>returns</strong> the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
-  <code style="white-space: pre;">Note:</code> customQuery is called on value changes in the <strong>TextField</strong> component as long as the component is a part of <code style="white-space: pre;">react</code> dependency of at least one other component.</li>
-<li><strong class="li-title">onValueChange</strong> <code class="code-with-title" style="white-space: pre;">Function</code>
-  is called every time the component’s <strong>value</strong> changes and is passed in as a parameter to the function. This can be used for updating other UI components when <strong>TextField’s</strong> value changes.</li>
-</ul><h3 id="-textfield-examples">Examples</h3><ol>
-<li><p><a href="../playground/?selectedKind=TextField&amp;selectedStory=Basic&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs">Text field  with default props</a></p>
+	<div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/appbaseio/reactive-manual/commit/68c5f67ceecd4894c6103f02fc0633ee4e3cf474">Apr 30, 2017</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/siddharthlatest" title="siddharthlatest" target="_blank"><img class="contributor_img img-rounded" src="https://avatars0.githubusercontent.com/u/630042?v=3" alt="siddharthlatest"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/appbaseio/reactivebase-manual/tree/master/docs/v1.0.0/search-components/ResultCard.md" target="_blank"><span><i class="fa fa-pencil"></i> Edit this page on Github </span></a></div></div><div class="clearFix"></div><h2 id="-resultcard">ResultCard</h2><p><img src="https://i.imgur.com/aeQs0nn.png" alt="Image to be displayed"></p><p><code style="white-space: pre;">ResultCard</code> creates a result card UI component to display results in a card layout, suited for data that have an associated image.</p><p>Example uses:</p><ul>
+<li>showing e-commerce search results in a card layout.</li>
+<li>showing filtered hotel booking results in a card layout.</li>
+</ul><p><code style="white-space: pre;">Note:</code> An alternative layout to ResultCard is a <a href="v1.0.0/search-components/ResultList.html"><strong>ResultList</strong></a>, which displays result data in a list format.</p><h3 id="-resultcard-usage">Usage</h3><h4 id="basic-usage">Basic Usage</h4><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">ResultCard</span><span class="pln">
+  react</span><span class="pun">={{</span><span class="pln">
+    </span><span class="string"><span class="str">"and"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"PriceFilter"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"SearchFilter"</span></span><span class="pun">]</span><span class="pln">
+  </span><span class="pun">}}</span><span class="pln">
+  onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h4 id="pagination-usage-with-all-props">Pagination Usage With All Props</h4><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">ResultCard</span><span class="pln">
+  componentId</span><span class="pun">=</span><span class="string"><span class="str">"ResultCard</span><span class="number"><span class="str">01</span></span><span class="str">"</span></span><span class="pln">
+  title</span><span class="pun">=</span><span class="string"><span class="str">"Result Card"</span></span><span class="pln">
+  appbaseField</span><span class="pun">=</span><span class="string"><span class="str">"ratings"</span></span><span class="pln">
+  stream</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">  
+  sortBy</span><span class="pun">=</span><span class="string"><span class="str">"desc"</span></span><span class="pln">
+  from</span><span class="pun">={</span><span class="number"><span class="lit">0</span></span><span class="pun">}</span><span class="pln">
+  size</span><span class="pun">={</span><span class="number"><span class="lit">8</span></span><span class="pun">}</span><span class="pln">
+  pagination</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  paginationAt</span><span class="pun">=</span><span class="string"><span class="str">"bottom"</span></span><span class="pln">
+  showResultStats</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  initialLoader</span><span class="pun">=</span><span class="string"><span class="str">"Loading Results.."</span></span><span class="pln">
+  noResults</span><span class="pun">=</span><span class="string"><span class="str">"No Matching Results Found!"</span></span><span class="pln">
+  react</span><span class="pun">={{</span><span class="pln">
+    and</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"PriceFilter"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"SearchFilter"</span></span><span class="pun">]</span><span class="pln">
+  </span><span class="pun">}}</span><span class="pln">
+  onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h4 id="infinite-scroll-usage-with-all-props">Infinite Scroll Usage With All Props</h4><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">ResultCard</span><span class="pln">
+  componentId</span><span class="pun">=</span><span class="string"><span class="str">"ResultCard</span><span class="number"><span class="str">01</span></span><span class="str">"</span></span><span class="pln">
+  title</span><span class="pun">=</span><span class="string"><span class="str">"Result Card"</span></span><span class="pln">
+  appbaseField</span><span class="pun">=</span><span class="string"><span class="str">"ratings"</span></span><span class="pln">
+  stream</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">  
+  sortBy</span><span class="pun">=</span><span class="string"><span class="str">"desc"</span></span><span class="pln">
+  from</span><span class="pun">={</span><span class="number"><span class="lit">0</span></span><span class="pun">}</span><span class="pln">
+  size</span><span class="pun">={</span><span class="number"><span class="lit">8</span></span><span class="pun">}</span><span class="pln">
+  pagination</span><span class="pun">={</span><span class="kwd">false</span><span class="pun">}</span><span class="pln">
+  scrollOnWindow</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  showResultStats</span><span class="pun">={</span><span class="kwd">true</span><span class="pun">}</span><span class="pln">
+  initialLoader</span><span class="pun">=</span><span class="string"><span class="str">"Loading Results.."</span></span><span class="pln">
+  noResults</span><span class="pun">=</span><span class="string"><span class="str">"No Matching Results Found!"</span></span><span class="pln">
+  react</span><span class="pun">={{</span><span class="pln">
+    and</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"PriceFilter"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"SearchFilter"</span></span><span class="pun">]</span><span class="pln">
+  </span><span class="pun">}}</span><span class="pln">
+  onData</span><span class="pun">={</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">onData</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><h3 id="-resultcard-props">Props</h3><ul>
+<li><strong class="li-title">componentId</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  unique id of the component, can be referenced in another component’s <code style="white-space: pre;">react</code> prop.</li>
+<li><strong class="li-title">appbaseField</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  data field to be mapped with <code style="white-space: pre;">ResultCard</code>‘s UI view, used for providing a sorting context.</li>
+<li><strong class="li-title">title</strong> <code class="code-with-title" style="white-space: pre;">String or HTML</code> [optional]<br>  title of the component, to be shown in the UI.</li>
+<li><strong class="li-title">stream</strong> <code class="code-with-title" style="white-space: pre;">Boolean</code> [optional]<br>  whether to stream new result updates in the UI. Defaults to <code style="white-space: pre;">false</code>.</li>
+<li><strong class="li-title">pagination</strong> <code class="code-with-title" style="white-space: pre;">Boolean</code> [optional]<br>  pagination &lt;&gt; infinite scroll switcher. Defaults to <code style="white-space: pre;">false</code>, i.e. an infinite scroll based view. When set to <code style="white-space: pre;">true</code>, a pagination based list view with page numbers will appear.</li>
+<li><strong class="li-title">paginationAt</strong> <code class="code-with-title" style="white-space: pre;">String</code> [optional]<br>  Determines the position where to show the pagination, only applicable when <strong>pagination</strong> prop is set to <code style="white-space: pre;">true</code>. Accepts one of <code style="white-space: pre;">top</code>, <code style="white-space: pre;">bottom</code> or <code style="white-space: pre;">both</code> as valid values. Defaults to <code style="white-space: pre;">bottom</code>.</li>
+<li><strong class="li-title">sortBy</strong> <code class="code-with-title" style="white-space: pre;">String</code> [optional]<br> sort the results by either <code style="white-space: pre;">asc</code> or <code style="white-space: pre;">desc</code> order. It is an alternative to <code style="white-space: pre;">sortOptions</code>, both can’t be used together.</li>
+<li><strong class="li-title">sortOptions</strong> <code class="code-with-title" style="white-space: pre;">Object Array</code> [optional]<br>  an alternative to the <code style="white-space: pre;">sortBy</code> prop, <code style="white-space: pre;">sortOptions</code> creates a sorting view in the ResultCard component’s UI. Each array element is an object that takes three keys:<ul>
+<li><code style="white-space: pre;">label</code> - label to be displayed in the UI.</li>
+<li><code style="white-space: pre;">appbaseField</code> - data field to use for applying the sorting criteria on.</li>
+<li><code style="white-space: pre;">sortBy</code> - specified as either <code style="white-space: pre;">asc</code> or <code style="white-space: pre;">desc</code>.</li>
+</ul>
 </li>
-<li><p><a href="../playground/?selectedKind=TextField&amp;selectedStory=DefaultSelected&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs">Text field with a default selected value</a></p>
+<li><strong class="li-title">from</strong> <code class="code-with-title" style="white-space: pre;">Number</code> [optional]<br>  starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.</li>
+<li><strong class="li-title">size</strong> <code class="code-with-title" style="white-space: pre;">Number</code> [optional]<br>  number of results to show per view. Defaults to 20.</li>
+<li><strong class="li-title">initialLoader</strong> <code class="code-with-title" style="white-space: pre;">String or HTML</code> [optional]<br>  display to show the user while the data is loading, accepts <code style="white-space: pre;">String</code> or <code style="white-space: pre;">HTML</code> markup.</li>
+<li><strong class="li-title">noResults</strong> <code class="code-with-title" style="white-space: pre;">String or HTML</code> [optional]<br>  display to show the user when no results are found, accepts <code style="white-space: pre;">String</code> or <code style="white-space: pre;">HTML</code> markup.</li>
+<li><strong class="li-title">showResultStats</strong> <code class="code-with-title" style="white-space: pre;">Boolean</code> [optional]<br>  whether to show result stats in the form of results found and time taken. Defaults to <code style="white-space: pre;">true</code>.</li>
+<li><strong class="li-title">onResultStats</strong> <code class="code-with-title" style="white-space: pre;">Function</code> [optional]<br>  show custom result stats using a function that takes two parameters for <code style="white-space: pre;">time_taken</code> and <code style="white-space: pre;">total_results</code> and returns a string.</li>
+<li><strong class="li-title">react</strong> <code class="code-with-title" style="white-space: pre;">Object</code><br>  a dependency object defining how this component should react based on the state changes in the sensor components. You can read more about how to specify this prop over <a href="v1.0.0/advanced/React.html">here</a>.</li>
+<li><strong class="li-title">onData</strong> <code class="code-with-title" style="white-space: pre;">Function</code> [optional]<br>  returns a card element object to be rendered based on the <code style="white-space: pre;">res</code> data object. This callback function prop is called for each data item rendered in the <strong>ResultCard</strong> component’s view.<pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pln">  onData</span><span class="pun">={</span><span class="pln">
+    </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">res</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        image</span><span class="pun">:</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">image</span><span class="pun">,</span><span class="pln">
+        title</span><span class="pun">:</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">name</span><span class="pun">,</span><span class="pln">
+        desc</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">
+            </span><span class="pun">&lt;</span><span class="pln">div</span><span class="pun">&gt;</span><span class="pln">
+                </span><span class="pun">&lt;</span><span class="pln">div className</span><span class="pun">=</span><span class="string"><span class="str">"price"</span></span><span class="pun">&gt;</span><span class="pln">$</span><span class="pun">{</span><span class="pln">res</span><span class="pun">.</span><span class="pln">price</span><span class="pun">}&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span><span class="pln">
+                </span><span class="pun">&lt;</span><span class="pln">p</span><span class="pun">&gt;{</span><span class="pln">res</span><span class="pun">.</span><span class="pln">room_type</span><span class="pun">}</span><span class="pln"> </span><span class="pun">·</span><span class="pln"> </span><span class="pun">{</span><span class="pln">res</span><span class="pun">.</span><span class="pln">accommodates</span><span class="pun">}</span><span class="pln"> guests</span><span class="pun">&lt;/</span><span class="pln">p</span><span class="pun">&gt;</span><span class="pln">
+            </span><span class="pun">&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span><span class="pln">
+        </span><span class="pun">),</span><span class="pln">
+        url</span><span class="pun">:</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">listing_url
+      </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span></code></pre>
+  The return format for the callback function is an object with <code style="white-space: pre;">image</code>, <code style="white-space: pre;">title</code>, <code style="white-space: pre;">desc</code> and <code style="white-space: pre;">url</code> fields.</li>
+</ul><h3 id="-resultcard-css-styles">CSS Styles</h3><p>All reactivebase components are <code style="white-space: pre;">rbc</code> namespaced.</p><p><img src="https://i.imgur.com/E8u43mG.png" alt="Annotated image"></p><h3 id="-resultcard-extending">Extending</h3><p><code style="white-space: pre;">ResultCard</code> component can be extended to</p><ol>
+<li>customize the look and feel with <code style="white-space: pre;">componentStyle</code> prop,</li>
+<li>render individual result data items using <code style="white-space: pre;">onData</code>,</li>
+<li>specify how results should be filtered using <code style="white-space: pre;">react</code> prop.</li>
+</ol><pre><code class="lang-js prettyprint prettyprinted" style="white-space: pre;"><span class="pun">&lt;</span><span class="typ">ResultCard</span><span class="pln">
+  </span><span class="pun">...</span><span class="pln">
+  </span><span class="comment"><span class="com">// specify any number of custom styles.</span></span><span class="pln">
+  componentStyle</span><span class="pun">={{</span><span class="string"><span class="str">"paddingBottom"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"</span><span class="number"><span class="str">10</span></span><span class="str">px"</span></span><span class="pun">}}</span><span class="pln">
+  </span><span class="comment"><span class="com">// register a callback function with the `onData` prop.</span></span><span class="pln">
+  onData</span><span class="pun">={</span><span class="pln">
+    </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">res</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        image</span><span class="pun">:</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">image</span><span class="pun">,</span><span class="pln">
+        title</span><span class="pun">:</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">name</span><span class="pun">,</span><span class="pln">
+        url</span><span class="pun">:</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">listing_url
+      </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="comment"><span class="com">// specify how and which results are filtered using `react` prop.</span></span><span class="pln">
+  react</span><span class="pun">={</span><span class="pln">
+    </span><span class="string"><span class="str">"and"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"pricingFilter"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"dateFilter"</span></span><span class="pun">],</span><span class="pln">
+    </span><span class="string"><span class="str">"or"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"searchFilter"</span></span><span class="pun">]</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">/&gt;</span></code></pre><ul>
+<li><strong class="li-title">componentStyle</strong> <code class="code-with-title" style="white-space: pre;">Object</code> [optional]<br>  CSS Styles to be applied to the <strong>ResultCard</strong> component.</li>
+<li><strong class="li-title">onData</strong> <code class="code-with-title" style="white-space: pre;">Function</code> [optional]<br>  a callback function where user can define how to render the view based on the data changes. In <code style="white-space: pre;">ResultCard</code>‘s case, the expected return format is an object with <code style="white-space: pre;">image</code>, <code style="white-space: pre;">title</code>, <code style="white-space: pre;">url</code> and <code style="white-space: pre;">desc</code> keys.</li>
+<li><strong class="li-title">react</strong> <code class="code-with-title" style="white-space: pre;">Object</code><br>  specify dependent components to reactively update <strong>ResultCard’s</strong> data view.<ul>
+<li><strong class="li-title">key</strong> <code class="code-with-title" style="white-space: pre;">String</code><br>  one of <code style="white-space: pre;">and</code>, <code style="white-space: pre;">or</code>, <code style="white-space: pre;">not</code> defines the combining clause.<ul>
+<li><strong class="li-title">and</strong> clause implies that the results will be filtered by matches from <strong>all</strong> of the associated component states.</li>
+<li><strong class="li-title">or</strong> clause implies that the results will be filtered by matches from <strong>at least one</strong> of the associated component states.</li>
+<li><strong class="li-title">not</strong> clause implies that the results will be filtered by an <strong>inverse</strong> match of the associated component states.</li>
+</ul>
 </li>
-<li><p><a href="../playground/?knob-title=TextField%3A%20Car%20Search&amp;knob-placeholder=Type%20a%20car%20name&amp;knob-defaultSelected=nissan&amp;selectedKind=TextField&amp;selectedStory=Playground&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs">Playground (with all knob actions)</a></p>
+<li><strong class="li-title">value</strong> <code class="code-with-title" style="white-space: pre;">String or Array or Object</code>  <ul>
+<li><code style="white-space: pre;">String</code> is used for specifying a single component by its <code style="white-space: pre;">componentId</code>.</li>
+<li><code style="white-space: pre;">Array</code> is used for specifying multiple components by their <code style="white-space: pre;">componentId</code>.</li>
+<li><code style="white-space: pre;">Object</code> is used for nesting other key clauses.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h3 id="-resultcard-examples">Examples</h3><p></p><div class="cp_embed_wrapper"><iframe id="cp_embed_eWWJwp" src="//codepen.io/sids-aquarius/embed/eWWJwp?height=500&amp;theme-id=light&amp;slug-hash=eWWJwp&amp;default-tab=result&amp;user=sids-aquarius&amp;embed-version=2&amp;pen-title=ReactiveSearch%20ResultCard" scrolling="no" frameborder="0" height="500" allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="ReactiveSearch ResultCard" class="cp_embed_iframe " style="width: 100%; overflow: hidden;"></iframe></div><p></p><script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script><p>See more stories for ResultCard on playground.</p><ol>
+<li><p><a href="../playground/?selectedKind=s%2FResultCard&amp;selectedStory=Basic&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs&amp;filterBy=ReactiveSearch">ResultCard with infinite scroll</a></p>
+</li>
+<li><p><a href="../playground/?selectedKind=s%2FResultCard&amp;selectedStory=With+Pagination&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-knobs&amp;filterBy=ReactiveSearch">ResultCard with pagination</a>.</p>
 </li>
 </ol></div>
 	<!-- ngIf: !threeColumns && navigationSidebar --><div class="rightSidebar menubar ng-scope" data-ng-if="!threeColumns &amp;&amp; navigationSidebar">
-		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
+		<!-- ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><ul class="menu section ng-scope" ng-repeat="folder in map[currentVersion]" data-ng-if="folder.name === currentFolder">
 			<li>
 				<div class="other-pages">Other pages in</div>
 			</li>
 			<li>
-				<a class="level-1 ng-binding" ng-href=./v1.0.0/components/index.html ng-bind="folder.name" href=./v1.0.0/components/index.html>components</a>
+				<a class="level-1 ng-binding" ng-href=./v1.0.0/search-components/index.html ng-bind="folder.name" href=./v1.0.0/search-components/index.html>search-components</a>
 			</li>
 			<!-- ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/SingleList.html ng-bind="file.label" href=./v1.0.0/components/SingleList.html>Single List</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/NestedList.html ng-bind="file.label" href=./v1.0.0/search-components/NestedList.html>Nested List</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/MultiList.html ng-bind="file.label" href=./v1.0.0/components/MultiList.html>Multi List</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/MultiLevelMenu.html ng-bind="file.label" href=./v1.0.0/search-components/MultiLevelMenu.html>MultiLevel Menu</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/SingleDropdownList.html ng-bind="file.label" href=./v1.0.0/components/SingleDropdownList.html>Single Dropdown List</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/CategorySearch.html ng-bind="file.label" href=./v1.0.0/search-components/CategorySearch.html>Category Search</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/MultiDropdownList.html ng-bind="file.label" href=./v1.0.0/components/MultiDropdownList.html>Multi Dropdown List</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/DynamicRangeSlider.html ng-bind="file.label" href=./v1.0.0/search-components/DynamicRangeSlider.html>DynamicRange Slider</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/SingleRange.html ng-bind="file.label" href=./v1.0.0/components/SingleRange.html>Single Range</a>
+				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/RatingsFilter.html ng-bind="file.label" href=./v1.0.0/search-components/RatingsFilter.html>Ratings Filter</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/MultiRange.html ng-bind="file.label" href=./v1.0.0/components/MultiRange.html>Multi Range</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/SingleDropdownRange.html ng-bind="file.label" href=./v1.0.0/components/SingleDropdownRange.html>Single Dropdown Range</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/MultiDropdownRange.html ng-bind="file.label" href=./v1.0.0/components/MultiDropdownRange.html>Multi Dropdown Range</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/ToggleButton.html ng-bind="file.label" href=./v1.0.0/components/ToggleButton.html>Toggle Button</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/RangeSlider.html ng-bind="file.label" href=./v1.0.0/components/RangeSlider.html>Range Slider</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/NumberBox.html ng-bind="file.label" href=./v1.0.0/components/NumberBox.html>Number Box</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/TextField.html ng-bind="file.label" href=./v1.0.0/components/TextField.html>Text Field</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DataSearch.html ng-bind="file.label" href=./v1.0.0/components/DataSearch.html>Data Search</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DataController.html ng-bind="file.label" href=./v1.0.0/components/DataController.html>Data Controller</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DatePicker.html ng-bind="file.label" href=./v1.0.0/components/DatePicker.html>Date Picker</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/DateRange.html ng-bind="file.label" href=./v1.0.0/components/DateRange.html>Date Range</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/ReactiveList.html ng-bind="file.label" href=./v1.0.0/components/ReactiveList.html>Reactive List</a>
-			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><li ng-repeat="file in folder.files" data-ng-if="file.name !== 'index'" class="ng-scope">
-				<a class="level-2 ng-binding" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/components/ReactiveElement.html ng-bind="file.label" href=./v1.0.0/components/ReactiveElement.html>Reactive Element</a>
+				<a class="level-2 ng-binding active" data-ng-class="{'active': file.name === currentFile}" ng-href=./v1.0.0/search-components/ResultCard.html ng-bind="file.label" href=./v1.0.0/search-components/ResultCard.html>Result Card</a>
 			</li><!-- end ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files --><!-- ngIf: file.name !== 'index' --><!-- end ngRepeat: file in folder.files -->
-		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
+		</ul><!-- end ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] --><!-- ngIf: folder.name === currentFolder --><!-- end ngRepeat: folder in map[currentVersion] -->
 	</div><!-- end ngIf: !threeColumns && navigationSidebar -->
 	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
-					<a href=./v1.0.0/components/NumberBox.html class="paginationLink pull-left">Previous</a>
+					<a href=./v1.0.0/search-components/RatingsFilter.html class="paginationLink pull-left">Previous</a>
 				</span>
 				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
-					<a href=./v1.0.0/components/DataSearch.html class="paginationLink pull-right">Next</a>
+					<a href=./v1.0.0/components/SingleList.html class="paginationLink pull-right">Next</a>
 				</span>
 			</div>
 		</div>
